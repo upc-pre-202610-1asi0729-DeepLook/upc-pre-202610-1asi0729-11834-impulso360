@@ -64,3 +64,24 @@
 | TS04 | Servicios del negocio | **Como** Developer, **quiero** implementar endpoints en servicios **para** permitir que cada negocio registre y edite sus servicios. | **Escenario 1:** Creación de servicio.<br>• **Dado** datos válidos.<br>• **Cuando** se envía POST.<br>• **Entonces** crea servicio.<br><br>**Escenario 2:** Actualización de servicio.<br>• **Dado** servicio existente.<br>• **Cuando** se actualiza.<br>• **Entonces** guarda cambios. | EP07 |
 | TS05 | Perfil digital | **Como** Developer, **quiero** implementar endpoints del perfil del negocio **para** mostrar información pública actualizada. | **Escenario 1:** Consulta de perfil existente.<br>• **Dado** perfil existente.<br>• **Cuando** se consulta.<br>• **Entonces** retorna información.<br><br>**Escenario 2:** Actualización de perfil.<br>• **Dado** cambios.<br>• **Cuando** se actualiza.<br>• **Entonces** guarda datos. | EP07 |
 | TS06 | Recordatorios | **Como** Developer, **quiero** implementar endpoints de recordatorios **para** gestionar alertas de citas próximas. | **Escenario 1:** Consulta de cita próxima.<br>• **Dado** cita próxima.<br>• **Cuando** se consulta.<br>• **Entonces** retorna alerta.<br><br>**Escenario 2:** Consulta sin citas próximas.<br>• **Dado** sin citas.<br>• **Cuando** se consulta.<br>• **Entonces** retorna vacío. | EP07 |
+
+## 3.2. Impact Mapping
+
+**Business Goal 1:Reducir la desorganización operativa de los negocios usuarios en un 40%**
+
+Este primer Business Goal busca reducir los problemas operativos que enfrentan las microempresas y emprendedores al gestionar sus citas y clientes mediante herramientas físicas o separadas.
+
+![Impact Mapping 03](../assets/imagenes/impact-mapping/Impact-Map-01.png)
+
+**Business Goal 2:Incrementar la visibilidad digital de los negocios en un 30%**
+
+El segundo Business goal busca que los usuarios puedan mostrar sus servicios de manera más profesional, clara y accesible. La finalidad es que no dependan únicamente de recomendaciones o redes sociales, sino que cuenten con un espacio digital ordenado para presentar su negocio.
+
+![Impact Mapping 02](../assets/imagenes/impact-mapping/Impact-Map-02.png)
+
+**Business Goal 3:Facilitar la adopción digital**
+
+Este objetivo busca darles a los usuarios de Impulso360 un producto fácil de usar además de altamente accesible, con características como internacionalización y responsive.
+
+![Impact Mapping 03](../assets/imagenes/impact-mapping/Impact-Map-03.png)
+
