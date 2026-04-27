@@ -64,3 +64,69 @@
 | TS04 | Servicios del negocio | **Como** Developer, **quiero** implementar endpoints en servicios **para** permitir que cada negocio registre y edite sus servicios. | **Escenario 1:** Creación de servicio.<br>• **Dado** datos válidos.<br>• **Cuando** se envía POST.<br>• **Entonces** crea servicio.<br><br>**Escenario 2:** Actualización de servicio.<br>• **Dado** servicio existente.<br>• **Cuando** se actualiza.<br>• **Entonces** guarda cambios. | EP07 |
 | TS05 | Perfil digital | **Como** Developer, **quiero** implementar endpoints del perfil del negocio **para** mostrar información pública actualizada. | **Escenario 1:** Consulta de perfil existente.<br>• **Dado** perfil existente.<br>• **Cuando** se consulta.<br>• **Entonces** retorna información.<br><br>**Escenario 2:** Actualización de perfil.<br>• **Dado** cambios.<br>• **Cuando** se actualiza.<br>• **Entonces** guarda datos. | EP07 |
 | TS06 | Recordatorios | **Como** Developer, **quiero** implementar endpoints de recordatorios **para** gestionar alertas de citas próximas. | **Escenario 1:** Consulta de cita próxima.<br>• **Dado** cita próxima.<br>• **Cuando** se consulta.<br>• **Entonces** retorna alerta.<br><br>**Escenario 2:** Consulta sin citas próximas.<br>• **Dado** sin citas.<br>• **Cuando** se consulta.<br>• **Entonces** retorna vacío. | EP07 |
+
+## 3.2. Impact Mapping
+
+**Business Goal 1: Reducir la desorganización operativa de los negocios usuarios en un 40%**
+
+Este primer Business Goal busca reducir los problemas operativos que enfrentan las microempresas y emprendedores al gestionar sus citas y clientes mediante herramientas físicas o separadas.
+
+![Impact Mapping 03](../assets/imagenes/impact-mapping/Impact-Map-01.png)
+
+**Business Goal 2: Incrementar la visibilidad digital de los negocios en un 30%**
+
+El segundo Business goal busca que los usuarios puedan mostrar sus servicios de manera más profesional, clara y accesible. La finalidad es que no dependan únicamente de recomendaciones o redes sociales, sino que cuenten con un espacio digital ordenado para presentar su negocio.
+
+![Impact Mapping 02](../assets/imagenes/impact-mapping/Impact-Map-02.png)
+
+**Business Goal 3: Facilitar la adopción digital**
+
+Este objetivo busca darles a los usuarios de Impulso360 un producto fácil de usar además de altamente accesible, con características como internacionalización y responsive.
+
+![Impact Mapping 03](../assets/imagenes/impact-mapping/Impact-Map-03.png)
+
+## 3.3. Product Backlog
+
+| \#Orden | User Story Id | Título | Descripción | Story Points (1/2/3/5/8) |
+| :---- | :---- | :---- | :---- | :---- |
+| 1 | US32 | Visualización del Hero | **Como** visitante, **quiero** ver una sección principal clara **para** entender rápidamente qué ofrece Impulso360. | 2 |
+| 2 | US33 | Consulta de beneficios | **Como** visitante, **quiero** revisar los beneficios principales **para** identificar cómo la plataforma puede ayudar a mi negocio. | 2 |
+| 3 | US34 | Revisión de características | **Como** visitante, **quiero** conocer las características de la plataforma **para** evaluar si cubre mis necesidades. | 2 |
+| 4 | US35 | Comparación de planes | **Como** visitante, **quiero** revisar los planes disponibles **para** elegir una opción adecuada a mi negocio. | 2 |
+| 5 | US39 | Acción de contacto o registro | **Como** visitante, **quiero** acceder a una opción de contacto o registro **para** iniciar el uso de la plataforma. | 2 |
+| 6 | US38 | Navegación responsive | **Como** visitante, **quiero** navegar la landing page desde celular **para** consultar la información de forma cómoda. | 3 |
+| 7 | US36 | Conocimiento del equipo | **Como** visitante, **quiero** conocer información sobre el equipo **para** generar confianza en la solución. | 1 |
+| 8 | US37 | Consulta de preguntas frecuentes | **Como** visitante, **quiero** revisar preguntas frecuentes **para** resolver dudas antes de usar la plataforma. | 2 |
+| 9 | US40 | Internacionalización | **Como** visitante, **quiero** ver la landing en mi idioma **para** entender la propuesta de valor | 3 |
+| 10 | US01 | Visualización digital de citas | **Como** dueño de una microempresa de bienes o servicios, **quiero** visualizar los registro de citas en una agenda digital **para** organizar mejor mis horarios. | 5 |
+| 11 | US02 | Panel diario de atención | **Como** administrador de un negocio,  **quiero** visualizar todas las citas en un panel diario de atención  **para** su control. | 3 |
+| 12 | US03 | Alertas de citas | **Como** encargado de un consultorio o veterinaria, **quiero** recibir alertas sobre próximas citas **para** no olvidar atenciones importantes. | 3 |
+| 13 | US05 | Reprogramación sencilla de citas | **Como** microempresario, **quiero** reprogramar una cita fácilmente  **para** adaptarme a cambios sin perder la reserva | 5 |
+| 14 | US06 | Cancelación de reservas | **Como** administrador,  **quiero** cancelar citas registradas  **para** mantener actualizada la agenda del negocio | 3 |
+| 15 | US09 | Clasificación de citas | **Como** encargado, **quiero** clasificar citas por servicio **para** tener claridad | 2 |
+| 16 | US15 | Confirmación de citas | **Como** dueño de una microempresa, **quiero** confirmar citas **para** asegurar asistencia | 3 |
+| 17 | US25 | Confirmación ordenada de reservas | **Como** emprendedor, **quiero** confirmar reservas desde un sistema ordenado **para** mejorar seguimiento | 2 |
+| 18 | US27 | Planificación anticipada | **Como** emprendedor, **quiero** ver citas futuras **para** planificar mi trabajo | 3 |
+| 19 | US10 | Notas por cita | **Como** dueño, **quiero** agregar notas a citas **para** recordar detalles | 2 |
+| 20 | US14 | Citas perdidas | **Como** administrador, **quiero** identificar citas perdidas **para** mejorar gestión | 2 |
+| 21 | US04 | Registro de datos de clientes | **Como** responsable del negocio,  **quiero** registrar los datos básicos de mis clientes  **para** tener mejor control de quién reserva mis servicios. | 5 |
+| 22 | US08 | Historial por cliente | **Como** dueño, **quiero** ver historial de citas **para** mejorar atención | 3 |
+| 23 | US19 | Base de clientes | **Como** emprendedor que recién se moderniza,  **quiero** registrar clientes en una base simple,  **para** dejar de depender solo de conversaciones en redes sociales y de medios tradicionales. | 3 |
+| 24 | US23 | Historial para mejor control | **Como** emprendedor que busca modernizarse,  **quiero** tener un historial de clientes y citas, **para** empezar a tomar decisiones con más orden.  | 5 |
+| 25 | US28 | Contactos de clientes | **Como** emprendedor, **quiero** guardar contactos **para** mantener comunicación | 2 |
+| 26 | US11 | Perfil digital | **Como** microempresario, **quiero** mostrar mi negocio **para** atraer clientes | 5 |
+| 27 | US12 | Promoción de servicios destacados | **Como** responsable, **quiero** destacar servicios **para** atraer reservas | 3 |
+| 28 | US20 | Perfil independiente | **Como** emprendedor que quiere crecer,  **quiero** mostrar mis servicios en un perfil digital,  **para** dejar de depender únicamente de publicaciones en redes sociales. | 2 |
+| 29 | US24 | Edición de perfil del negocio | **Como** emprendedor,  **quiero** editar fácilmente la información de mi negocio,  **para** mantener actualizado mi perfil digital. | 3 |
+| 30 | US26 | Registro de servicios | **Como** emprendedor, **quiero** registrar mis servicios con nombres, horarios o detalles **para** presentarlos mejor a mis clientes. | 3 |
+| 31 | US07 | Panel del negocio | **Como** emprendedor, **quiero** ver en un panel mis citas, clientes y recordatorios **para** entender mejor el estado actual de mi negocio. | 5 |
+| 32 | US22 | Panel general del negocio | **Como** emprendedor,  **quiero** ver en un panel mis citas, clientes y recordatorios,  **para** entender mejor el estado actual de mi negocio. | 3 |
+| 33 | US29 | Visualización ordenada | **Como** emprendedor, **quiero** ver registros ordenados **para** mejorar gestión | 2 |
+| 34 | US17 | Mejora de la experiencia de reserva | **Como** dueño, **quiero** mejorar reservas **para** dar mejor servicio | 3 |
+| 35 | US13 | Acceso móvil | **Como** usuario, **quiero** acceder desde celular **para** revisar citas en cualquier lugar | 3 |
+| 36 | US16 | Soporte Básico | **Como** usuario, **quiero** ayuda dentro de la plataforma **para** aprender a usarla | 2 |
+| 37 | US18 | Inicio simple | **Como** emprendedor, **quiero** empezar fácilmente **para** digitalizarme | 2 |
+| 38 | US21 | Aprendizaje rápido de la plataforma | **Como** emprendedor,  **quiero** aprender rápidamente a usar la plataforma,  **para** empezar a obtener beneficios desde los primeros días. | 3 |
+| 39 | US30 | Crecimiento gradual de funcionalidades | **Como** emprendedor, **quiero** usar funciones progresivamente **para** adaptarme | 2 |
+| 40 | US31 | Organización sin sistemas costosos | **Como** emprendedor, **quiero** organizarme sin sistemas costosos **para** no afectar mi economía | 1 |
+| 41 | US41 | Internacionalización de la APP | **Como** usuario, **quiero** cambiar el idioma de la plataforma **para** entender mejor el contenido | 3 |
