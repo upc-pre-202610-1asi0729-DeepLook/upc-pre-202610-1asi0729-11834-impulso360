@@ -568,7 +568,19 @@ Una vez dentro de la aplicación, el sistema se vuelve funcional y eficiente, co
 
 ![wireflow1](../assets/imagenes/web-applications-design/wireflow-1.png)
 
-![wireflow1](../assets/imagenes/web-applications-design/wireflow-2.png)
+![wireflow2](../assets/imagenes/web-applications-design/wireflow-2.png)
+
+![wireflows1](../assets/imagenes/wireflows/wireflows-1.png)
+
+![wireflows2](../assets/imagenes/wireflows/wireflows-2.png)
+
+![wireflows3](../assets/imagenes/wireflows/wireflows-3.png)
+
+![wireflows4](../assets/imagenes/wireflows/wireflows-4.png)
+
+![wireflows5](../assets/imagenes/wireflows/wireflows-5.png)
+
+![wireflows6](../assets/imagenes/wireflows/wireflows-6.png)
 
 ---
 
