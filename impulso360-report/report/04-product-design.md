@@ -616,7 +616,7 @@ Una vez dentro de la aplicación, el sistema se vuelve funcional y eficiente, co
 
 ## 4.5. Web Applications Prototyping
 
-![]()
+[Clic para ver Web Applications Prototyping](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20231e504_upc_edu_pe/IQDkANW1YLFYQ6FNR_bfRoZyAXyOxM27YPBsThiLQ3RiUEM?e=OVhfHV&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
 
 ---
 
