@@ -117,7 +117,7 @@
 
 # Project Report Collaboration Insights
 
-URL del repositorio para el proyecto: [Link](https://github.com/TukunTech-Experimentos/Report)
+URL del repositorio para el proyecto: [Link](https://github.com/upc-pre-202610-1asi0729-DeepLook/upc-pre-202610-1asi0729-11834-impulso360)
 
 **Github Collaboration Insights**
 
