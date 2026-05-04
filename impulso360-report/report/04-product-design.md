@@ -568,7 +568,19 @@ Una vez dentro de la aplicación, el sistema se vuelve funcional y eficiente, co
 
 ![wireflow1](../assets/imagenes/web-applications-design/wireflow-1.png)
 
-![wireflow1](../assets/imagenes/web-applications-design/wireflow-2.png)
+![wireflow2](../assets/imagenes/web-applications-design/wireflow-2.png)
+
+![wireflows1](../assets/imagenes/wireflows/wireflows-1.png)
+
+![wireflows2](../assets/imagenes/wireflows/wireflows-2.png)
+
+![wireflows3](../assets/imagenes/wireflows/wireflows-3.png)
+
+![wireflows4](../assets/imagenes/wireflows/wireflows-4.png)
+
+![wireflows5](../assets/imagenes/wireflows/wireflows-5.png)
+
+![wireflows6](../assets/imagenes/wireflows/wireflows-6.png)
 
 ---
 
@@ -598,13 +610,29 @@ Una vez dentro de la aplicación, el sistema se vuelve funcional y eficiente, co
 
 ### 4.4.3. Web Applications User Flow Diagrams
 
-![]()
+![UserFlow1](../assets/imagenes/userflows/userflow-1.png)
+
+![UserFlow2](../assets/imagenes/userflows/userflow-2.png)
+
+![UserFlow3](../assets/imagenes/userflows/userflow-3.png)
+
+![UserFlow4](../assets/imagenes/userflows/userflow-4.png)
+
+![UserFlow5](../assets/imagenes/userflows/userflow-5.png)
+
+![UserFlow6](../assets/imagenes/userflows/userflow-6.png)
+
+![UserFlow7](../assets/imagenes/userflows/userflow-7.png)
+
+![UserFlow8](../assets/imagenes/userflows/userflow-8.png)
+
+
 
 ---
 
 ## 4.5. Web Applications Prototyping
 
-![]()
+[Clic para ver Web Applications Prototyping](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20231e504_upc_edu_pe/IQDkANW1YLFYQ6FNR_bfRoZyAXyOxM27YPBsThiLQ3RiUEM?e=OVhfHV&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
 
 ---
 
