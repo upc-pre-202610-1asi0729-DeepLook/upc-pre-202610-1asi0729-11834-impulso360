@@ -570,9 +570,20 @@ URL: [https://upc-pre-202610-1asi0729-deeplook.github.io/Landing-Page/](https://
 
 Durante este sprint, el equipo se centró en la documentación e implementación de la landing page del proyecto. El trabajo se organizó mediante el uso de GitHub como herramienta principal para la colaboración y control de versiones. A continuación se presentan las colaboraciones y commits hechos tanto para el landing page como para el reporte.
 
-Report:
+Report: 
+
+![Commit1](../assets/imagenes/team-collaboration-insight-sprint-1/team-collaboration-insight-during-sprint-1-1.png)
+
+![Commit2](../assets/imagenes/team-collaboration-insight-sprint-1/team-collaboration-insight-during-sprint-1-2.png)
+
+![Commit3](../assets/imagenes/team-collaboration-insight-sprint-1/team-collaboration-insight-during-sprint-1-3.png)
+
+![Commit4](../assets/imagenes/team-collaboration-insight-sprint-1/team-collaboration-insight-during-sprint-1-4.png)
+
+![Commit5](../assets/imagenes/team-collaboration-insight-sprint-1/team-collaboration-insight-during-sprint-1-5.png)
 
 Landing Page:
+
 ![Contributors](../assets/imagenes/Insights/contributors.png)
 ![Pull Request](../assets/imagenes/Insights/pull.png)
 ![Commits Landing Page](../assets/imagenes/Insights/LP-commits1.png)
