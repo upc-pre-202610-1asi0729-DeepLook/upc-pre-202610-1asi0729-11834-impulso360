@@ -610,7 +610,23 @@ Una vez dentro de la aplicación, el sistema se vuelve funcional y eficiente, co
 
 ### 4.4.3. Web Applications User Flow Diagrams
 
-![]()
+![UserFlow1](../assets/imagenes/userflows/userflow-1.png)
+
+![UserFlow2](../assets/imagenes/userflows/userflow-2.png)
+
+![UserFlow3](../assets/imagenes/userflows/userflow-3.png)
+
+![UserFlow4](../assets/imagenes/userflows/userflow-4.png)
+
+![UserFlow5](../assets/imagenes/userflows/userflow-5.png)
+
+![UserFlow6](../assets/imagenes/userflows/userflow-6.png)
+
+![UserFlow7](../assets/imagenes/userflows/userflow-7.png)
+
+![UserFlow8](../assets/imagenes/userflows/userflow-8.png)
+
+
 
 ---
 
