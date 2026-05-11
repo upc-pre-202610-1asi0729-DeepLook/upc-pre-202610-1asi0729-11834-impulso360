@@ -677,207 +677,92 @@ El diseño orientado a objetos del sistema se ha estructurado siguiendo los patr
 
 ![class-diagram](../assets/imagenes/diagrams/class-diagram.png)
 
-#### Class dictionary:
+## Class Dictionary (Domain-Driven Design)
 
-**1. IAM (Gestión de Identidad y Acceso)**
+En el diseño de **Impulso 360**, se utiliza el enfoque de **Domain-Driven Design (DDD)** para organizar la lógica de negocio. Este diccionario categoriza las clases según su estereotipo técnico (**Aggregate Root, Entity, Value Object, Enum**), asegurando que cada objeto tenga una responsabilidad clara y que el sistema mantenga su integridad.
 
-**Clase: UserAccount**
+### 1. IAM (Gestión de Identidad y Acceso)
 
-Descripción: Es la entidad principal de seguridad. Representa las credenciales y el estado de acceso de cualquier persona que utilice la plataforma, ya sea un emprendedor (Owner), su personal (Staff) o un cliente final (Client).
+| Clase / Elemento | Estereotipo | Descripción y Comportamiento |
+| :--- | :--- | :--- |
+| **`UserAccount`** | `<<Aggregate Root>>` | Punto de entrada para la seguridad. Centraliza credenciales y roles.<br>**Atributos:** `- id: Long`, `- username: String`, `- passwordHash: String`, **`- role: Role`**.<br>**Métodos:** `+ authenticate(rawPass: String): boolean` |
+| **`RoleAssignment`** | `<<Entity>>` | Entidad que rastrea la asignación histórica de un rol a un usuario.<br>**Atributos:** `- id: Long`, **`- role: Role`**, `- assignedAt: DateTime` |
+| **`Email`** | `<<Value Object>>` | Encapsula la lógica de validación de correo electrónico (Inmutable).<br>**Atributos:** `- address: String` |
+| **`Role`** | `<<Enum>>` | Define los tipos de usuario: `OWNER`, `ADMINISTRATOR`, `STAFF`, `CLIENT`. |
 
-Atributos:
+### 2. Business Profile (Perfil del Negocio)
 
-- id (Long): Identificador único generado por el sistema.
-- username (String): Nombre de usuario único (usualmente el correo electrónico).
-- passwordHash (String): Representación cifrada de la contraseña para seguridad.
-- isActive (boolean): Indica si la cuenta tiene permitido el acceso al sistema.
-- hasCompletedTutorial (boolean): Marca si el usuario ya visualizó la guía de inicio rápido.
-- roles (List<Role>): Colección de permisos o perfiles asignados al usuario.
+| Clase / Elemento | Estereotipo | Descripción y Comportamiento |
+| :--- | :--- | :--- |
+| **`BusinessProfile`** | `<<Aggregate Root>>` | Entidad raíz que controla la presencia digital y el catálogo de servicios.<br>**Atributos:** `- id: Long`, `- name: BusinessName`, `- address: Address`, `- isPublished: boolean`.<br>**Métodos:** `+ publishService(service: Service): void` |
+| **`Service`** | `<<Entity>>` | Representa una prestación ofrecida. Posee identidad propia.<br>**Atributos:** `- id: Long`, `- name: String`, `- price: Price`, **`- status: ServiceStatus`**, **`- category: ServiceCategory`**, `- isFeatured: boolean`.<br>**Métodos:** `+ updatePrice(newPrice: Price): void`, `+ setFeatured(featured: boolean): void` |
+| **`BusinessName`** | `<<Value Object>>` | Agrupa el nombre legal y comercial del negocio. |
+| **`Price`** | `<<Value Object>>` | Garantiza que el monto y la moneda siempre se manejen juntos. |
+| **`ServiceStatus`** | `<<Enum>>` | Indica si el servicio está `ACTIVE` o `INACTIVE`. |
+| **`ServiceCategory`** | `<<Enum>>` | Clasificación temática: `VETERINARIA`, `ESTETICA`, `PREVENCION`, `CIRUGIA`. |
 
-Métodos:
+### 3. Customer Management (Gestión de Clientes)
 
-- authenticate(String rawPass): Compara la contraseña ingresada con el hash almacenado para permitir el acceso.
-- changePassword(String newPass): Genera un nuevo hash y actualiza la credencial de acceso.
-- markTutorialAsCompleted(): Cambia el estado del tutorial para no mostrarlo en futuros inicios de sesión.
-- deactivate(): Inhabilita la cuenta sin eliminar los datos históricos asociados.
+| Clase / Elemento | Estereotipo | Descripción y Comportamiento |
+| :--- | :--- | :--- |
+| **`Client`** | `<<Aggregate Root>>` | Raíz que protege la información del consumidor final y su historial.<br>**Atributos:** `- id: Long`, `- firstName: String`, `- lastName: String`, **`- status: ClientStatus`**.<br>**Métodos:** `+ updateContactInfo(email: Email, phone: PhoneNumber): void` |
+| **`ClientContactInfo`** | `<<Entity>>` | Permite gestionar múltiples medios de contacto por cliente. |
+| **`PhoneNumber`** | `<<Value Object>>` | Encapsula el código de país y número con validación propia. |
+| **`ClientStatus`** | `<<Enum>>` | Ciclo de vida: `ACTIVE`, `INACTIVE`, `RECURRING`. |
 
-**Clase: SessionToken**
+### 4. Appointment Management (Gestión de Citas)
 
-Descripción: Objeto encargado de gestionar la persistencia de una sesión activa sin requerir la contraseña en cada petición.
+| Clase / Elemento | Estereotipo | Descripción y Comportamiento |
+| :--- | :--- | :--- |
+| **`Appointment`** | `<<Aggregate Root>>` | **Entidad Crítica.** Controla las transiciones de estado de la reserva.<br>**Atributos:** `- id: Long`, `- clientId: Long`, `- businessId: Long`, **`- status: AppointmentStatus`**, `- timeSlot: TimeSlot`.<br>**Métodos:** `+ confirm()`, `+ cancel(reason: String)`, `+ reschedule(newSlot: TimeSlot)`, `+ markAsMissed()` |
+| **`TimeSlot`** | `<<Value Object>>` | Bloque de tiempo inmutable. Un cambio de hora genera un nuevo objeto.<br>**Atributos:** `- startTime: Time`, `- endTime: Time` |
+| **`AppointmentDateTime`** | `<<Value Object>>` | Envuelve la fecha de la cita con lógica de validación temporal. |
+| **`AppointmentStatus`** | `<<Enum>>` | Estados permitidos: `PENDING`, `CONFIRMED`, `CANCELLED`, `MISSED`. |
 
-Atributos:
+### 5. Notification / Reminder (Recordatorios)
 
-- tokenHash (String): Cadena única que identifica la sesión actual.
-- expiresAt (DateTime): Fecha y hora en la que el token dejará de ser válido.
-- ipAddress (String): Dirección de red desde donde se originó la sesión por seguridad.
+| Clase / Elemento | Estereotipo | Descripción y Comportamiento |
+| :--- | :--- | :--- |
+| **`Reminder`** | `<<Aggregate Root>>` | Gestiona el envío de alertas automáticas.<br>**Atributos:** `- id: Long`, **`- status: ReminderStatus`**, **`- channel: ReminderChannel`**.<br>**Métodos:** `+ scheduleFor(appointment: Appointment): void` |
+| **`ReminderSchedule`** | `<<Entity>>` | Determina el momento exacto y la recurrencia del envío. |
+| **`ReminderStatus`** | `<<Enum>>` | Flujo de entrega: `PENDING`, `SENT`, `FAILED`. |
+| **`ReminderChannel`** | `<<Enum>>` | Vías: `EMAIL`, `SMS`, `WHATSAPP`. |
 
-Métodos:
+### 6. Reporting (Reportes Operativos)
 
-- isValid(): Comprueba si el token no ha expirado y pertenece a una sesión activa.
-- revoke(): Invalida el token inmediatamente, forzando un nuevo inicio de sesión.
+| Clase / Elemento | Estereotipo | Descripción y Comportamiento |
+| :--- | :--- | :--- |
+| **`DailyPanel`** | `<<Read Model>>` | Objeto de solo lectura para el panel operativo diario. |
+| **`DailyAgenda`** | `<<Read Model>>` | Vista consolidada cronológicamente de las citas del día actual. |
+| **`WeeklyAgenda`** | `<<Read Model>>` | Proyección semanal de la ocupación de la agenda. |
 
-**Clase: SupportTicket**
+---
 
-Descripción: Representa una solicitud de asistencia técnica o duda comercial enviada por el usuario al equipo de Impulso 360.
+## Control de Consistencia y Reglas de Dominio (Business Rules)
 
-Atributos:
+En el diseño de **Impulso 360**, no se permite la modificación directa de los atributos de las entidades (como el uso de `setStatus()`). En su lugar, se aplica el patrón **Aggregate Root**, donde una entidad principal actúa como la "puerta de enlace" exclusiva para modificar los datos internos, garantizando que siempre se cumplan las reglas de consistencia (invariantes) antes de realizar cualquier cambio en la base de datos.
 
-- id (Long): Código de seguimiento del ticket.
-- subject (String): Título o tema breve del problema.
-- message (String): Descripción detallada de la consulta.
-- status (TicketStatus): Estado del ticket (Abierto, En Progreso, Resuelto).
+### A. Aggregate Root: `Appointment` (Cita)
+La entidad `Appointment` es la responsable absoluta de la consistencia de una reserva. Ningún servicio externo puede cambiar su estado de forma arbitraria; debe invocar los métodos de comportamiento de la clase, los cuales evalúan las siguientes reglas de estado:
 
-Métodos:
+**Reglas de Transición y Consistencia:**
+* **Creación (`schedule`):** Una cita solo puede nacer en estado `PENDING`. **Regla:** El `TimeSlot` proporcionado debe ser una fecha y hora en el futuro. No se pueden agendar citas en el pasado.
+* **Confirmación (`confirm()`):** Transiciona de `PENDING` a `CONFIRMED`. **Regla:** Una cita no puede confirmarse si ya se encuentra en estado `CANCELLED` o `MISSED`.
+* **Cancelación (`cancel(reason)`):** Transiciona a `CANCELLED`. **Regla:** Exige obligatoriamente un parámetro `reason` (motivo de cancelación). Una vez cancelada, el `TimeSlot` asociado se libera para que el `BusinessProfile` pueda recibir otra reserva. Es un estado terminal (no se puede des-cancelar).
+* **Inasistencia (`markAsMissed()`):** Transiciona de `CONFIRMED` a `MISSED`. **Regla:** Este método solo puede ejecutarse si el `AppointmentDateTime` (fecha de la cita) ya está en el pasado (evaluado mediante `isPast()`). No se puede marcar como inasistencia una cita que aún no ha ocurrido.
+* **Reprogramación (`reschedule(newTimeSlot)`):** **Regla:** El nuevo `TimeSlot` debe estar disponible en la agenda del negocio. Al reprogramar, si la cita estaba `CONFIRMED`, su estado se revierte a `PENDING` para requerir una nueva confirmación de la otra parte.
 
-- reply(String response): Registra una respuesta o actualización en el hilo del ticket.
-- close(): Marca la solicitud como finalizada una vez resuelto el problema.
+### B. Aggregate Root: `BusinessProfile` (Perfil del Negocio)
+Es la entidad responsable de controlar la consistencia de su catálogo comercial y su visibilidad digital.
 
-**2. Perfil del Negocio (Business Profile)**
+* **Publicación de Servicios (`publishService(Service)`):** **Regla:** Antes de agregar un `Service` a su lista interna, el perfil valida que el servicio tenga un `Price` mayor a 0 y una categoría asignada.
+* **Regla de Destacados:** El `BusinessProfile` controla que no puedan existir más de 3 servicios con la etiqueta `isFeatured = true` simultáneamente. Si se intenta destacar un cuarto servicio, el Aggregate lanza una excepción de dominio.
 
-**Clase: BusinessProfile**
+### C. Aggregate Root: `Client` (Cliente)
+Responsable de mantener la integridad de sus datos de contacto y su estado comercial frente a los negocios.
 
-Descripción: Almacena la información comercial y estética del negocio. Es la cara pública del emprendimiento en la plataforma.
-
-Atributos:
-
-- legalName (String): Nombre oficial registrado legalmente.
-- publicDisplayName (String): Nombre comercial que verán los clientes.
-- description (String): Texto explicativo sobre los servicios y valores del negocio.
-- logoUrl / coverImageUrl (String): Enlaces a las imágenes de identidad visual.
-- themeColor (String): Código de color para personalizar la interfaz del cliente.
-- isPublished (boolean): Indica si el perfil es visible para el público general.
-
-Métodos:
-
-- updateProfile(Object data): Actualiza múltiples campos de información del negocio a la vez.
-- publish() / unpublish(): Alterna la visibilidad del perfil en la aplicación cliente.
-
-**Clase: BusinessSubscription**
-
-Descripción: Gestiona la relación comercial entre el negocio e Impulso 360, controlando el acceso a funciones según el plan contratado.
-
-Atributos:
-
-- startDate / endDate (DateTime): Periodo de vigencia de la suscripción actual.
-- status (SubscriptionStatus): Estado del pago (Prueba, Activo, Expirado).
-
-Métodos:
-
-- activateTrial(): Inicia el periodo de prueba gratuita definido en el plan.
-- upgradePlan(SubscriptionPlan newPlan): Cambia el nivel de suscripción y actualiza las funciones disponibles.
-
-**3. Gestión de Clientes (Client Management)**
-
-**Clase: Client**
-
-Descripción: Entidad que representa al consumidor final. Puede ser un perfil creado por el dueño o una cuenta activa de un usuario cliente.
-
-Atributos:
-
-- firstName / lastName (String): Nombre y apellidos del cliente.
-- email / phone (String): Datos de contacto para notificaciones y seguimiento.
-
-Métodos:
-
-- updateContactInfo(String email, String phone): Actualiza los medios de comunicación del cliente.
-- getFullName(): Retorna el nombre completo formateado para reportes y agendas.
-
-**Clase: ClientHistory**
-
-Descripción: Acumula datos estadísticos del cliente para ayudar en la toma de decisiones comerciales.
-
-Atributos:
-
-- totalAppointments (int): Contador de citas asistidas exitosamente.
-- totalNoShows (int): Contador de citas a las que el cliente no asistió.
-- lifetimeValue (double): Ingreso total acumulado generado por este cliente.
-
-Métodos:
-
-- incrementAppointments(): Suma una unidad al historial de asistencia.
-- recordNoShow(): Registra una inasistencia y afecta negativamente el perfil del cliente.
-- # calculateLTV(): Método protegido que recalcula el valor histórico basado en los pagos realizados.
-
-**4. Gestión de Citas (Appointment Management)**
-
-**Clase: Appointment**
-
-Descripción: Es el objeto core que representa la reserva de un espacio de tiempo para la prestación de un servicio.
-
-Atributos:
-
-- scheduledAt (DateTime): Fecha de la cita.
-- startTime / endTime (Time): Rango horario reservado.
-- status (AppointmentStatus): Estado actual (Programada, Completada, Cancelada, etc.).
-
-Métodos:
-
-- schedule(): Valida y confirma la creación de la reserva.
-- reschedule(DateTime newDate, Time newTime): Cambia la fecha u hora, verificando nuevamente la disponibilidad.
-- cancel(): Libera el espacio en la agenda y cambia el estado a cancelado.
-
-**Clase: Service**
-
-Descripción: Detalle de cada prestación ofrecida por el negocio (ej. "Corte de cabello", "Asesoría").
-
-Atributos:
-
-- name (String): Nombre del servicio.
-- durationMinutes (int): Tiempo estimado que consume el servicio.
-- price (double): Costo base del servicio.
-- isFeatured (boolean): Indica si el servicio aparece destacado en el perfil.
-
-Métodos:
-
-- updatePrice(double newPrice): Modifica el valor comercial del servicio.
-- setFeatured(boolean featured): Cambia el estado de promoción del servicio.
-
-**5. Notificaciones (Notifications)**
-
-**Clase: Notification**
-
-Descripción: Encargada de la comunicación saliente para reducir el ausentismo de los clientes.
-
-Atributos:
-
-- recipientAddress (String): Destino (email o teléfono).
-- content (String): Texto del mensaje enviado.
-- type (NotificationType): Categoría (Recordatorio, Confirmación, Promoción).
-
-Métodos:
-
-- dispatch(): Envía el mensaje a través del proveedor externo de mensajería.
-- retry(): Intenta reenviar la notificación en caso de error técnico.
-
-**6. Panel y Seguimiento (Dashboard & Analytics)**
-
-**Clase: DashboardReport**
-
-Descripción: Compila datos transaccionales para presentar una visión global de la salud del negocio.
-
-Atributos:
-
-- periodStart / periodEnd (Date): Rango de fechas que abarca el análisis.
-- generationDate (DateTime): Momento exacto en que se calculó el reporte.
-
-Métodos:
-
-- generate(): Procesa las citas y pagos para extraer las métricas del periodo.
-- exportToPDF(): Genera un documento descargable con los resultados del reporte.
-
-**Clase: KPI**
-
-Descripción: Representa un indicador específico de rendimiento dentro de un reporte.
-
-Atributos:
-
-- metricName (String): Nombre del indicador (ej. "Tasa de Cancelación").
-- numericValue (double): Valor calculado para la métrica.
-
-Métodos:
-
-- calculateVariance(): Compara el valor actual con el del periodo anterior para mostrar la tendencia de crecimiento o decrecimiento.
-
+* **Actualización de Contacto (`updateContactInfo(Email, PhoneNumber)`):** **Regla:** El Aggregate no acepta cadenas de texto crudas. Exige objetos de valor (*Value Objects*) previamente validados. El `Email` verifica internamente que tenga formato válido (regex), y el `PhoneNumber` verifica que tenga un código de país correcto.
+* **Transición de Estado:** El cliente pasa de `ACTIVE` a `INACTIVE` automáticamente si la fecha de su última cita registrada supera los 6 meses de antigüedad.
 ---
 
 ## 4.8. Database Design
