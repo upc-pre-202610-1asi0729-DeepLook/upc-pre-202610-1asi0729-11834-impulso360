@@ -655,17 +655,15 @@ https://miro.com/app/board/uXjVHcT2IXY=/?share_link_id=761504321242
 
 ### 4.6.3. Software Architecture Container Diagrams
 
-![container-diagram](../assets/imagenes/domain-driver-software-architecture/container-diagram.png)
+![container-diagram](../assets/imagenes/domain-driver-software-architecture/ContainerDiagramOS.png)
 
 ---
 
 ### 4.6.4. Software Architecture Components Diagrams
 
-![components-diagram](../assets/imagenes/domain-driver-software-architecture/component-diagram.png)
+![components-diagram](../assets/imagenes/domain-driver-software-architecture/ComponentDiagram1OS.png)
 
-![components-diagram](../assets/imagenes/domain-driver-software-architecture/component-diagram-1.png)
-
-![components-diagram](../assets/imagenes/domain-driver-software-architecture/component-diagram-2.png)
+![components-diagram](../assets/imagenes/domain-driver-software-architecture/ComponentDiagram2OS.png)
 
 ---
 
