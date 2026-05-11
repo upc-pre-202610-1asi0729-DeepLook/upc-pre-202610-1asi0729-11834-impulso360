@@ -679,75 +679,68 @@ El diseño orientado a objetos del sistema se ha estructurado siguiendo los patr
 
 ## Class Dictionary (Domain-Driven Design)
 
-A continuación, se presenta el diccionario de clases estructurado bajo los principios de Domain-Driven Design (DDD), definiendo claramente los *Aggregate Roots*, *Entities*, *Value Objects* y *Enums* para cada Bounded Context.
+En el diseño de **Impulso 360**, se utiliza el enfoque de **Domain-Driven Design (DDD)** para organizar la lógica de negocio. Este diccionario categoriza las clases según su estereotipo técnico (**Aggregate Root, Entity, Value Object, Enum**), asegurando que cada objeto tenga una responsabilidad clara y que el sistema mantenga su integridad.
 
 ### 1. IAM (Gestión de Identidad y Acceso)
 
 | Clase / Elemento | Estereotipo | Descripción y Comportamiento |
 | :--- | :--- | :--- |
-| **`UserAccount`** | `<<Aggregate Root>>` | Raíz de agregación que gestiona la seguridad y el acceso al sistema.<br>**Atributos:**<br>`- id: Long`<br>`- username: String`<br>`- passwordHash: String`<br>**Métodos:**<br>`+ authenticate(rawPass: String): boolean` - Compara la contraseña ingresada con el hash para permitir el acceso. |
-| **`RoleAssignment`** | `<<Entity>>` | Entidad interna que registra cuándo se otorgó un rol específico a una cuenta.<br>**Atributos:**<br>`- id: Long`<br>`- assignedAt: DateTime` |
-| **`Email`** | `<<Value Object>>` | Objeto de valor inmutable que representa un correo electrónico.<br>**Atributos:**<br>`- address: String`<br>**Métodos:**<br>`+ isValid(): boolean` - Valida mediante RegEx que el formato sea correcto. |
-| **`Role`** | `<<Enum>>` | Roles disponibles: `OWNER`, `ADMINISTRATOR`, `STAFF`, `CLIENT`. |
+| **`UserAccount`** | `<<Aggregate Root>>` | Punto de entrada para la seguridad. Centraliza credenciales y roles.<br>**Atributos:** `- id: Long`, `- username: String`, `- passwordHash: String`, **`- role: Role`**.<br>**Métodos:** `+ authenticate(rawPass: String): boolean` |
+| **`RoleAssignment`** | `<<Entity>>` | Entidad que rastrea la asignación histórica de un rol a un usuario.<br>**Atributos:** `- id: Long`, **`- role: Role`**, `- assignedAt: DateTime` |
+| **`Email`** | `<<Value Object>>` | Encapsula la lógica de validación de correo electrónico (Inmutable).<br>**Atributos:** `- address: String` |
+| **`Role`** | `<<Enum>>` | Define los tipos de usuario: `OWNER`, `ADMINISTRATOR`, `STAFF`, `CLIENT`. |
 
 ### 2. Business Profile (Perfil del Negocio)
 
 | Clase / Elemento | Estereotipo | Descripción y Comportamiento |
 | :--- | :--- | :--- |
-| **`BusinessProfile`** | `<<Aggregate Root>>` | Raíz que controla el catálogo comercial y la visibilidad del negocio.<br>**Atributos:**<br>`- id: Long`<br>`- description: String`<br>`- isPublished: boolean`<br>**Métodos:**<br>`+ publishService(service: Service): void` - Agrega un servicio al catálogo validando reglas de negocio. |
-| **`BusinessName`** | `<<Value Object>>` | Encapsula la identidad nominal del establecimiento.<br>**Atributos:**<br>`- legalName: String`<br>`- publicDisplayName: String` |
-| **`Address`** | `<<Value Object>>` | Estructura inmutable de la ubicación física.<br>**Atributos:**<br>`- street: String`<br>`- city: String`<br>`- reference: String` |
-| **`Service`** | `<<Entity>>` | Prestación individual ofrecida por el negocio.<br>**Atributos:**<br>`- id: Long`<br>`- name: String`<br>`- description: String`<br>`- durationMinutes: int`<br>`- isFeatured: boolean` |
-| **`Price`** | `<<Value Object>>` | Encapsula el valor económico evitando el uso de tipos primitivos sueltos.<br>**Atributos:**<br>`- amount: double`<br>`- currency: String` |
-| **`ServiceStatus`** | `<<Enum>>` | Estados de un servicio: `ACTIVE`, `INACTIVE`. |
-| **`ServiceCategory`** | `<<Enum>>` | Categorías fijas: `VETERINARIA`, `ESTETICA`, `PREVENCION`, `CIRUGIA`. |
+| **`BusinessProfile`** | `<<Aggregate Root>>` | Entidad raíz que controla la presencia digital y el catálogo de servicios.<br>**Atributos:** `- id: Long`, `- name: BusinessName`, `- address: Address`, `- isPublished: boolean`.<br>**Métodos:** `+ publishService(service: Service): void` |
+| **`Service`** | `<<Entity>>` | Representa una prestación ofrecida. Posee identidad propia.<br>**Atributos:** `- id: Long`, `- name: String`, `- price: Price`, **`- status: ServiceStatus`**, **`- category: ServiceCategory`**, `- isFeatured: boolean`.<br>**Métodos:** `+ updatePrice(newPrice: Price): void`, `+ setFeatured(featured: boolean): void` |
+| **`BusinessName`** | `<<Value Object>>` | Agrupa el nombre legal y comercial del negocio. |
+| **`Price`** | `<<Value Object>>` | Garantiza que el monto y la moneda siempre se manejen juntos. |
+| **`ServiceStatus`** | `<<Enum>>` | Indica si el servicio está `ACTIVE` o `INACTIVE`. |
+| **`ServiceCategory`** | `<<Enum>>` | Clasificación temática: `VETERINARIA`, `ESTETICA`, `PREVENCION`, `CIRUGIA`. |
 
 ### 3. Customer Management (Gestión de Clientes)
 
 | Clase / Elemento | Estereotipo | Descripción y Comportamiento |
 | :--- | :--- | :--- |
-| **`Client`** | `<<Aggregate Root>>` | Representa al consumidor final y protege la integridad de su información.<br>**Atributos:**<br>`- id: Long`<br>`- firstName: String`<br>`- lastName: String`<br>`- registeredAt: DateTime`<br>**Métodos:**<br>`+ updateContactInfo(email: Email, phone: PhoneNumber): void` - Actualiza el contacto exigiendo Value Objects válidos. |
-| **`ClientContactInfo`** | `<<Entity>>` | Permite que un cliente tenga múltiples puntos de contacto.<br>**Atributos:**<br>`- id: Long`<br>`- isPrimary: boolean` |
-| **`PhoneNumber`** | `<<Value Object>>` | Objeto de valor validado para números telefónicos.<br>**Atributos:**<br>`- countryCode: String`<br>`- number: String` |
-| **`ClientStatus`** | `<<Enum>>` | Ciclo de vida del cliente: `ACTIVE`, `INACTIVE`, `RECURRING`. |
+| **`Client`** | `<<Aggregate Root>>` | Raíz que protege la información del consumidor final y su historial.<br>**Atributos:** `- id: Long`, `- firstName: String`, `- lastName: String`, **`- status: ClientStatus`**.<br>**Métodos:** `+ updateContactInfo(email: Email, phone: PhoneNumber): void` |
+| **`ClientContactInfo`** | `<<Entity>>` | Permite gestionar múltiples medios de contacto por cliente. |
+| **`PhoneNumber`** | `<<Value Object>>` | Encapsula el código de país y número con validación propia. |
+| **`ClientStatus`** | `<<Enum>>` | Ciclo de vida: `ACTIVE`, `INACTIVE`, `RECURRING`. |
 
 ### 4. Appointment Management (Gestión de Citas)
 
 | Clase / Elemento | Estereotipo | Descripción y Comportamiento |
 | :--- | :--- | :--- |
-| **`Appointment`** | `<<Aggregate Root>>` | El núcleo transaccional. Protege las reglas de reserva y cambios de horario.<br>**Atributos:**<br>`- id: Long`<br>`- clientId: Long`<br>`- businessId: Long`<br>`- serviceId: Long`<br>**Métodos:**<br>`+ confirm(): void`<br>`+ cancel(reason: String): void`<br>`+ reschedule(newTimeSlot: TimeSlot): void`<br>`+ markAsMissed(): void` |
-| **`AppointmentNote`** | `<<Entity>>` | Anotaciones adjuntas a una cita específica.<br>**Atributos:**<br>`- id: Long`<br>`- content: String`<br>`- createdAt: DateTime` |
-| **`AppointmentDateTime`** | `<<Value Object>>` | Objeto inmutable de la fecha de la cita.<br>**Atributos:**<br>`- scheduledDate: Date`<br>**Métodos:**<br>`+ isPast(): boolean` - Evalúa si la fecha ya transcurrió. |
-| **`TimeSlot`** | `<<Value Object>>` | El bloque de tiempo exacto que consume la cita en la agenda.<br>**Atributos:**<br>`- startTime: Time`<br>`- endTime: Time`<br>**Métodos:**<br>`+ isAvailable(): boolean` |
-| **`AppointmentStatus`** | `<<Enum>>` | Estados estrictos: `PENDING`, `CONFIRMED`, `CANCELLED`, `MISSED`. |
+| **`Appointment`** | `<<Aggregate Root>>` | **Entidad Crítica.** Controla las transiciones de estado de la reserva.<br>**Atributos:** `- id: Long`, `- clientId: Long`, `- businessId: Long`, **`- status: AppointmentStatus`**, `- timeSlot: TimeSlot`.<br>**Métodos:** `+ confirm()`, `+ cancel(reason: String)`, `+ reschedule(newSlot: TimeSlot)`, `+ markAsMissed()` |
+| **`TimeSlot`** | `<<Value Object>>` | Bloque de tiempo inmutable. Un cambio de hora genera un nuevo objeto.<br>**Atributos:** `- startTime: Time`, `- endTime: Time` |
+| **`AppointmentDateTime`** | `<<Value Object>>` | Envuelve la fecha de la cita con lógica de validación temporal. |
+| **`AppointmentStatus`** | `<<Enum>>` | Estados permitidos: `PENDING`, `CONFIRMED`, `CANCELLED`, `MISSED`. |
 
 ### 5. Notification / Reminder (Recordatorios)
 
 | Clase / Elemento | Estereotipo | Descripción y Comportamiento |
 | :--- | :--- | :--- |
-| **`Reminder`** | `<<Aggregate Root>>` | Controla los intentos de comunicación saliente automatizada.<br>**Atributos:**<br>`- id: Long`<br>`- appointmentId: Long`<br>`- messageContent: String`<br>**Métodos:**<br>`+ scheduleFor(appointment: Appointment): void` |
-| **`ReminderSchedule`** | `<<Entity>>` | Reglas de recurrencia del recordatorio.<br>**Atributos:**<br>`- id: Long`<br>`- isRecurring: boolean` |
-| **`ReminderTime`** | `<<Value Object>>` | Fecha y hora de ejecución considerando zona horaria.<br>**Atributos:**<br>`- executeAt: DateTime`<br>`- timezone: String` |
-| **`ReminderStatus`** | `<<Enum>>` | Flujo de envío: `PENDING`, `SENT`, `FAILED`. |
-| **`ReminderChannel`** | `<<Enum>>` | Vías de contacto: `EMAIL`, `SMS`, `WHATSAPP`. |
+| **`Reminder`** | `<<Aggregate Root>>` | Gestiona el envío de alertas automáticas.<br>**Atributos:** `- id: Long`, **`- status: ReminderStatus`**, **`- channel: ReminderChannel`**.<br>**Métodos:** `+ scheduleFor(appointment: Appointment): void` |
+| **`ReminderSchedule`** | `<<Entity>>` | Determina el momento exacto y la recurrencia del envío. |
+| **`ReminderStatus`** | `<<Enum>>` | Flujo de entrega: `PENDING`, `SENT`, `FAILED`. |
+| **`ReminderChannel`** | `<<Enum>>` | Vías: `EMAIL`, `SMS`, `WHATSAPP`. |
 
-### 6. Reporting (Reportes Analíticos)
-
-*Este contexto implementa el patrón de Read Models (Modelos de Lectura) para extraer inteligencia de negocio sin afectar la consistencia transaccional de los Aggregate Roots.*
+### 6. Reporting (Reportes Operativos)
 
 | Clase / Elemento | Estereotipo | Descripción y Comportamiento |
 | :--- | :--- | :--- |
-| **`DailyPanel`** | `<<Read Model>>` | Resumen operativo diario del negocio.<br>**Atributos:**<br>`- date: Date`, `- totalConfirmed: int`, `- totalPending: int`, `- totalMissed: int`<br>**Métodos:**<br>`+ generateSummary(): void` |
-| **`DailyAgenda`** | `<<Read Model>>` | Extrae las citas ordenadas cronológicamente para un día.<br>**Atributos:**<br>`- date: Date`<br>**Métodos:**<br>`+ getChronologicalAppointments(): List<Appointment>` |
-| **`WeeklyAgenda`** | `<<Read Model>>` | Vista semanal para la matriz de programación de la interfaz.<br>**Atributos:**<br>`- startDate: Date`, `- endDate: Date`<br>**Métodos:**<br>`+ getAppointmentsByTimeSlot(): Map` |
+| **`DailyPanel`** | `<<Read Model>>` | Objeto de solo lectura para el panel operativo diario. |
+| **`DailyAgenda`** | `<<Read Model>>` | Vista consolidada cronológicamente de las citas del día actual. |
+| **`WeeklyAgenda`** | `<<Read Model>>` | Proyección semanal de la ocupación de la agenda. |
 
 ---
 
 ## Control de Consistencia y Reglas de Dominio (Business Rules)
 
-En el diseño de Impulso 360, no se permite la modificación directa de los atributos de las entidades (como el uso de `setStatus()`). En su lugar, se aplica el patrón **Aggregate Root**, donde una entidad principal actúa como la "puerta de enlace" exclusiva para modificar los datos internos, garantizando que siempre se cumplan las reglas de consistencia (invariantes) antes de realizar cualquier cambio en la base de datos.
-
-A continuación, se detalla qué entidad controla la consistencia en cada contexto y cuáles son sus reglas de estado:
+En el diseño de **Impulso 360**, no se permite la modificación directa de los atributos de las entidades (como el uso de `setStatus()`). En su lugar, se aplica el patrón **Aggregate Root**, donde una entidad principal actúa como la "puerta de enlace" exclusiva para modificar los datos internos, garantizando que siempre se cumplan las reglas de consistencia (invariantes) antes de realizar cualquier cambio en la base de datos.
 
 ### A. Aggregate Root: `Appointment` (Cita)
 La entidad `Appointment` es la responsable absoluta de la consistencia de una reserva. Ningún servicio externo puede cambiar su estado de forma arbitraria; debe invocar los métodos de comportamiento de la clase, los cuales evalúan las siguientes reglas de estado:
