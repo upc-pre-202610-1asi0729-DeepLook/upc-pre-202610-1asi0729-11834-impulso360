@@ -859,3 +859,33 @@ Landing Page:
     </tr>
   </tbody>
 </table>
+
+#### 5.2.1.4. Development Evidence for Sprint Review.
+
+Durante el Sprint 2, el equipo avanzó en la implementación del frontend de Impulso360. Se desarrollaron las secciones principales, incluyendo el panel general, agenda, clientes, servicios, perfil, ayuda y notificaciones. Estos avances fueron registrados en GitHub mediante commits realizados en ramas feature, siguiendo GitFlow y Conventional Commits.
+
+| Repository          | Branch | Commit Id | Commit Message | Commited on (Date) |
+|---------------------|--------|-----------|----------------|--------------------|
+| impulso360-frontend |        |           |                |                    |
+| impulso360-frontend |        |           |                |                    |
+| impulso360-frontend |        |           |                |                    |
+
+#### 5.2.2.5. Execution Evidence for Sprint Review.
+Durante la ejecución del Sprint 2 se completaron satisfactoriamente los objetivos planteados para el desarrollo del frontend principal de Impulso360. Se implementaron las secciones clave de la aplicación, consolidando una base funcional e intuitiva para la gestión digital de negocios de servicios.
+
+Las principales secciones desarrolladas son:
+
+- Panel general del negocio
+//imagenes de la app 
+- Ayuda y soporte básico
+  //imagenes de la app
+- Agenda digital
+- Gestión de clientes
+- Perfil del negocio
+- Gestión de servicios
+- Notificaciones y reportes
+#### 5.2.2.6. Services Documentation Evidence for Sprint Review
+
+#### 5.2.2.7. Software Deployment Evidence for Sprint Review
+
+#### 5.2.2.8. Team Collaboration Insights during Sprint
