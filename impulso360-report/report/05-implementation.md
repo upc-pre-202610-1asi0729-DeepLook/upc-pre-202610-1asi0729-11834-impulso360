@@ -606,7 +606,7 @@ Landing Page:
 
 #### 5.2.2.2. Aspect Leaders and Collaborators.
 
-| Team Member | GitHub Username |Panel General + Ayuda| Agenda | Clientes | Perfil del Negocio + Servicios | Notificaciones + Reportes |
+| Team Member | GitHub Username |Panel General + Ayuda| Agenda | Clientes | Perfil del Negocio + Servicios | Notificaciones |
 | :---- | :---- | :---- | :---- |:---------|:-------------------------------|:--------------------------|
 | Merino Ordinola, Winnie Lisbeth | winniemerino | C | C | C        | L                              | C                         |
 | Sandoval Cueto, Fabian Jesus | JFabianSandoval | C | C | C        | C                              | L                         |
@@ -876,14 +876,12 @@ Durante la ejecución del Sprint 2 se completaron satisfactoriamente los objetiv
 Las principales secciones desarrolladas son:
 
 - Panel general del negocio
-//imagenes de la app 
 - Ayuda y soporte básico
-  //imagenes de la app
 - Agenda digital
 - Gestión de clientes
 - Perfil del negocio
 - Gestión de servicios
-- Notificaciones y reportes
+- Notificaciones
 #### 5.2.2.6. Services Documentation Evidence for Sprint Review
 
 #### 5.2.2.7. Software Deployment Evidence for Sprint Review
