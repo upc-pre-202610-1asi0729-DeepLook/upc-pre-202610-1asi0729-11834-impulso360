@@ -603,3 +603,14 @@ Landing Page:
 | Sprint 1 Goal | Nuestro enfoque es desarrollar el frontend de la aplicación web de Impulso360. Creemos que una interfaz intuitiva y organizada permitirá a los emprendedores gestionar sus citas, clientes y servicios de manera sencilla. Esto se confirmará cuando los usuarios puedan navegar correctamente entre los módulos principales de la plataforma. |
 | Sprint 1 Velocity | 35 Story Points                                                                                                                                                                                                                                                                                                                                |
 | Sum of Story Points | 35 Story Points                                                                                                                                                                                                                                                                                                                                 |
+
+#### 5.2.2.2. Aspect Leaders and Collaborators.
+
+| Team Member | GitHub Username |Panel General + Ayuda| Agenda | Clientes | Perfil del Negocio + Servicios | Notificaciones + Reportes |
+| :---- | :---- | :---- | :---- |:---------|:-------------------------------|:--------------------------|
+| Merino Ordinola, Winnie Lisbeth | winniemerino | C | C | C        | L                              | C                         |
+| Sandoval Cueto, Fabian Jesus | JFabianSandoval | C | C | C        | C                              | L                         |
+| Jave Chang, Alejandro Manuel | alejandro202312510 | C | L | C        | C                              | C                         |
+| Ramos Cerdan, Elias Daniel | eliocerdan | L | C | C        | C                              | C                         |
+| Tirado Carrera, Gabriela Luciana | Gaby0443 | C | C | L        | C                              | C                         |
+
