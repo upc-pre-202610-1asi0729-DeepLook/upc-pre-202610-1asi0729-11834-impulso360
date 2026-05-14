@@ -626,8 +626,6 @@ Una vez dentro de la aplicación, el sistema se vuelve funcional y eficiente, co
 
 ![UserFlow8](../assets/imagenes/userflows/userflow-8.png)
 
-
-
 ---
 
 ## 4.5. Web Applications Prototyping
@@ -643,9 +641,17 @@ Una vez dentro de la aplicación, el sistema se vuelve funcional y eficiente, co
 Link de la herramienta Miro:
 https://miro.com/app/board/uXjVHcT2IXY=/?share_link_id=761504321242
 
-![boundedcontext1](../assets/imagenes/needfinding/bounded-context-1.png)
+![boundedcontext1](../assets/imagenes/domain-driver-software-architecture/bounded-context-business-profile.png)
 
-![boundedcontext2](../assets/imagenes/needfinding/bounded-context-2.png)
+![boundedcontext2](../assets/imagenes/domain-driver-software-architecture/bounded-context-appointment-management.png)
+
+![boundedcontext3](../assets/imagenes/domain-driver-software-architecture/bounded-context-customer-managment.png)
+
+![boundedcontext4](../assets/imagenes/domain-driver-software-architecture/bounded-context-iam.png)
+
+![boundedcontext5](../assets/imagenes/domain-driver-software-architecture/bounded-context-reminder.png)
+
+![boundedcontext6](../assets/imagenes/domain-driver-software-architecture/bounded-context-reporting.png)
 
 ### 4.6.2. Software Architecture Context Diagram
 
@@ -681,58 +687,58 @@ En el diseño de **Impulso 360**, se utiliza el enfoque de **Domain-Driven Desig
 
 ### 1. IAM (Gestión de Identidad y Acceso)
 
-| Clase / Elemento | Estereotipo | Descripción y Comportamiento |
-| :--- | :--- | :--- |
-| **`UserAccount`** | `<<Aggregate Root>>` | Punto de entrada para la seguridad. Centraliza credenciales y roles.<br>**Atributos:** `- id: Long`, `- username: String`, `- passwordHash: String`, **`- role: Role`**.<br>**Métodos:** `+ authenticate(rawPass: String): boolean` |
-| **`RoleAssignment`** | `<<Entity>>` | Entidad que rastrea la asignación histórica de un rol a un usuario.<br>**Atributos:** `- id: Long`, **`- role: Role`**, `- assignedAt: DateTime` |
-| **`Email`** | `<<Value Object>>` | Encapsula la lógica de validación de correo electrónico (Inmutable).<br>**Atributos:** `- address: String` |
-| **`Role`** | `<<Enum>>` | Define los tipos de usuario: `OWNER`, `ADMINISTRATOR`, `STAFF`, `CLIENT`. |
+| Clase / Elemento     | Estereotipo          | Descripción y Comportamiento                                                                                                                                                                                                        |
+| :------------------- | :------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **`UserAccount`**    | `<<Aggregate Root>>` | Punto de entrada para la seguridad. Centraliza credenciales y roles.<br>**Atributos:** `- id: Long`, `- username: String`, `- passwordHash: String`, **`- role: Role`**.<br>**Métodos:** `+ authenticate(rawPass: String): boolean` |
+| **`RoleAssignment`** | `<<Entity>>`         | Entidad que rastrea la asignación histórica de un rol a un usuario.<br>**Atributos:** `- id: Long`, **`- role: Role`**, `- assignedAt: DateTime`                                                                                    |
+| **`Email`**          | `<<Value Object>>`   | Encapsula la lógica de validación de correo electrónico (Inmutable).<br>**Atributos:** `- address: String`                                                                                                                          |
+| **`Role`**           | `<<Enum>>`           | Define los tipos de usuario: `OWNER`, `ADMINISTRATOR`, `STAFF`, `CLIENT`.                                                                                                                                                           |
 
 ### 2. Business Profile (Perfil del Negocio)
 
-| Clase / Elemento | Estereotipo | Descripción y Comportamiento |
-| :--- | :--- | :--- |
-| **`BusinessProfile`** | `<<Aggregate Root>>` | Entidad raíz que controla la presencia digital y el catálogo de servicios.<br>**Atributos:** `- id: Long`, `- name: BusinessName`, `- address: Address`, `- isPublished: boolean`.<br>**Métodos:** `+ publishService(service: Service): void` |
-| **`Service`** | `<<Entity>>` | Representa una prestación ofrecida. Posee identidad propia.<br>**Atributos:** `- id: Long`, `- name: String`, `- price: Price`, **`- status: ServiceStatus`**, **`- category: ServiceCategory`**, `- isFeatured: boolean`.<br>**Métodos:** `+ updatePrice(newPrice: Price): void`, `+ setFeatured(featured: boolean): void` |
-| **`BusinessName`** | `<<Value Object>>` | Agrupa el nombre legal y comercial del negocio. |
-| **`Price`** | `<<Value Object>>` | Garantiza que el monto y la moneda siempre se manejen juntos. |
-| **`ServiceStatus`** | `<<Enum>>` | Indica si el servicio está `ACTIVE` o `INACTIVE`. |
-| **`ServiceCategory`** | `<<Enum>>` | Clasificación temática: `VETERINARIA`, `ESTETICA`, `PREVENCION`, `CIRUGIA`. |
+| Clase / Elemento      | Estereotipo          | Descripción y Comportamiento                                                                                                                                                                                                                                                                                                |
+| :-------------------- | :------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **`BusinessProfile`** | `<<Aggregate Root>>` | Entidad raíz que controla la presencia digital y el catálogo de servicios.<br>**Atributos:** `- id: Long`, `- name: BusinessName`, `- address: Address`, `- isPublished: boolean`.<br>**Métodos:** `+ publishService(service: Service): void`                                                                               |
+| **`Service`**         | `<<Entity>>`         | Representa una prestación ofrecida. Posee identidad propia.<br>**Atributos:** `- id: Long`, `- name: String`, `- price: Price`, **`- status: ServiceStatus`**, **`- category: ServiceCategory`**, `- isFeatured: boolean`.<br>**Métodos:** `+ updatePrice(newPrice: Price): void`, `+ setFeatured(featured: boolean): void` |
+| **`BusinessName`**    | `<<Value Object>>`   | Agrupa el nombre legal y comercial del negocio.                                                                                                                                                                                                                                                                             |
+| **`Price`**           | `<<Value Object>>`   | Garantiza que el monto y la moneda siempre se manejen juntos.                                                                                                                                                                                                                                                               |
+| **`ServiceStatus`**   | `<<Enum>>`           | Indica si el servicio está `ACTIVE` o `INACTIVE`.                                                                                                                                                                                                                                                                           |
+| **`ServiceCategory`** | `<<Enum>>`           | Clasificación temática: `VETERINARIA`, `ESTETICA`, `PREVENCION`, `CIRUGIA`.                                                                                                                                                                                                                                                 |
 
 ### 3. Customer Management (Gestión de Clientes)
 
-| Clase / Elemento | Estereotipo | Descripción y Comportamiento |
-| :--- | :--- | :--- |
-| **`Client`** | `<<Aggregate Root>>` | Raíz que protege la información del consumidor final y su historial.<br>**Atributos:** `- id: Long`, `- firstName: String`, `- lastName: String`, **`- status: ClientStatus`**.<br>**Métodos:** `+ updateContactInfo(email: Email, phone: PhoneNumber): void` |
-| **`ClientContactInfo`** | `<<Entity>>` | Permite gestionar múltiples medios de contacto por cliente. |
-| **`PhoneNumber`** | `<<Value Object>>` | Encapsula el código de país y número con validación propia. |
-| **`ClientStatus`** | `<<Enum>>` | Ciclo de vida: `ACTIVE`, `INACTIVE`, `RECURRING`. |
+| Clase / Elemento        | Estereotipo          | Descripción y Comportamiento                                                                                                                                                                                                                                  |
+| :---------------------- | :------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **`Client`**            | `<<Aggregate Root>>` | Raíz que protege la información del consumidor final y su historial.<br>**Atributos:** `- id: Long`, `- firstName: String`, `- lastName: String`, **`- status: ClientStatus`**.<br>**Métodos:** `+ updateContactInfo(email: Email, phone: PhoneNumber): void` |
+| **`ClientContactInfo`** | `<<Entity>>`         | Permite gestionar múltiples medios de contacto por cliente.                                                                                                                                                                                                   |
+| **`PhoneNumber`**       | `<<Value Object>>`   | Encapsula el código de país y número con validación propia.                                                                                                                                                                                                   |
+| **`ClientStatus`**      | `<<Enum>>`           | Ciclo de vida: `ACTIVE`, `INACTIVE`, `RECURRING`.                                                                                                                                                                                                             |
 
 ### 4. Appointment Management (Gestión de Citas)
 
-| Clase / Elemento | Estereotipo | Descripción y Comportamiento |
-| :--- | :--- | :--- |
-| **`Appointment`** | `<<Aggregate Root>>` | **Entidad Crítica.** Controla las transiciones de estado de la reserva.<br>**Atributos:** `- id: Long`, `- clientId: Long`, `- businessId: Long`, **`- status: AppointmentStatus`**, `- timeSlot: TimeSlot`.<br>**Métodos:** `+ confirm()`, `+ cancel(reason: String)`, `+ reschedule(newSlot: TimeSlot)`, `+ markAsMissed()` |
-| **`TimeSlot`** | `<<Value Object>>` | Bloque de tiempo inmutable. Un cambio de hora genera un nuevo objeto.<br>**Atributos:** `- startTime: Time`, `- endTime: Time` |
-| **`AppointmentDateTime`** | `<<Value Object>>` | Envuelve la fecha de la cita con lógica de validación temporal. |
-| **`AppointmentStatus`** | `<<Enum>>` | Estados permitidos: `PENDING`, `CONFIRMED`, `CANCELLED`, `MISSED`. |
+| Clase / Elemento          | Estereotipo          | Descripción y Comportamiento                                                                                                                                                                                                                                                                                                  |
+| :------------------------ | :------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **`Appointment`**         | `<<Aggregate Root>>` | **Entidad Crítica.** Controla las transiciones de estado de la reserva.<br>**Atributos:** `- id: Long`, `- clientId: Long`, `- businessId: Long`, **`- status: AppointmentStatus`**, `- timeSlot: TimeSlot`.<br>**Métodos:** `+ confirm()`, `+ cancel(reason: String)`, `+ reschedule(newSlot: TimeSlot)`, `+ markAsMissed()` |
+| **`TimeSlot`**            | `<<Value Object>>`   | Bloque de tiempo inmutable. Un cambio de hora genera un nuevo objeto.<br>**Atributos:** `- startTime: Time`, `- endTime: Time`                                                                                                                                                                                                |
+| **`AppointmentDateTime`** | `<<Value Object>>`   | Envuelve la fecha de la cita con lógica de validación temporal.                                                                                                                                                                                                                                                               |
+| **`AppointmentStatus`**   | `<<Enum>>`           | Estados permitidos: `PENDING`, `CONFIRMED`, `CANCELLED`, `MISSED`.                                                                                                                                                                                                                                                            |
 
 ### 5. Notification / Reminder (Recordatorios)
 
-| Clase / Elemento | Estereotipo | Descripción y Comportamiento |
-| :--- | :--- | :--- |
-| **`Reminder`** | `<<Aggregate Root>>` | Gestiona el envío de alertas automáticas.<br>**Atributos:** `- id: Long`, **`- status: ReminderStatus`**, **`- channel: ReminderChannel`**.<br>**Métodos:** `+ scheduleFor(appointment: Appointment): void` |
-| **`ReminderSchedule`** | `<<Entity>>` | Determina el momento exacto y la recurrencia del envío. |
-| **`ReminderStatus`** | `<<Enum>>` | Flujo de entrega: `PENDING`, `SENT`, `FAILED`. |
-| **`ReminderChannel`** | `<<Enum>>` | Vías: `EMAIL`, `SMS`, `WHATSAPP`. |
+| Clase / Elemento       | Estereotipo          | Descripción y Comportamiento                                                                                                                                                                                |
+| :--------------------- | :------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **`Reminder`**         | `<<Aggregate Root>>` | Gestiona el envío de alertas automáticas.<br>**Atributos:** `- id: Long`, **`- status: ReminderStatus`**, **`- channel: ReminderChannel`**.<br>**Métodos:** `+ scheduleFor(appointment: Appointment): void` |
+| **`ReminderSchedule`** | `<<Entity>>`         | Determina el momento exacto y la recurrencia del envío.                                                                                                                                                     |
+| **`ReminderStatus`**   | `<<Enum>>`           | Flujo de entrega: `PENDING`, `SENT`, `FAILED`.                                                                                                                                                              |
+| **`ReminderChannel`**  | `<<Enum>>`           | Vías: `EMAIL`, `SMS`, `WHATSAPP`.                                                                                                                                                                           |
 
 ### 6. Reporting (Reportes Operativos)
 
-| Clase / Elemento | Estereotipo | Descripción y Comportamiento |
-| :--- | :--- | :--- |
-| **`DailyPanel`** | `<<Read Model>>` | Objeto de solo lectura para el panel operativo diario. |
-| **`DailyAgenda`** | `<<Read Model>>` | Vista consolidada cronológicamente de las citas del día actual. |
-| **`WeeklyAgenda`** | `<<Read Model>>` | Proyección semanal de la ocupación de la agenda. |
+| Clase / Elemento   | Estereotipo      | Descripción y Comportamiento                                    |
+| :----------------- | :--------------- | :-------------------------------------------------------------- |
+| **`DailyPanel`**   | `<<Read Model>>` | Objeto de solo lectura para el panel operativo diario.          |
+| **`DailyAgenda`**  | `<<Read Model>>` | Vista consolidada cronológicamente de las citas del día actual. |
+| **`WeeklyAgenda`** | `<<Read Model>>` | Proyección semanal de la ocupación de la agenda.                |
 
 ---
 
@@ -741,26 +747,31 @@ En el diseño de **Impulso 360**, se utiliza el enfoque de **Domain-Driven Desig
 En el diseño de **Impulso 360**, no se permite la modificación directa de los atributos de las entidades (como el uso de `setStatus()`). En su lugar, se aplica el patrón **Aggregate Root**, donde una entidad principal actúa como la "puerta de enlace" exclusiva para modificar los datos internos, garantizando que siempre se cumplan las reglas de consistencia (invariantes) antes de realizar cualquier cambio en la base de datos.
 
 ### A. Aggregate Root: `Appointment` (Cita)
+
 La entidad `Appointment` es la responsable absoluta de la consistencia de una reserva. Ningún servicio externo puede cambiar su estado de forma arbitraria; debe invocar los métodos de comportamiento de la clase, los cuales evalúan las siguientes reglas de estado:
 
 **Reglas de Transición y Consistencia:**
-* **Creación (`schedule`):** Una cita solo puede nacer en estado `PENDING`. **Regla:** El `TimeSlot` proporcionado debe ser una fecha y hora en el futuro. No se pueden agendar citas en el pasado.
-* **Confirmación (`confirm()`):** Transiciona de `PENDING` a `CONFIRMED`. **Regla:** Una cita no puede confirmarse si ya se encuentra en estado `CANCELLED` o `MISSED`.
-* **Cancelación (`cancel(reason)`):** Transiciona a `CANCELLED`. **Regla:** Exige obligatoriamente un parámetro `reason` (motivo de cancelación). Una vez cancelada, el `TimeSlot` asociado se libera para que el `BusinessProfile` pueda recibir otra reserva. Es un estado terminal (no se puede des-cancelar).
-* **Inasistencia (`markAsMissed()`):** Transiciona de `CONFIRMED` a `MISSED`. **Regla:** Este método solo puede ejecutarse si el `AppointmentDateTime` (fecha de la cita) ya está en el pasado (evaluado mediante `isPast()`). No se puede marcar como inasistencia una cita que aún no ha ocurrido.
-* **Reprogramación (`reschedule(newTimeSlot)`):** **Regla:** El nuevo `TimeSlot` debe estar disponible en la agenda del negocio. Al reprogramar, si la cita estaba `CONFIRMED`, su estado se revierte a `PENDING` para requerir una nueva confirmación de la otra parte.
+
+- **Creación (`schedule`):** Una cita solo puede nacer en estado `PENDING`. **Regla:** El `TimeSlot` proporcionado debe ser una fecha y hora en el futuro. No se pueden agendar citas en el pasado.
+- **Confirmación (`confirm()`):** Transiciona de `PENDING` a `CONFIRMED`. **Regla:** Una cita no puede confirmarse si ya se encuentra en estado `CANCELLED` o `MISSED`.
+- **Cancelación (`cancel(reason)`):** Transiciona a `CANCELLED`. **Regla:** Exige obligatoriamente un parámetro `reason` (motivo de cancelación). Una vez cancelada, el `TimeSlot` asociado se libera para que el `BusinessProfile` pueda recibir otra reserva. Es un estado terminal (no se puede des-cancelar).
+- **Inasistencia (`markAsMissed()`):** Transiciona de `CONFIRMED` a `MISSED`. **Regla:** Este método solo puede ejecutarse si el `AppointmentDateTime` (fecha de la cita) ya está en el pasado (evaluado mediante `isPast()`). No se puede marcar como inasistencia una cita que aún no ha ocurrido.
+- **Reprogramación (`reschedule(newTimeSlot)`):** **Regla:** El nuevo `TimeSlot` debe estar disponible en la agenda del negocio. Al reprogramar, si la cita estaba `CONFIRMED`, su estado se revierte a `PENDING` para requerir una nueva confirmación de la otra parte.
 
 ### B. Aggregate Root: `BusinessProfile` (Perfil del Negocio)
+
 Es la entidad responsable de controlar la consistencia de su catálogo comercial y su visibilidad digital.
 
-* **Publicación de Servicios (`publishService(Service)`):** **Regla:** Antes de agregar un `Service` a su lista interna, el perfil valida que el servicio tenga un `Price` mayor a 0 y una categoría asignada.
-* **Regla de Destacados:** El `BusinessProfile` controla que no puedan existir más de 3 servicios con la etiqueta `isFeatured = true` simultáneamente. Si se intenta destacar un cuarto servicio, el Aggregate lanza una excepción de dominio.
+- **Publicación de Servicios (`publishService(Service)`):** **Regla:** Antes de agregar un `Service` a su lista interna, el perfil valida que el servicio tenga un `Price` mayor a 0 y una categoría asignada.
+- **Regla de Destacados:** El `BusinessProfile` controla que no puedan existir más de 3 servicios con la etiqueta `isFeatured = true` simultáneamente. Si se intenta destacar un cuarto servicio, el Aggregate lanza una excepción de dominio.
 
 ### C. Aggregate Root: `Client` (Cliente)
+
 Responsable de mantener la integridad de sus datos de contacto y su estado comercial frente a los negocios.
 
-* **Actualización de Contacto (`updateContactInfo(Email, PhoneNumber)`):** **Regla:** El Aggregate no acepta cadenas de texto crudas. Exige objetos de valor (*Value Objects*) previamente validados. El `Email` verifica internamente que tenga formato válido (regex), y el `PhoneNumber` verifica que tenga un código de país correcto.
-* **Transición de Estado:** El cliente pasa de `ACTIVE` a `INACTIVE` automáticamente si la fecha de su última cita registrada supera los 6 meses de antigüedad.
+- **Actualización de Contacto (`updateContactInfo(Email, PhoneNumber)`):** **Regla:** El Aggregate no acepta cadenas de texto crudas. Exige objetos de valor (_Value Objects_) previamente validados. El `Email` verifica internamente que tenga formato válido (regex), y el `PhoneNumber` verifica que tenga un código de país correcto.
+- **Transición de Estado:** El cliente pasa de `ACTIVE` a `INACTIVE` automáticamente si la fecha de su última cita registrada supera los 6 meses de antigüedad.
+
 ---
 
 ## 4.8. Database Design
