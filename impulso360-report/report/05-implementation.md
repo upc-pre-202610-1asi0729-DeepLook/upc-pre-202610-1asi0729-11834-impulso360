@@ -614,3 +614,248 @@ Landing Page:
 | Ramos Cerdan, Elias Daniel | eliocerdan | L | C | C        | C                              | C                         |
 | Tirado Carrera, Gabriela Luciana | Gaby0443 | C | C | L        | C                              | C                         |
 
+#### 5.2.2.3. Sprint Backlog 2.
+<table>
+  <thead>
+    <tr>
+      <th>Sprint #</th>
+      <th colspan="7">Sprint 2</th>
+    </tr>
+    <tr>
+      <th colspan="2">User Story</th>
+      <th colspan="6">Work-Item / Task</th>
+    </tr>
+    <tr>
+      <th>id</th>
+      <th>Title</th>
+      <th>id</th>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Estimation<br>(Hours)</th>
+      <th>Assigned To</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="4">US22</td>
+      <td rowspan="4">Panel general del negocio</td>
+      <td>T01</td>
+      <td>Implementar layout principal del dashboard</td>
+      <td>Crear la estructura base del dashboard con sidebar, header superior y contenedor principal.</td>
+      <td>3</td>
+      <td>Elias Ramos Cerdan</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T02</td>
+      <td>Implementar tarjetas resumen del panel</td>
+      <td>Crear las cards de “Citas hoy”, “Confirmadas”, “Pendientes” y “Clientes activos”.</td>
+      <td>2</td>
+      <td>Elias Ramos Cerdan</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T03</td>
+      <td>Implementar sección “Citas del día”</td>
+      <td>Desarrollar listado de citas con estados, acciones rápidas y filtros.</td>
+      <td>3</td>
+      <td>Elias Ramos Cerdan</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T04</td>
+      <td>Implementar calendario lateral y alerta rápida</td>
+      <td>Agregar calendario compacto y card lateral de próxima cita.</td>
+      <td>2</td>
+      <td>Elias Ramos Cerdan</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td rowspan="4">US16</td>
+      <td rowspan="4">Soporte Básico</td>
+      <td>T05</td>
+      <td>Implementar vista principal de ayuda</td>
+      <td>Crear interfaz principal de ayuda con diseño dividido y buscador central.</td>
+      <td>2</td>
+      <td>Elias Ramos Cerdan</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T06</td>
+      <td>Crear módulo de tutorial interactivo</td>
+      <td>Implementar checklist/tutorial de onboarding con progreso de usuario.</td>
+      <td>2</td>
+      <td>Elias Ramos Cerdan</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T07</td>
+      <td>Implementar preguntas frecuentes</td>
+      <td>Agregar acordeón de preguntas frecuentes y respuestas rápidas.</td>
+      <td>2</td>
+      <td>Elias Ramos Cerdan</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T08</td>
+      <td>Crear sección de guías rápidas</td>
+      <td>Implementar tarjetas de tutoriales rápidos con categorías e iconos.</td>
+      <td>2</td>
+      <td>Elias Ramos Cerdan</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td rowspan="3">US01</td>
+      <td rowspan="3">Visualización digital de citas</td>
+      <td>T09</td>
+      <td>Implementar vista semanal de agenda</td>
+      <td>Crear calendario semanal con distribución horaria de citas.</td>
+      <td>4</td>
+      <td>Alejandro Jave</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T10</td>
+      <td>Implementar filtros de agenda</td>
+      <td>Agregar filtros por estado de cita y vistas diaria, semanal y mensual.</td>
+      <td>2</td>
+      <td>Alejandro Jave</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T11</td>
+      <td>Implementar panel lateral de citas</td>
+      <td>Mostrar detalle diario de citas y próximas citas en sidebar derecho.</td>
+      <td>2</td>
+      <td>Alejandro Jave</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td rowspan="2">US04</td>
+      <td rowspan="2">Registro de datos de clientes</td>
+      <td>T12</td>
+      <td>Implementar tabla principal de clientes</td>
+      <td>Crear tabla de clientes con columnas de contacto, citas y estado.</td>
+      <td>3</td>
+      <td>Gabriela Tirado</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T13</td>
+      <td>Implementar buscador y filtros de clientes</td>
+      <td>Agregar búsqueda por nombre o teléfono y botón de filtros.</td>
+      <td>2</td>
+      <td>Gabriela Tirado</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td rowspan="1">US08</td>
+      <td rowspan="1">Historial por cliente</td>
+      <td>T14</td>
+      <td>Implementar panel lateral de historial</td>
+      <td>Crear sección lateral con historial detallado de citas por cliente.</td>
+      <td>2</td>
+      <td>Gabriela Tirado</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td rowspan="2">US11</td>
+      <td rowspan="2">Perfil digital</td>
+      <td>T15</td>
+      <td>Implementar vista de perfil del negocio</td>
+      <td>Crear formulario editable de datos generales del negocio y portada.</td>
+      <td>3</td>
+      <td>Winnie Merino</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T16</td>
+      <td>Implementar vista previa del perfil público</td>
+      <td>Agregar preview lateral del perfil digital y enlace compartible.</td>
+      <td>2</td>
+      <td>Winnie Merino</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td rowspan="1">US24</td>
+      <td rowspan="1">Edición de perfil del negocio</td>
+      <td>T17</td>
+      <td>Implementar configuración de horarios</td>
+      <td>Crear sección editable de horarios de atención semanales.</td>
+      <td>2</td>
+      <td>Winnie Merino</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td rowspan="3">US26</td>
+      <td rowspan="3">Registro de servicios</td>
+      <td>T18</td>
+      <td>Implementar cards de servicios</td>
+      <td>Crear listado visual de servicios con categorías, precios y estados.</td>
+      <td>3</td>
+      <td>Winnie Merino</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T19</td>
+      <td>Implementar servicios destacados</td>
+      <td>Agregar lógica visual para destacar servicios y mostrar límite permitido.</td>
+      <td>2</td>
+      <td>Winnie Merino</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T20</td>
+      <td>Crear modal de nuevo servicio</td>
+      <td>Implementar formulario modal para registro y edición de servicios.</td>
+      <td>3</td>
+      <td>Winnie Merino</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td rowspan="3">US03</td>
+      <td rowspan="3">Alertas de citas</td>
+      <td>T21</td>
+      <td>Implementar módulo de notificaciones</td>
+      <td>Crear listado principal de notificaciones con estados visuales y acciones rápidas.</td>
+      <td>3</td>
+      <td>Fabian Sandoval</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T22</td>
+      <td>Implementar resumen diario de alertas</td>
+      <td>Agregar panel lateral con resumen de citas confirmadas, pendientes y canceladas.</td>
+      <td>2</td>
+      <td>Fabian Sandoval</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T23</td>
+      <td>Implementar configuración de alertas</td>
+      <td>Crear switches de configuración para alertas y recordatorios automáticos.</td>
+      <td>2</td>
+      <td>Fabian Sandoval</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td rowspan="2">US41</td>
+      <td rowspan="2">Internacionalización de la APP</td>
+      <td>T24</td>
+      <td>Preparar frontend para internacionalización</td>
+      <td>Separar textos principales de dashboard, agenda, clientes, servicios y notificaciones.</td>
+      <td>2</td>
+      <td>Todos</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T25</td>
+      <td>Implementar recursos ES/EN de la aplicación</td>
+      <td>Crear archivos de traducción y validar consistencia visual en ambos idiomas.</td>
+      <td>3</td>
+      <td>Todos</td>
+      <td>Done</td>
+    </tr>
+  </tbody>
+</table>
