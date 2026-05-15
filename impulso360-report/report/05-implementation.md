@@ -593,17 +593,17 @@ Landing Page:
 ###  5.2.2. Sprint 2
 #### 5.2.2.1. Sprint Planning 2.
 
-| Sprint \# | Sprint 2                                                                                                                                                                                                                                                                                                                                       |
-| :---- |:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Sprint \#                      | Sprint 2                                                                                                                                                                                                                                                                                                                                       |
+|:-------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Sprint Planning Background** |                                                                                                                                                                                                                                                                                                                                                |
-| Date | 06 \- 05 \- 2026                                                                                                                                                                                                                                                                                                                               |
-| Location | Reunión virtual via google meets                                                                                                                                                                                                                                                                                                               |
-| Prepared By | Grupo DeepLook                                                                                                                                                                                                                                                                                                                                 |
-| Attendees | Merino Ordinola, Winnie Lisbeth  Sandoval Cueto, Fabian Jesus  Jave Chang, Alejandro Manuel  Ramos Cerdan, Elias Daniel  Tirado Carrera, Gabriela Luciana                                                                                                                                                                                      |
+| Date                           | 06 \- 05 \- 2026                                                                                                                                                                                                                                                                                                                               |
+| Location                       | Reunión virtual via google meets                                                                                                                                                                                                                                                                                                               |
+| Prepared By                    | Grupo DeepLook                                                                                                                                                                                                                                                                                                                                 |
+| Attendees                      | Merino Ordinola, Winnie Lisbeth  Sandoval Cueto, Fabian Jesus  Jave Chang, Alejandro Manuel  Ramos Cerdan, Elias Daniel  Tirado Carrera, Gabriela Luciana                                                                                                                                                                                      |
 | **Sprint Goal & User Stories** |                                                                                                                                                                                                                                                                                                                                                |
-| Sprint 1 Goal | Nuestro enfoque es desarrollar el frontend de la aplicación web de Impulso360. Creemos que una interfaz intuitiva y organizada permitirá a los emprendedores gestionar sus citas, clientes y servicios de manera sencilla. Esto se confirmará cuando los usuarios puedan navegar correctamente entre los módulos principales de la plataforma. |
-| Sprint 1 Velocity | 35 Story Points                                                                                                                                                                                                                                                                                                                                |
-| Sum of Story Points | 35 Story Points                                                                                                                                                                                                                                                                                                                                 |
+| Sprint 2 Goal                  | Nuestro enfoque es desarrollar el frontend de la aplicación web de Impulso360. Creemos que una interfaz intuitiva y organizada permitirá a los emprendedores gestionar sus citas, clientes y servicios de manera sencilla. Esto se confirmará cuando los usuarios puedan navegar correctamente entre los módulos principales de la plataforma. |
+| Sprint 2 Velocity              | 35 Story Points                                                                                                                                                                                                                                                                                                                                |
+| Sum of Story Points            | 35 Story Points                                                                                                                                                                                                                                                                                                                                 |
 
 #### 5.2.2.2. Aspect Leaders and Collaborators.
 
@@ -861,7 +861,7 @@ Landing Page:
   </tbody>
 </table>
 
-#### 5.2.1.4. Development Evidence for Sprint Review.
+#### 5.2.2.4. Development Evidence for Sprint Review.
 
 Durante el Sprint 2, el equipo avanzó en la implementación del frontend de Impulso360. Se desarrollaron las secciones principales, incluyendo el panel general, agenda, clientes, servicios, perfil, ayuda y notificaciones. Estos avances fueron registrados en GitHub mediante commits realizados en ramas feature, siguiendo GitFlow y Conventional Commits.
 
@@ -879,14 +879,48 @@ Durante la ejecución del Sprint 2 se completaron satisfactoriamente los objetiv
 Las principales secciones desarrolladas son:
 
 - Panel general del negocio
+![Dashboard](../assets/imagenes/execution-evidence-sprint2/dashboard.png)
+![Dashboard](../assets/imagenes/execution-evidence-sprint2/dashboard2.png)
 - Ayuda y soporte básico
+![Ayuda](../assets/imagenes/execution-evidence-sprint2/ayuda.png)
+![Ayuda](../assets/imagenes/execution-evidence-sprint2/ayuda2.png)
 - Agenda digital
+![Agenda Digitar](../assets/imagenes/execution-evidence-sprint2/agenda.png)
+![Agenda Digitar](../assets/imagenes/execution-evidence-sprint2/agenda2.png)
 - Gestión de clientes
+![Clientes](../assets/imagenes/execution-evidence-sprint2/clientes.png)
+![Clientes](../assets/imagenes/execution-evidence-sprint2/clientes2.png)
 - Perfil del negocio
+![Perfil](../assets/imagenes/execution-evidence-sprint2/perfil.png)
+![Perfil](../assets/imagenes/execution-evidence-sprint2/perfil2.png)
 - Gestión de servicios
+![Servicios](../assets/imagenes/execution-evidence-sprint2/servicios.png)
+![Servicios](../assets/imagenes/execution-evidence-sprint2/servicios2.png)
 - Notificaciones
+![Servicios](../assets/imagenes/execution-evidence-sprint2/notificaciones.png)
 #### 5.2.2.6. Services Documentation Evidence for Sprint Review
+Durante el Sprint 2, no se desarrollaron Web Services ni endpoints documentados con OpenAPI, ya que el alcance principal de este avance estuvo enfocado en la implementación inicial del frontend de la aplicación. Para ello, se utilizaron TypeScript, HTML y CSS en Angular, con el objetivo de desarrollar las diferentes secciones del sistema, como agenda y clientes.
 
+Por este motivo, en el presente avance aún no se cuenta con documentación OpenAPI, ejemplos de request/response, parámetros de endpoints ni commits relacionados con servicios backend. La documentación de Web Services será desarrollada en los siguientes sprints, cuando se implemente el backend del sistema y se construyan los endpoints relacionados con autenticación, gestión de citas, gestión de clientes, servicios del negocio, perfil digital y recordatorios.
 #### 5.2.2.7. Software Deployment Evidence for Sprint Review
+El despliegue del frontend de la aplicación Impulso360 se realizó en firebase, de forma que sea accesible públicamente desde internet y que se actualice de forma automática cada vez que se realicen cambios en la rama principal del repositorio.
+**URL:https://impulso360-frontend.web.app/**
 
 #### 5.2.2.8. Team Collaboration Insights during Sprint
+
+Durante este sprint, el equipo se centró en la documentación e implementación del frontend de la aplicación. El trabajo se organizó mediante el uso de GitHub como herramienta principal para la colaboración y control de versiones. A continuación se presentan las colaboraciones y commits hechos tanto para el frontend como para el reporte.
+
+**Report:**
+![report-commit](../assets/imagenes/report-commits-sprint2/report-commit.png)
+![report-commit](../assets/imagenes/report-commits-sprint2/report-commit1.png)
+![report-commit](../assets/imagenes/report-commits-sprint2/report-commit2.png)
+![report-commit](../assets/imagenes/report-commits-sprint2/report-commit3.png)
+
+**Frontend de la aplicación**
+![frontend-commit](../assets/imagenes/frontend-commits/frontend-commit.png)
+![frontend-commit](../assets/imagenes/frontend-commits/frontend-commit1.png)
+![frontend-commit](../assets/imagenes/frontend-commits/frontend-commit2.png)
+![frontend-commit](../assets/imagenes/frontend-commits/frontend-commit3.png)
+![frontend-commit](../assets/imagenes/frontend-commits/frontend-commit4.png)
+![frontend-commit](../assets/imagenes/frontend-commits/frontend-commit5.png)
+![frontend-commit](../assets/imagenes/frontend-commits/frontend-commit6.png)
