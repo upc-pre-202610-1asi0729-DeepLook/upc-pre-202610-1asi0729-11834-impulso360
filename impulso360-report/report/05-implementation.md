@@ -903,7 +903,8 @@ Durante el Sprint 2, no se desarrollaron Web Services ni endpoints documentados 
 
 Por este motivo, en el presente avance aún no se cuenta con documentación OpenAPI, ejemplos de request/response, parámetros de endpoints ni commits relacionados con servicios backend. La documentación de Web Services será desarrollada en los siguientes sprints, cuando se implemente el backend del sistema y se construyan los endpoints relacionados con autenticación, gestión de citas, gestión de clientes, servicios del negocio, perfil digital y recordatorios.
 #### 5.2.2.7. Software Deployment Evidence for Sprint Review
-
+El despliegue del frontend de la aplicación Impulso360 se realizó en firebase, de forma que sea accesible públicamente desde internet y que se actualice de forma automática cada vez que se realicen cambios en la rama principal del repositorio.
+**URL:https://impulso360-frontend.web.app/**
 
 #### 5.2.2.8. Team Collaboration Insights during Sprint
 
