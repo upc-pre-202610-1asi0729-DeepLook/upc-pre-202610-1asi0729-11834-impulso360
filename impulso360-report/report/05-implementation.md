@@ -879,12 +879,25 @@ Durante la ejecución del Sprint 2 se completaron satisfactoriamente los objetiv
 Las principales secciones desarrolladas son:
 
 - Panel general del negocio
+![Dashboard](../assets/imagenes/execution-evidence-sprint2/dashboard.png)
+![Dashboard](../assets/imagenes/execution-evidence-sprint2/dashboard2.png)
 - Ayuda y soporte básico
+![Ayuda](../assets/imagenes/execution-evidence-sprint2/ayuda.png)
+![Ayuda](../assets/imagenes/execution-evidence-sprint2/ayuda2.png)
 - Agenda digital
+![Agenda Digitar](../assets/imagenes/execution-evidence-sprint2/agenda.png)
+![Agenda Digitar](../assets/imagenes/execution-evidence-sprint2/agenda2.png)
 - Gestión de clientes
+![Clientes](../assets/imagenes/execution-evidence-sprint2/clientes.png)
+![Clientes](../assets/imagenes/execution-evidence-sprint2/clientes2.png)
 - Perfil del negocio
+![Perfil](../assets/imagenes/execution-evidence-sprint2/perfil.png)
+![Perfil](../assets/imagenes/execution-evidence-sprint2/perfil2.png)
 - Gestión de servicios
+![Servicios](../assets/imagenes/execution-evidence-sprint2/servicios.png)
+![Servicios](../assets/imagenes/execution-evidence-sprint2/servicios2.png)
 - Notificaciones
+![Servicios](../assets/imagenes/execution-evidence-sprint2/notificaciones.png)
 #### 5.2.2.6. Services Documentation Evidence for Sprint Review
 Durante el Sprint 2, no se desarrollaron Web Services ni endpoints documentados con OpenAPI, ya que el alcance principal de este avance estuvo enfocado en la implementación inicial del frontend de la aplicación. Para ello, se utilizaron TypeScript, HTML y CSS en Angular, con el objetivo de desarrollar las diferentes secciones del sistema, como agenda y clientes.
 
