@@ -910,7 +910,10 @@ Por este motivo, en el presente avance aún no se cuenta con documentación Open
 Durante este sprint, el equipo se centró en la documentación e implementación del frontend de la aplicación. El trabajo se organizó mediante el uso de GitHub como herramienta principal para la colaboración y control de versiones. A continuación se presentan las colaboraciones y commits hechos tanto para el frontend como para el reporte.
 
 **Report:**
-
+![report-commit](../assets/imagenes/report-commits-sprint2/report-commit.png)
+![report-commit](../assets/imagenes/report-commits-sprint2/report-commit1.png)
+![report-commit](../assets/imagenes/report-commits-sprint2/report-commit2.png)
+![report-commit](../assets/imagenes/report-commits-sprint2/report-commit3.png)
 
 **Frontend de la aplicación**
 ![frontend-commit](../assets/imagenes/frontend-commits/frontend-commit.png)
