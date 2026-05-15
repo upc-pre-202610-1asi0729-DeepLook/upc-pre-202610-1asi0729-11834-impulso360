@@ -522,7 +522,8 @@ URL: https://upc-pre-202610-1asi0729-deeplook.github.io/Landing-Page/
   </tbody>
 </table>
 
-#### 5.2.1.4. Development Evidence for Sprint Review.
+#### 5.2.1.4. 
+
 
 Durante el Sprint 1, el equipo avanzó en la implementación inicial del Landing Page de Impulso360. Se desarrollaron las secciones principales de la página, incluyendo el inicio, la sección informativa, los planes y el formulario de contacto. Estos avances fueron registrados en GitHub mediante commits realizados en ramas feature, siguiendo GitFlow y Conventional Commits.
 
@@ -866,10 +867,12 @@ Durante el Sprint 2, el equipo avanzó en la implementación del frontend de Imp
 
 | Repository          | Branch | Commit Id | Commit Message | Commited on (Date) |
 |---------------------|--------|-----------|----------------|--------------------|
-| impulso360-frontend |        |           |                |                    |
-| impulso360-frontend |        |           |                |                    |
-| impulso360-frontend |        |           |                |                    |
-
+| impulso360-frontend |feature/reminder|d131d40|adds global notification bell and list view|2026-05-14|
+| impulso360-frontend | feat/overview|a2bd164|implement panel general or overview webapp|2026-05-14|
+| impulso360-frontend |feat/clientes|0613c0f|add whole client bounded context|2026-05-14|
+| impulso360-frontend |feat/business-profile|d63cf82|implement domain, infrastructure, application and presentation layers|2026-05-14|
+| impulso360-frontend |feat/agenda|d6850b4|implementation of agenda view and appointment form|2026-05-14|
+| impulso360-frontend |feat/service|9858a61|implement full services CRUD with persistence|2026-05-14|
 #### 5.2.2.5. Execution Evidence for Sprint Review.
 Durante la ejecución del Sprint 2 se completaron satisfactoriamente los objetivos planteados para el desarrollo del frontend principal de Impulso360. Se implementaron las secciones clave de la aplicación, consolidando una base funcional e intuitiva para la gestión digital de negocios de servicios.
 
