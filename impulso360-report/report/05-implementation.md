@@ -913,3 +913,10 @@ Durante este sprint, el equipo se centró en la documentación e implementación
 
 
 **Frontend de la aplicación**
+![frontend-commit](../assets/imagenes/frontend-commits/frontend-commit.png)
+![frontend-commit](../assets/imagenes/frontend-commits/frontend-commit1.png)
+![frontend-commit](../assets/imagenes/frontend-commits/frontend-commit2.png)
+![frontend-commit](../assets/imagenes/frontend-commits/frontend-commit3.png)
+![frontend-commit](../assets/imagenes/frontend-commits/frontend-commit4.png)
+![frontend-commit](../assets/imagenes/frontend-commits/frontend-commit5.png)
+![frontend-commit](../assets/imagenes/frontend-commits/frontend-commit6.png)
