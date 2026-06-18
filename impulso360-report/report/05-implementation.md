@@ -522,7 +522,8 @@ URL: https://upc-pre-202610-1asi0729-deeplook.github.io/Landing-Page/
   </tbody>
 </table>
 
-#### 5.2.1.4. Development Evidence for Sprint Review.
+#### 5.2.1.4. 
+
 
 Durante el Sprint 1, el equipo avanzó en la implementación inicial del Landing Page de Impulso360. Se desarrollaron las secciones principales de la página, incluyendo el inicio, la sección informativa, los planes y el formulario de contacto. Estos avances fueron registrados en GitHub mediante commits realizados en ramas feature, siguiendo GitFlow y Conventional Commits.
 
@@ -589,6 +590,342 @@ Landing Page:
 ![Commits Landing Page](../assets/imagenes/Insights/LP-commits1.png)
 ![Commits Landing Page 2](../assets/imagenes/Insights/LP-commits2.png)
 
+
+
+###  5.2.2. Sprint 2
+#### 5.2.2.1. Sprint Planning 2.
+
+| Sprint \#                      | Sprint 2                                                                                                                                                                                                                                                                                                                                       |
+|:-------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Sprint Planning Background** |                                                                                                                                                                                                                                                                                                                                                |
+| Date                           | 06 \- 05 \- 2026                                                                                                                                                                                                                                                                                                                               |
+| Location                       | Reunión virtual via google meets                                                                                                                                                                                                                                                                                                               |
+| Prepared By                    | Grupo DeepLook                                                                                                                                                                                                                                                                                                                                 |
+| Attendees                      | Merino Ordinola, Winnie Lisbeth  Sandoval Cueto, Fabian Jesus  Jave Chang, Alejandro Manuel  Ramos Cerdan, Elias Daniel  Tirado Carrera, Gabriela Luciana                                                                                                                                                                                      |
+| **Sprint Goal & User Stories** |                                                                                                                                                                                                                                                                                                                                                |
+| Sprint 2 Goal                  | Nuestro enfoque es desarrollar el frontend de la aplicación web de Impulso360. Creemos que una interfaz intuitiva y organizada permitirá a los emprendedores gestionar sus citas, clientes y servicios de manera sencilla. Esto se confirmará cuando los usuarios puedan navegar correctamente entre los módulos principales de la plataforma. |
+| Sprint 2 Velocity              | 35 Story Points                                                                                                                                                                                                                                                                                                                                |
+| Sum of Story Points            | 35 Story Points                                                                                                                                                                                                                                                                                                                                 |
+
+#### 5.2.2.2. Aspect Leaders and Collaborators.
+
+| Team Member | GitHub Username |Panel General + Ayuda| Agenda | Clientes | Perfil del Negocio + Servicios | Notificaciones |
+| :---- | :---- | :---- | :---- |:---------|:-------------------------------|:--------------------------|
+| Merino Ordinola, Winnie Lisbeth | winniemerino | C | C | C        | L                              | C                         |
+| Sandoval Cueto, Fabian Jesus | JFabianSandoval | C | C | C        | C                              | L                         |
+| Jave Chang, Alejandro Manuel | alejandro202312510 | C | L | C        | C                              | C                         |
+| Ramos Cerdan, Elias Daniel | eliocerdan | L | C | C        | C                              | C                         |
+| Tirado Carrera, Gabriela Luciana | Gaby0443 | C | C | L        | C                              | C                         |
+
+#### 5.2.2.3. Sprint Backlog 2.
+<table>
+  <thead>
+    <tr>
+      <th>Sprint #</th>
+      <th colspan="7">Sprint 2</th>
+    </tr>
+    <tr>
+      <th colspan="2">User Story</th>
+      <th colspan="6">Work-Item / Task</th>
+    </tr>
+    <tr>
+      <th>id</th>
+      <th>Title</th>
+      <th>id</th>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Estimation<br>(Hours)</th>
+      <th>Assigned To</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="4">US22</td>
+      <td rowspan="4">Panel general del negocio</td>
+      <td>T01</td>
+      <td>Implementar layout principal del dashboard</td>
+      <td>Crear la estructura base del dashboard con sidebar, header superior y contenedor principal.</td>
+      <td>3</td>
+      <td>Elias Ramos Cerdan</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T02</td>
+      <td>Implementar tarjetas resumen del panel</td>
+      <td>Crear las cards de “Citas hoy”, “Confirmadas”, “Pendientes” y “Clientes activos”.</td>
+      <td>2</td>
+      <td>Elias Ramos Cerdan</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T03</td>
+      <td>Implementar sección “Citas del día”</td>
+      <td>Desarrollar listado de citas con estados, acciones rápidas y filtros.</td>
+      <td>3</td>
+      <td>Elias Ramos Cerdan</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T04</td>
+      <td>Implementar calendario lateral y alerta rápida</td>
+      <td>Agregar calendario compacto y card lateral de próxima cita.</td>
+      <td>2</td>
+      <td>Elias Ramos Cerdan</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td rowspan="4">US16</td>
+      <td rowspan="4">Soporte Básico</td>
+      <td>T05</td>
+      <td>Implementar vista principal de ayuda</td>
+      <td>Crear interfaz principal de ayuda con diseño dividido y buscador central.</td>
+      <td>2</td>
+      <td>Elias Ramos Cerdan</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T06</td>
+      <td>Crear módulo de tutorial interactivo</td>
+      <td>Implementar checklist/tutorial de onboarding con progreso de usuario.</td>
+      <td>2</td>
+      <td>Elias Ramos Cerdan</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T07</td>
+      <td>Implementar preguntas frecuentes</td>
+      <td>Agregar acordeón de preguntas frecuentes y respuestas rápidas.</td>
+      <td>2</td>
+      <td>Elias Ramos Cerdan</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T08</td>
+      <td>Crear sección de guías rápidas</td>
+      <td>Implementar tarjetas de tutoriales rápidos con categorías e iconos.</td>
+      <td>2</td>
+      <td>Elias Ramos Cerdan</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td rowspan="3">US01</td>
+      <td rowspan="3">Visualización digital de citas</td>
+      <td>T09</td>
+      <td>Implementar vista semanal de agenda</td>
+      <td>Crear calendario semanal con distribución horaria de citas.</td>
+      <td>4</td>
+      <td>Alejandro Jave</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T10</td>
+      <td>Implementar filtros de agenda</td>
+      <td>Agregar filtros por estado de cita y vistas diaria, semanal y mensual.</td>
+      <td>2</td>
+      <td>Alejandro Jave</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T11</td>
+      <td>Implementar panel lateral de citas</td>
+      <td>Mostrar detalle diario de citas y próximas citas en sidebar derecho.</td>
+      <td>2</td>
+      <td>Alejandro Jave</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td rowspan="2">US04</td>
+      <td rowspan="2">Registro de datos de clientes</td>
+      <td>T12</td>
+      <td>Implementar tabla principal de clientes</td>
+      <td>Crear tabla de clientes con columnas de contacto, citas y estado.</td>
+      <td>3</td>
+      <td>Gabriela Tirado</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T13</td>
+      <td>Implementar buscador y filtros de clientes</td>
+      <td>Agregar búsqueda por nombre o teléfono y botón de filtros.</td>
+      <td>2</td>
+      <td>Gabriela Tirado</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td rowspan="1">US08</td>
+      <td rowspan="1">Historial por cliente</td>
+      <td>T14</td>
+      <td>Implementar panel lateral de historial</td>
+      <td>Crear sección lateral con historial detallado de citas por cliente.</td>
+      <td>2</td>
+      <td>Gabriela Tirado</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td rowspan="2">US11</td>
+      <td rowspan="2">Perfil digital</td>
+      <td>T15</td>
+      <td>Implementar vista de perfil del negocio</td>
+      <td>Crear formulario editable de datos generales del negocio y portada.</td>
+      <td>3</td>
+      <td>Winnie Merino</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T16</td>
+      <td>Implementar vista previa del perfil público</td>
+      <td>Agregar preview lateral del perfil digital y enlace compartible.</td>
+      <td>2</td>
+      <td>Winnie Merino</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td rowspan="1">US24</td>
+      <td rowspan="1">Edición de perfil del negocio</td>
+      <td>T17</td>
+      <td>Implementar configuración de horarios</td>
+      <td>Crear sección editable de horarios de atención semanales.</td>
+      <td>2</td>
+      <td>Winnie Merino</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td rowspan="3">US26</td>
+      <td rowspan="3">Registro de servicios</td>
+      <td>T18</td>
+      <td>Implementar cards de servicios</td>
+      <td>Crear listado visual de servicios con categorías, precios y estados.</td>
+      <td>3</td>
+      <td>Winnie Merino</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T19</td>
+      <td>Implementar servicios destacados</td>
+      <td>Agregar lógica visual para destacar servicios y mostrar límite permitido.</td>
+      <td>2</td>
+      <td>Winnie Merino</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T20</td>
+      <td>Crear modal de nuevo servicio</td>
+      <td>Implementar formulario modal para registro y edición de servicios.</td>
+      <td>3</td>
+      <td>Winnie Merino</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td rowspan="3">US03</td>
+      <td rowspan="3">Alertas de citas</td>
+      <td>T21</td>
+      <td>Implementar módulo de notificaciones</td>
+      <td>Crear listado principal de notificaciones con estados visuales y acciones rápidas.</td>
+      <td>3</td>
+      <td>Fabian Sandoval</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T22</td>
+      <td>Implementar resumen diario de alertas</td>
+      <td>Agregar panel lateral con resumen de citas confirmadas, pendientes y canceladas.</td>
+      <td>2</td>
+      <td>Fabian Sandoval</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T23</td>
+      <td>Implementar configuración de alertas</td>
+      <td>Crear switches de configuración para alertas y recordatorios automáticos.</td>
+      <td>2</td>
+      <td>Fabian Sandoval</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td rowspan="2">US41</td>
+      <td rowspan="2">Internacionalización de la APP</td>
+      <td>T24</td>
+      <td>Preparar frontend para internacionalización</td>
+      <td>Separar textos principales de dashboard, agenda, clientes, servicios y notificaciones.</td>
+      <td>2</td>
+      <td>Todos</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T25</td>
+      <td>Implementar recursos ES/EN de la aplicación</td>
+      <td>Crear archivos de traducción y validar consistencia visual en ambos idiomas.</td>
+      <td>3</td>
+      <td>Todos</td>
+      <td>Done</td>
+    </tr>
+  </tbody>
+</table>
+
+#### 5.2.2.4. Development Evidence for Sprint Review.
+
+Durante el Sprint 2, el equipo avanzó en la implementación del frontend de Impulso360. Se desarrollaron las secciones principales, incluyendo el panel general, agenda, clientes, servicios, perfil, ayuda y notificaciones. Estos avances fueron registrados en GitHub mediante commits realizados en ramas feature, siguiendo GitFlow y Conventional Commits.
+
+| Repository          | Branch | Commit Id | Commit Message | Commited on (Date) |
+|---------------------|--------|-----------|----------------|--------------------|
+| impulso360-frontend |feature/reminder|d131d40|adds global notification bell and list view|2026-05-14|
+| impulso360-frontend | feat/overview|a2bd164|implement panel general or overview webapp|2026-05-14|
+| impulso360-frontend |feat/clientes|0613c0f|add whole client bounded context|2026-05-14|
+| impulso360-frontend |feat/business-profile|d63cf82|implement domain, infrastructure, application and presentation layers|2026-05-14|
+| impulso360-frontend |feat/agenda|d6850b4|implementation of agenda view and appointment form|2026-05-14|
+| impulso360-frontend |feat/service|9858a61|implement full services CRUD with persistence|2026-05-14|
+#### 5.2.2.5. Execution Evidence for Sprint Review.
+Durante la ejecución del Sprint 2 se completaron satisfactoriamente los objetivos planteados para el desarrollo del frontend principal de Impulso360. Se implementaron las secciones clave de la aplicación, consolidando una base funcional e intuitiva para la gestión digital de negocios de servicios.
+
+Las principales secciones desarrolladas son:
+
+- Panel general del negocio
+![Dashboard](../assets/imagenes/execution-evidence-sprint2/dashboard.png)
+![Dashboard](../assets/imagenes/execution-evidence-sprint2/dashboard2.png)
+- Ayuda y soporte básico
+![Ayuda](../assets/imagenes/execution-evidence-sprint2/ayuda.png)
+![Ayuda](../assets/imagenes/execution-evidence-sprint2/ayuda2.png)
+- Agenda digital
+![Agenda Digitar](../assets/imagenes/execution-evidence-sprint2/agenda.png)
+![Agenda Digitar](../assets/imagenes/execution-evidence-sprint2/agenda2.png)
+- Gestión de clientes
+![Clientes](../assets/imagenes/execution-evidence-sprint2/clientes.png)
+![Clientes](../assets/imagenes/execution-evidence-sprint2/clientes2.png)
+- Perfil del negocio
+![Perfil](../assets/imagenes/execution-evidence-sprint2/perfil.png)
+![Perfil](../assets/imagenes/execution-evidence-sprint2/perfil2.png)
+- Gestión de servicios
+![Servicios](../assets/imagenes/execution-evidence-sprint2/servicios.png)
+![Servicios](../assets/imagenes/execution-evidence-sprint2/servicios2.png)
+- Notificaciones
+![Servicios](../assets/imagenes/execution-evidence-sprint2/notificaciones.png)
+#### 5.2.2.6. Services Documentation Evidence for Sprint Review
+Durante el Sprint 2, no se desarrollaron Web Services ni endpoints documentados con OpenAPI, ya que el alcance principal de este avance estuvo enfocado en la implementación inicial del frontend de la aplicación. Para ello, se utilizaron TypeScript, HTML y CSS en Angular, con el objetivo de desarrollar las diferentes secciones del sistema, como agenda y clientes.
+
+Por este motivo, en el presente avance aún no se cuenta con documentación OpenAPI, ejemplos de request/response, parámetros de endpoints ni commits relacionados con servicios backend. La documentación de Web Services será desarrollada en los siguientes sprints, cuando se implemente el backend del sistema y se construyan los endpoints relacionados con autenticación, gestión de citas, gestión de clientes, servicios del negocio, perfil digital y recordatorios.
+#### 5.2.2.7. Software Deployment Evidence for Sprint Review
+El despliegue del frontend de la aplicación Impulso360 se realizó en firebase, de forma que sea accesible públicamente desde internet y que se actualice de forma automática cada vez que se realicen cambios en la rama principal del repositorio.
+**URL:https://impulso360-frontend.web.app/**
+
+#### 5.2.2.8. Team Collaboration Insights during Sprint
+
+Durante este sprint, el equipo se centró en la documentación e implementación del frontend de la aplicación. El trabajo se organizó mediante el uso de GitHub como herramienta principal para la colaboración y control de versiones. A continuación se presentan las colaboraciones y commits hechos tanto para el frontend como para el reporte.
+
+**Report:**
+![report-commit](../assets/imagenes/report-commits-sprint2/report-commit.png)
+![report-commit](../assets/imagenes/report-commits-sprint2/report-commit1.png)
+![report-commit](../assets/imagenes/report-commits-sprint2/report-commit2.png)
+![report-commit](../assets/imagenes/report-commits-sprint2/report-commit3.png)
+
+**Frontend de la aplicación**
+![frontend-commit](../assets/imagenes/frontend-commits/frontend-commit.png)
+![frontend-commit](../assets/imagenes/frontend-commits/frontend-commit1.png)
+![frontend-commit](../assets/imagenes/frontend-commits/frontend-commit2.png)
+![frontend-commit](../assets/imagenes/frontend-commits/frontend-commit3.png)
+![frontend-commit](../assets/imagenes/frontend-commits/frontend-commit4.png)
+![frontend-commit](../assets/imagenes/frontend-commits/frontend-commit5.png)
+![frontend-commit](../assets/imagenes/frontend-commits/frontend-commit6.png)
 
 ## 5.3. Validation Interviews
 

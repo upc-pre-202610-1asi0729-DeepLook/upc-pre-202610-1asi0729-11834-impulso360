@@ -102,18 +102,20 @@
 
 # Registro de Versiones del Informe
 
-<div>
+**Tabla 1: Registro de Versiones**
 
-| Versión | Fecha       | Autor | Descripción de modificación |
-|---------|-------------|-------|-----------------------------|
-| 1.0     | 2026-04-10  | Merino Ordinola, Winnie Lisbeth<br>Sandoval Cueto Fabian Jesus<br>Ramos Cerdan Elias Daniel<br>Tirado Carrera Gabriela Luciana<br>Jave Chang Alejandro Manuel | Desarrollo del código de la aplicación y elaboración de diagramas C4.|
-| 1.1     | 2026-04-11  | Merino Ordinola, Winnie Lisbeth<br>Sandoval Cueto Fabian Jesus<br>Ramos Cerdan Elias Daniel<br>Tirado Carrera Gabriela Luciana<br>Jave Chang Alejandro Manuel | Creación de mockups (UX/UI).                                                                |
-| 1.2     | 2026-04-13  | Merino Ordinola, Winnie Lisbeth<br>Sandoval Cueto Fabian Jesus<br>Ramos Cerdan Elias Daniel<br>Tirado Carrera Gabriela Luciana<br>Jave Chang Alejandro Manuel | Creación de wireframes.                                                                     |
-| 1.3     | 2026-04-15  | Merino Ordinola, Winnie Lisbeth<br>Sandoval Cueto Fabian Jesus<br>Ramos Cerdan Elias Daniel<br>Tirado Carrera Gabriela Luciana<br>Jave Chang Alejandro Manuel | Elaboración de entrevistas, redacción y consolidación del informe.                          |
-| 1.4     | 2026-04-16  | Merino Ordinola, Winnie Lisbeth<br>Sandoval Cueto Fabian Jesus<br>Ramos Cerdan Elias Daniel<br>Tirado Carrera Gabriela Luciana<br>Jave Chang Alejandro Manuel | Revisión conjunta del documento, correcciones finales y validación de la versión entregable. |
-| 1.5     | 2026-04-17  | Merino Ordinola, Winnie Lisbeth<br>Sandoval Cueto Fabian Jesus<br>Ramos Cerdan Elias Daniel<br>Tirado Carrera Gabriela Luciana<br>Jave Chang Alejandro Manuel | Revisión conjunta del documento y elaboracion del Capítulo VI y Capítulo VII. |
-
-</div>
+| Versión | Fecha | Participantes | Descripción de modificación |
+|---|---|---|---|
+| AV1 | 20/04/2026 | Elias Daniel Ramos Cerdan | User stories<br>Registro de entrevistas<br>Lean UX Problem Statements<br>Lean UX Assumptions<br>Lean UX Hypothesis Statements<br>Landing Page Mock-up<br>Software Configuration Management<br>Development Evidence for Sprint Review |
+| AV1 | 21/04/2026 | Sandoval Cueto Fabian Jesus | Web Applications Wireframes<br>Web Applications Mock-ups<br>User Personas<br>Needfinding<br>Ubiquitous Language<br>Web style guidelines<br>Entrevistas<br>Information architecture |
+| AV1 | 21/04/2026 | Jave Chang Alejandro Manuel | Competidores<br>Registro de entrevistas<br>Web Applications Wireframes<br>Web Applications Mockups<br>Database Design<br>Database Diagrams |
+| AV1 | 21/04/2026 | Tirado Carrera Gabriela Luciana | Análisis Competitivo<br>Web Application mockups<br>Estrategia frente a competidores<br>Registro de Entrevistas<br>User Stories<br>Impact Mapping<br>Product Backlog<br>Sprint n |
+| AV1 | 21/04/2026 | Merino Ordinola, Winnie Lisbeth | StartUp Profile<br>Solution Profile<br>Diseño de entrevistas<br>Diagrama de contexto<br>Diagrama de eventos<br>Diagrama de contenedores<br>Diagrama de componentes<br>Landing page |
+| TB1 | 11/05/2026 | Elias Daniel Ramos Cerdan | Corrección de user stories<br>FrontEnd (Help)<br>Corrección diagramas C4 |
+| TB1 | 13/05/2026 | Sandoval Cueto Fabian Jesus | Creación del bounded context Overview frontend<br>Creación del bounded context Reminder frontend<br>Corrección de resumen de entrevistas |
+| TB1 | 12/05/2026 | Jave Chang Alejandro Manuel | Corrección de diagrama de clases<br>Corrección de diccionario de clases<br>Frontend |
+| TB1 | 11/05/2026 | Tirado Carrera Gabriela Luciana | Corrección diagramas C4<br>Sprint planning<br>Sprint backlog<br>Frontend |
+| TB1 | 13/05/2026 | Merino Ordinola, Winnie Lisbeth | Corrección de event storming<br>Business profile & Services bounded context frontend |
 
 # Project Report Collaboration Insights
 
@@ -125,13 +127,13 @@ URL del repositorio para el proyecto: [Link](https://github.com/upc-pre-202610-1
 
 
 
-
 # Student Outcome
 
 <table>
   <thead>
     <tr>
       <th>Criterio Específico</th>
+      <th>AV1</th>
       <th>TB1</th>
     </tr>
   </thead>
@@ -141,8 +143,9 @@ URL del repositorio para el proyecto: [Link](https://github.com/upc-pre-202610-1
       <td>
         <strong>1.c1. Identifica problemas complejos de ingeniería de software.</strong>
       </td>
-      <td>
-        <h4>Acciones Realizadas</h4>
+
+  <td>
+      <h4>Acciones Realizadas</h4>
 
   <p><strong>Elias Daniel Ramos Cerdan:</strong><br>
         <strong>1.c1:</strong> A partir de las entrevistas, User Stories y artefactos Lean UX, pude reconocer las necesidades principales de los usuarios. También analicé los problemas expresados por los segmentos objetivo y los relacioné con posibles funcionalidades del producto. Esto me permitió comprender mejor qué dificultades debía atender la solución y cómo estas afectaban la experiencia de los usuarios.</p>
@@ -150,22 +153,42 @@ URL del repositorio para el proyecto: [Link](https://github.com/upc-pre-202610-1
   <p><strong>Merino Ordinola, Winnie Lisbeth:</strong><br>
         <strong>1.c1:</strong> Mediante el Startup Profile, Solution Profile y diseño de entrevistas, contribuí a delimitar el contexto del proyecto, los segmentos objetivo y sus necesidades principales.</p>
 
-  <p><strong>Sandoval Cueto Fabian Jesus:</strong><br>
+   <p><strong>Sandoval Cueto Fabian Jesus:</strong><br>
         <strong>1.c1:</strong> El trabajo con Needfinding, User Personas e Information Architecture me permitió comprender mejor las dificultades de los usuarios. Con ello pude reconocer cómo esas necesidades afectaban la organización y experiencia del producto.</p>
 
-  <p><strong>Jave Chang Alejandro Manuel:</strong><br>
+   <p><strong>Jave Chang Alejandro Manuel:</strong><br>
         <strong>1.c1:</strong> Analicé a competidores, entrevistas, wireframes y mockups, y me ayudó a detectar limitaciones de soluciones actuales. A partir de ello, pude reconocer necesidades que nuestro sistema debía cubrir.</p>
 
   <p><strong>Tirado Carrera Gabriela Luciana:</strong><br>
         <strong>1.c1:</strong> Desde el análisis competitivo, entrevistas, User Stories e Impact Mapping, pude relacionar los problemas del negocio con las necesidades reales de los usuarios. También ayudé a reconocer qué funcionalidades podían generar mayor impacto en el producto. Esto permitió comprender mejor los problemas que debían priorizarse durante el desarrollo.</p>
+      </td>
 
- 
+   <td>
+        <h4>Acciones Realizadas</h4>
+
+  <p><strong>Ramos Cerdan Elias Daniel:</strong><br>
+        <strong>1.c1:</strong> A partir del feedback recibido, identifiqué que varias User Stories del proyecto eran demasiado generales o difíciles de comprobar, por lo que revisé cuáles no expresaban correctamente el valor para el usuario. Además, al trabajar el frontend de la sección Help, pude reconocer la necesidad de que los usuarios con baja experiencia digital tengan una guía clara dentro de la plataforma para aprender a usar sus funciones principales.</p>
+
+  <p><strong>Tirado Carrera Gabriela Luciana:</strong><br>
+        <strong>1.c1:</strong> Mediante la revisión de los diagramas C4, identifiqué problemas de consistencia entre la arquitectura planteada y el dominio real del proyecto, especialmente en la forma en que se representaban los componentes y responsabilidades del sistema. Asimismo, al trabajar el Sprint Planning y Sprint Backlog, ayudé a reconocer qué funcionalidades debían organizarse mejor para responder a las necesidades principales de los usuarios.</p>
+
+  <p><strong>Sandoval Cueto Fabian Jesus:</strong><br>
+        <strong>1.c1:</strong> A partir de la creación de los bounded contexts de Overview y Reminder en el frontend, identifiqué la necesidad de organizar mejor la información principal del negocio y los recordatorios dentro de la plataforma. Además, al corregir los resúmenes de entrevistas, pude reconocer con mayor claridad los problemas expresados por los usuarios, como la desorganización en citas, la falta de seguimiento y la necesidad de recordatorios más visibles.</p>
+
+  <p><strong>Jave Chang Alejandro Manuel:</strong><br>
+        <strong>1.c1:</strong> Mediante la corrección del diagrama de clases y del diccionario de clases, identifiqué problemas en la forma en que se representaban las entidades, atributos, métodos y relaciones del sistema. Asimismo, al trabajar en el frontend, pude reconocer cómo esas clases y funcionalidades debían reflejarse en una experiencia más clara para el usuario final.</p>
+
+  <p><strong>Merino Ordinola, Winnie Lisbeth:</strong><br>
+        <strong>1.c1:</strong> A través de la corrección del Event Storming, identifiqué eventos y procesos del dominio que debían estar mejor alineados con el negocio real de Impulso360. Además, al trabajar los bounded contexts de Business Profile y Services en el frontend, reconocí la importancia de representar correctamente la gestión del perfil del negocio y la administración de servicios como partes centrales de la solución.</p>
+      </td>
+    </tr>
 
   <tr>
       <td>
         <strong>1.c2. Formula problemas complejos de ingeniería de software aplicando ciencias, matemáticas e ingeniería.</strong>
       </td>
-      <td>
+
+<td>
         <h4>Acciones Realizadas</h4>
 
   <p><strong>Elias Daniel Ramos Cerdan:</strong><br>
@@ -183,13 +206,33 @@ URL del repositorio para el proyecto: [Link](https://github.com/upc-pre-202610-1
   <p><strong>Tirado Carrera Gabriela Luciana:</strong><br>
         <strong>1.c2:</strong> El problema del producto fue organizado mediante User Stories, Impact Mapping, Product Backlog y Sprint Planning. Con estos artefactos pude priorizar funcionalidades según su valor para el usuario y para el negocio. Esto ayudó a formular el problema en tareas y entregables más claros para el desarrollo progresivo del sistema.</p>
       </td>
+
+  <td>
+        <h4>Acciones Realizadas</h4>
+
+  <p><strong>Ramos Cerdan Elias Daniel:</strong><br>
+        <strong>1.c2:</strong> Reformulé las User Stories observadas para que sean más específicas, medibles y comprobables, utilizando una estructura más clara de “Como…, quiero…, para…” y criterios de aceptación en formato Dado/Cuando/Entonces. También organicé el flujo de ayuda del frontend, considerando tutoriales, preguntas frecuentes y guías rápidas, de manera que la necesidad de soporte del usuario se convierta en una funcionalidad concreta dentro del sistema.</p>
+
+<p><strong>Tirado Carrera Gabriela Luciana:</strong><br>
+        <strong>1.c2:</strong> Organicé la planificación del sprint mediante el Sprint Planning y el Sprint Backlog, relacionando las historias de usuario con tareas concretas, responsables y avances del equipo. Además, corregí los diagramas C4 para representar de forma más ordenada la arquitectura del sistema, considerando la relación entre la aplicación frontend, los servicios, los módulos principales y las responsabilidades técnicas del producto.</p>
+
+  <p><strong>Sandoval Cueto Fabian Jesus:</strong><br>
+        <strong>1.c2:</strong> Formulé la estructura frontend de los bounded contexts Overview y Reminder, organizando sus vistas y elementos para mostrar información importante como indicadores generales, citas próximas y recordatorios. También corregí los resúmenes de entrevistas para que los hallazgos estén mejor redactados y puedan relacionarse con necesidades reales del usuario y funcionalidades del sistema.</p>
+
+  <p><strong>Jave Chang Alejandro Manuel:</strong><br>
+        <strong>1.c2:</strong> Reformulé el diagrama de clases y el diccionario de clases para que representen de manera más clara las entidades principales del sistema, sus responsabilidades y relaciones. Esta corrección permitió que el diseño orientado a objetos esté mejor conectado con el dominio del proyecto y con las funcionalidades desarrolladas en el frontend.</p>
+
+<p><strong>Merino Ordinola, Winnie Lisbeth:</strong><br>
+        <strong>1.c2:</strong> Reformulé el Event Storming para que los eventos, comandos y procesos estén mejor conectados con la gestión de citas, clientes, servicios y perfil del negocio. Asimismo, organicé los bounded contexts de Business Profile y Services en el frontend, convirtiendo las necesidades del negocio en módulos visuales más claros y coherentes para el usuario.</p>
+      </td>
     </tr>
 
-  <tr>
+<tr>
       <td>
         <strong>1.c3. Resuelve problemas complejos de ingeniería de software aplicando ciencias, matemáticas e ingeniería.</strong>
       </td>
-      <td>
+
+<td>
         <h4>Acciones Realizadas</h4>
 
   <p><strong>Elias Daniel Ramos Cerdan:</strong><br>
@@ -207,17 +250,39 @@ URL del repositorio para el proyecto: [Link](https://github.com/upc-pre-202610-1
   <p><strong>Tirado Carrera Gabriela Luciana:</strong><br>
         <strong>1.c3:</strong> Mediante el Product Backlog, Sprint n, User Stories y mockups, organicé la solución por etapas. Esto facilitó el desarrollo progresivo de las funcionalidades principales del producto. Además, permitió que el equipo trabaje con mayor claridad sobre qué debía construirse primero y qué aportaba más valor.</p>
       </td>
-    </tr>
-  
- <tr>
-  <td>
-    <strong>Conclusiones</strong>
-  </td>
-  <td>
-    <p><strong>TB1:</strong> En el TB1 se consolidó una versión más completa del proyecto, integrando mejoras y avanzando en la definición del producto digital. Se fortaleció el análisis de usuarios mediante entrevistas, User Personas, Needfinding y User Stories. Además, se desarrollaron wireframes, mockups, arquitectura de información y lineamientos visuales. También se organizó el trabajo técnico con diagramas, base de datos, Product Backlog, planificación del sprint y evidencias en GitHub. En conjunto, el TB1 permitió pasar de una idea inicial a una propuesta más clara, estructurada y lista para continuar con la implementación.</p>
-  </td>
-</tr>
 
+<td>
+        <h4>Acciones Realizadas</h4>
+
+<p><strong>Ramos Cerdan Elias Daniel:</strong><br>
+        <strong>1.c3:</strong> Contribuí a la solución corrigiendo las User Stories necesarias para mejorar la trazabilidad entre necesidades, funcionalidades y criterios de aceptación. Además, desarrollé el frontend de la sección Help, permitiendo que el usuario pueda buscar ayuda, seguir un tutorial interactivo, revisar preguntas frecuentes y acceder a guías rápidas, lo cual mejora la accesibilidad y facilidad de uso de la plataforma.</p>
+
+  <p><strong>Tirado Carrera Gabriela Luciana:</strong><br>
+        <strong>1.c3:</strong> Aporté a la solución mediante la corrección de los diagramas C4, la elaboración y ajuste del Sprint Planning, el Sprint Backlog y el desarrollo frontend de las funcionalidades asignadas. Estas actividades ayudaron a ordenar el trabajo del equipo, evidenciar el avance técnico del producto y mejorar la coherencia entre la planificación, la arquitectura y la implementación de Impulso360.</p>
+
+  <p><strong>Sandoval Cueto Fabian Jesus:</strong><br>
+        <strong>1.c3:</strong> Contribuí a la solución mediante la implementación frontend de los bounded contexts Overview y Reminder, permitiendo que el usuario visualice información general del negocio y recordatorios importantes dentro de la plataforma. Además, la corrección de los resúmenes de entrevistas ayudó a mejorar la trazabilidad entre la investigación realizada y las funcionalidades propuestas.</p>
+
+  <p><strong>Jave Chang Alejandro Manuel:</strong><br>
+        <strong>1.c3:</strong> Aporté a la solución corrigiendo el diagrama de clases y el diccionario de clases, lo cual permitió mejorar la coherencia técnica del diseño del sistema. Además, mediante el desarrollo frontend, contribuí a que las funcionalidades planteadas se reflejen en interfaces más comprensibles y alineadas con las necesidades del usuario.</p>
+
+  <p><strong>Merino Ordinola, Winnie Lisbeth:</strong><br>
+        <strong>1.c3:</strong> Contribuí a la solución corrigiendo el Event Storming, lo que permitió ordenar mejor los eventos principales del dominio y mejorar la base del modelado del sistema. También desarrollé el frontend de los bounded contexts Business Profile y Services, permitiendo que el usuario gestione la información de su negocio y sus servicios de forma más clara y organizada.</p>
+      </td>
+    </tr>
+<tr>
+      <td>
+        <strong>Conclusiones</strong>
+      </td>
+
+<td>
+        <p><strong>AV1:</strong> En el AV1 se consolidó una versión más completa del proyecto, integrando mejoras y avanzando en la definición del producto digital. Se fortaleció el análisis de usuarios mediante entrevistas, User Personas, Needfinding y User Stories. Además, se desarrollaron wireframes, mockups, arquitectura de información y lineamientos visuales. También se organizó el trabajo técnico con diagramas, base de datos, Product Backlog, planificación del sprint y evidencias en GitHub. En conjunto, el AV1 permitió pasar de una idea inicial a una propuesta más clara, estructurada y lista para continuar con la implementación.</p>
+      </td>
+
+  <td>
+        <p><strong>TB1:</strong> En el TB1, el equipo fortaleció la calidad del proyecto a partir del feedback recibido, corrigiendo User Stories, diagramas C4, Event Storming, diagrama de clases, diccionario de clases, Sprint Planning y Sprint Backlog. Además, se avanzó en la implementación frontend de distintos bounded contexts como Help, Overview, Reminder, Business Profile y Services. Estas mejoras permitieron conectar mejor la investigación con las funcionalidades, ordenar la arquitectura del sistema y evidenciar un avance más claro hacia la implementación de Impulso360.</p>
+      </td>
+    </tr>
   </tbody>
 </table>
 
