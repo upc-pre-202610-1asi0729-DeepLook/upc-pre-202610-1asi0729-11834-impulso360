@@ -590,6 +590,8 @@ Landing Page:
 ![Commits Landing Page](../assets/imagenes/Insights/LP-commits1.png)
 ![Commits Landing Page 2](../assets/imagenes/Insights/LP-commits2.png)
 
+
+
 ###  5.2.2. Sprint 2
 #### 5.2.2.1. Sprint Planning 2.
 
@@ -924,3 +926,146 @@ Durante este sprint, el equipo se centró en la documentación e implementación
 ![frontend-commit](../assets/imagenes/frontend-commits/frontend-commit4.png)
 ![frontend-commit](../assets/imagenes/frontend-commits/frontend-commit5.png)
 ![frontend-commit](../assets/imagenes/frontend-commits/frontend-commit6.png)
+
+## 5.3. Validation Interviews
+
+En esta sección se documentan las actividades de validación ejecutadas con usuarios reales pertenecientes a nuestros dos segmentos objetivo. El propósito es evaluar la usabilidad, claridad y propuesta de valor tanto de la Landing Page como de los prototipos navegables de la aplicación web de Impulso360, garantizando que el sistema provea estrictamente el servicio sin flujos de asistencia innecesarios que desvíen la atención del usuario.
+
+### 5.3.1. Diseño de entrevistas
+
+#### Segmento 1: Microempresas de servicios por citas
+* **Objetivo de Validación:** Landing Page (secciones de Beneficios y Planes), Panel General (Dashboard), módulo de Agenda y creación de Citas. 
+* **Escenarios de Demostración (User Flows):**
+  * Exploración: Ingresar a la Landing Page, identificar la propuesta de valor y seleccionar el botón de "Empezar Ahora".
+  * Organización Diaria: Iniciar sesión e interpretar las métricas del "Panel General" (citas de hoy, pendientes, confirmadas).
+  * Gestión de Citas: Navegar a la "Agenda", registrar una nueva cita seleccionando cliente, servicio, fecha y hora, y verificar su aparición en la vista semanal.  
+
+#### Segmento 2: Empresas de Gestión de Edificios (Administradores)
+* **Objetivo de Validación:** Landing Page, módulo de Perfil del Negocio, módulo de Clientes y módulo de Servicios.  
+* **Escenarios de Demostración (User Flows):**
+  * Configuración Inicial: Navegar al "Perfil del Negocio" y actualizar el horario de atención y los datos de contacto.
+  * Gestión de Catálogo: Ingresar a "Servicios", registrar un nuevo servicio (nombre, categoría, precio, duración).
+  * Registro de Clientes: Ir al módulo "Clientes" y agregar un nuevo registro validando que la información sea correcta
+
+---
+
+### 5.3.2. Registro de Entrevistas
+
+A continuación, se detalla el registro de las sesiones de validación realizadas con los usuarios seleccionados, grabando la pantalla y la interacción directa con el sistema. 
+
+#### Segmento 1: Junta de Directiva y Residentes
+
+**Entrevista 1**
+
+| Campo | Detalle |
+| :--- | :--- |
+| **Segmento**   | Microempresas de servicios por citas |  
+| **Nombres y Apellidos** | Manuel Mera |
+| **Edad** | 45 |
+| **Distrito** | San Borja |
+| **URL del Video** | [Ver Video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202312510_upc_edu_pe/IQAfmzF0Tr-7RpE8f5dZ17XbAV0qf6q7U8TEQK1BMfn72uo?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=Tf6rrr) |
+| **Timing y Duración** | Inicio: 00:00 / Duración: 7:19 |
+| **Screenshot** | ![Entrevista 1](../assets/imagenes/validation/entrevista_validacion_manuel.png) |
+| **Resumen de Apreciaciones** | Manuel Mera resalta la eficiencia de la plataforma al valorar su diseño directo, el cual evita distracciones innecesarias y permite una navegación sumamente rápida entre el panel y el calendario. Destaca que los recordatorios automáticos y la interfaz intuitiva de la vista semanal —similar a su agenda física— son elementos clave para optimizar su tiempo y reducir el ausentismo de pacientes. Finalmente, sugiere incrementar el contraste visual entre las etiquetas de citas "Pendientes" y "Confirmadas" para facilitar una lectura más ágil, concluyendo que la herramienta es altamente práctica para su gestión diaria. |
+
+**Entrevista 2**
+
+**Entrevista 3**
+
+#### Segmento 2: Emprendedores en progreso de digitalización
+
+**Entrevista 4**
+
+**Entrevista 5**
+
+**Entrevista 6**
+
+---
+
+### 5.3.3. Evaluaciones según heurísticas
+
+Esta sección contiene el proceso de evaluación de las sesiones de validación basado en heurísticas, considerando heurísticas de usabilidad, arquitectura de información e inclusive design de la experiencia propuesta. **. 
+
+---
+
+#### Formato para Evaluación de User Experience según Heurísticas 
+
+**UX Heuristics & Principles Evaluation**  
+*Usability – Inclusive Design – Information Architecture* 
+
+* **CARRERA:** Ingeniería de Software 
+* **CURSO:** Open Source
+* **SECCIÓN:** 11834
+* **PROFESORES:** Todos 
+* **AUDITOR:** 
+* **CLIENTE(S):** 
+
+
+---
+
+**SITE o APP A EVALUAR:**  
+Impulso360
+
+**TAREAS A EVALUAR:**  
+El alcance de esta evaluación incluye la revisión de la usabilidad de las siguientes tareas: 
+
+1. 
+*No están incluidas en esta versión de la evaluación las siguientes tareas:*
+* 
+
+**ESCALA DE SEVERIDAD:**  
+Los errores serán puntuados tomando en cuenta la siguiente escala de severidad:
+
+| Nivel | Descripción |
+| :---: | :--- |
+| **1** | Problema superficial: puede ser fácilmente superado por el usuario o ocurre con muy poca frecuencia. No necesita ser arreglado a no ser que exista disponibilidad de tiempo. |
+| **2** | Problema menor: puede ocurrir un poco más frecuentemente o es un poco más difícil de superar para el usuario. Se le debería asignar una prioridad baja resolverlo de cara al siguiente release. |
+| **3** | Problema mayor: ocurre frecuentemente o los usuarios no son capaces de resolverlos. Es importante que sean corregidos y se les debe asignar una prioridad alta. |
+| **4** | Problema muy grave: un error de gran impacto que impide al usuario continuar con el uso de la herramienta. Es imperativo que sea corregido antes del lanzamiento. |
+
+**TABLA RESUMEN:**
+
+| # | Problema | Escala de severidad | Heurística/Principio violada(o) |
+| :---: | :--- | :---: | :--- |
+| **1** |  |  |  |
+| **2** |  |  |  |
+| **3** |  |  |  |
+| **4** |  |  |  |
+
+---
+
+#### DESCRIPCIÓN DE PROBLEMAS: 
+
+**PROBLEMA #1: **
+* **Severidad:** 
+* **Heurística violada:** 
+* **Problema:** 
+![Problema1](../imagenes/problema1.png)
+* **Recomendación:** 
+
+**PROBLEMA #2: **
+* **Severidad:** 
+* **Heurística violada:** 
+* **Problema:** 
+![Problema2](../imagenes/problema2.png)
+* **Recomendación:**   
+
+**PROBLEMA #3: **
+* **Severidad:**
+* **Heurística violada:** 
+* **Problema:** 
+![Problema3](../imagenes/problema3.png)
+* **Recomendación:** 
+
+**PROBLEMA #4: **
+* **Severidad:** 
+* **Heurística violada:** 
+* **Problema:** 
+![Problema4](../imagenes/problema4.png)
+* **Recomendación:** 
+
+---
+### 5.4. Video About-the-Product.
+
+
+---
