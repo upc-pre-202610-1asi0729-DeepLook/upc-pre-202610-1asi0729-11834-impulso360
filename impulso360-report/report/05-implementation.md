@@ -1053,7 +1053,9 @@ Los errores serán puntuados tomando en cuenta la siguiente escala de severidad:
 ![Problema1](../assets/imagenes/problema1.png)
 
 **Recomendación:** Definir un color único y consistente (por ejemplo, el azul principal de la marca o el naranja si se desea destacar) para todos los botones de acción primaria en todo el sistema.
+
 ---
+
 ### PROBLEMA #2: Falta de control para descartar cambios en el "Perfil de negocio"
 **Severidad:** 2
 
