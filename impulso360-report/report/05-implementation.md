@@ -997,9 +997,8 @@ Esta sección contiene el proceso de evaluación de las sesiones de validación 
 * **CURSO:** Open Source
 * **SECCIÓN:** 11834
 * **PROFESORES:** Todos 
-* **AUDITOR:** 
-* **CLIENTE(S):** 
-
+* **AUDITOR:** Maravilla
+* **CLIENTE(S):** Impulso360
 
 ---
 
@@ -1009,9 +1008,17 @@ Impulso360
 **TAREAS A EVALUAR:**  
 El alcance de esta evaluación incluye la revisión de la usabilidad de las siguientes tareas: 
 
-1. 
+1. Visualización de la agenda y citas programadas
+2. Registro de una nueva cita
+3. Registro de un nuevo cliente
+4. Creación de un nuevo servicio
+5. Configuración y edición del perfil del negocio
+   
 *No están incluidas en esta versión de la evaluación las siguientes tareas:*
-* 
+
+* Envío y recepción de notificaciones en tiempo real
+* Interacción funcional del centro de ayuda interactivo
+* Generación y exportación real de los historiales en PDF
 
 **ESCALA DE SEVERIDAD:**  
 Los errores serán puntuados tomando en cuenta la siguiente escala de severidad:
@@ -1026,43 +1033,81 @@ Los errores serán puntuados tomando en cuenta la siguiente escala de severidad:
 **TABLA RESUMEN:**
 
 | # | Problema | Escala de severidad | Heurística/Principio violada(o) |
-| :---: | :--- | :---: | :--- |
-| **1** |  |  |  |
-| **2** |  |  |  |
-| **3** |  |  |  |
-| **4** |  |  |  |
+| :--- | :--- | :---: | :--- |
+| **1** | Inconsistencia visual en los botones de acción principal (Primary Buttons) | 3 | Usability: Consistencia y estándares |
+| **2** | Mezcla inconsistente de idiomas en la interfaz de notificaciones | 2 | Usability: Consistencia y estándares / Relación entre el sistema y el mundo real |
+| **3** | Indicadores de campos obligatorios confusos en el formulario de "Nueva Cita" | 1 | Usability: Prevención de errores / Consistencia |
+| **4** | Bajo contraste de color en las etiquetas de estado "Pendiente" | 2 | Inclusive Design: Accesibilidad visual |
+| **5** | Falta de validación en los campos de entrada al registrar clientes | 3 | Usability: Prevención de errores |
 
 ---
 
 #### DESCRIPCIÓN DE PROBLEMAS: 
 
-**PROBLEMA #1: **
-* **Severidad:** 
-* **Heurística violada:** 
-* **Problema:** 
-![Problema1](../imagenes/problema1.png)
-* **Recomendación:** 
+### PROBLEMA #1: Inconsistencia visual en los botones de acción principal (Primary Buttons)
+**Severidad:** 3
+**Heurística violada:** Usabilidad - Consistencia y estándares
 
-**PROBLEMA #2: **
-* **Severidad:** 
-* **Heurística violada:** 
-* **Problema:** 
-![Problema2](../imagenes/problema2.png)
-* **Recomendación:**   
+**Problema:** A lo largo de la aplicación, los botones que ejecutan la acción principal de los formularios no mantienen un estándar de color. Por ejemplo, en el modal para crear una cita el botón es naranja ("Crear cita"), en la creación de cliente también es naranja ("Guardar cliente"), pero en la pantalla de Perfil de Negocio el botón es azul sólido ("Guardar cambios"), y en el modal de Añadir Servicio el botón tiene fondo blanco con texto negro ("Guardar servicio"). Esta falta de consistencia obliga al usuario a reaprender cuál es el botón de acción en cada pantalla.
 
-**PROBLEMA #3: **
-* **Severidad:**
-* **Heurística violada:** 
-* **Problema:** 
-![Problema3](../imagenes/problema3.png)
-* **Recomendación:** 
+![Problema1](../assets/imagenes/problema1.png)
 
-**PROBLEMA #4: **
-* **Severidad:** 
-* **Heurística violada:** 
-* **Problema:** 
-![Problema4](../imagenes/problema4.png)
-* **Recomendación:** 
+**Recomendación:** Definir un color único y consistente (por ejemplo, el azul principal de la marca o el naranja si se desea destacar) para todos los botones de acción primaria en todo el sistema.
+
+---
+
+### PROBLEMA #2: Falta de control para descartar cambios en el "Perfil de negocio"
+**Severidad:** 2
+
+**Heurística violada:** Usabilidad - Consistencia y estándares / Relación entre el sistema y el mundo real
+
+**Problema:**  
+En la vista de "Notificaciones", a pesar de que el selector de idioma superior indica que el sistema está configurado en español ("ES"), gran parte de la interfaz se muestra en inglés. El menú lateral muestra opciones como "Overview" y "Planner", y el panel derecho indica "Daily summary" y "Configure alerts". Sin embargo, el contenido dinámico de las notificaciones sí aparece en español ("Cita en 25 minutos"). Esta mezcla rompe la consistencia y puede desorientar al usuario.
+
+![Problema2](../assets/imagenes/problema2.png)
+
+**Recomendación:**  
+Revisar el sistema de internacionalización (i18n) de la aplicación para asegurar que las variables de texto estático del layout y componentes laterales se traduzcan correctamente al idioma activo del usuario.
+
+--- 
+
+### PROBLEMA #3: Indicadores de campos obligatorios confusos en el formulario de "Nueva Cita"
+**Severidad:** 1
+
+**Heurística violada:** Usabilidad - Prevención de errores / Consistencia y estándares
+
+**Problema:**  
+En el modal superior de "Nueva cita", el mensaje de ayuda indica "Los campos marcados con * son obligatorios". Sin embargo, las etiquetas de los inputs correspondientes poseen un doble asterisco (ej. `Cliente **`, `Servicio **`, `Fecha **`). Esta discrepancia técnica puede generar una leve confusión cognitiva respecto a si significan algo diferente a un campo obligatorio normal. 
+
+![Problema3](../assets/imagenes/problema3.png)
+
+**Recomendación:** Corregir los placeholders y labels de los campos para que utilicen un único asterisco (`*`), alineándose con el texto de advertencia superior.
+
+### PROBLEMA #4: Bajo contraste de color en las etiquetas de estado "Pendiente"
+**Severidad:** 2
+
+**Heurística violada:** Inclusive Design - Accesibilidad visual
+
+**Problema:**  
+En las tablas de "Clientes" y en el "Panel general", los estados de las citas utilizan etiquetas de colores (píldoras). La etiqueta del estado "Pendiente" utiliza un texto de color naranja claro sobre un fondo color crema/beige. Esta combinación presenta un bajo nivel de contraste, lo que dificulta su lectura para usuarios con deficiencias visuales o en monitores con mala calibración de brillo.
+
+![Problema4](../assets/imagenes/problema4.png)
+
+**Recomendación:**  
+Aumentar el contraste oscureciendo el color del texto naranja de la etiqueta "Pendiente" o cambiando el color de fondo para cumplir con los estándares de accesibilidad WCAG.
+
+### PROBLEMA #5: Falta de validación en los campos de entrada al registrar clientes
+**Severidad:** 3
+
+**Heurística violada:** Usabilidad - Prevención de errores
+
+**Problema:**  
+En la lista del módulo "Clientes", se observa un registro guardado con el nombre "aaa aaa" y el teléfono "123455". Esto evidencia que el formulario de creación de "Nuevo cliente" no posee validaciones adecuadas en el frontend para restringir el ingreso de caracteres inválidos, longitudes mínimas lógicas o formatos específicos (como un número de celular real). Permitir el ingreso de datos sin validación ensucia la base de datos y afecta la integridad de la información del negocio.
+
+![Problema5](../assets/imagenes/problema5.png)
+
+**Recomendación:**  
+Implementar validaciones de formato y longitud (ej. expresiones regulares) en los inputs del formulario antes de permitir el envío de datos, mostrando mensajes de error claros al usuario si el formato ingresado (como el número de teléfono) no es válido.
 
 ---
 ### 5.4. Video About-the-Product.
