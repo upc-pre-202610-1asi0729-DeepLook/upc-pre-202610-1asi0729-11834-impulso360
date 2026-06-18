@@ -642,3 +642,93 @@ A continuación, se detalla el registro de las sesiones de validación realizada
 **Entrevista 5**
 
 **Entrevista 6**
+
+---
+
+### 5.3.3. Evaluaciones según heurísticas
+
+Esta sección contiene el proceso de evaluación de las sesiones de validación basado en heurísticas, considerando heurísticas de usabilidad, arquitectura de información e inclusive design de la experiencia propuesta. **. 
+
+---
+
+#### Formato para Evaluación de User Experience según Heurísticas 
+
+**UX Heuristics & Principles Evaluation**  
+*Usability – Inclusive Design – Information Architecture* 
+
+* **CARRERA:** Ingeniería de Software 
+* **CURSO:** Open Source
+* **SECCIÓN:** 11834
+* **PROFESORES:** Todos 
+* **AUDITOR:** 
+* **CLIENTE(S):** 
+
+
+---
+
+**SITE o APP A EVALUAR:**  
+Impulso360
+
+**TAREAS A EVALUAR:**  
+El alcance de esta evaluación incluye la revisión de la usabilidad de las siguientes tareas: 
+
+1. 
+*No están incluidas en esta versión de la evaluación las siguientes tareas:*
+* 
+
+**ESCALA DE SEVERIDAD:**  
+Los errores serán puntuados tomando en cuenta la siguiente escala de severidad:
+
+| Nivel | Descripción |
+| :---: | :--- |
+| **1** | Problema superficial: puede ser fácilmente superado por el usuario o ocurre con muy poca frecuencia. No necesita ser arreglado a no ser que exista disponibilidad de tiempo. |
+| **2** | Problema menor: puede ocurrir un poco más frecuentemente o es un poco más difícil de superar para el usuario. Se le debería asignar una prioridad baja resolverlo de cara al siguiente release. |
+| **3** | Problema mayor: ocurre frecuentemente o los usuarios no son capaces de resolverlos. Es importante que sean corregidos y se les debe asignar una prioridad alta. |
+| **4** | Problema muy grave: un error de gran impacto que impide al usuario continuar con el uso de la herramienta. Es imperativo que sea corregido antes del lanzamiento. |
+
+**TABLA RESUMEN:**
+
+| # | Problema | Escala de severidad | Heurística/Principio violada(o) |
+| :---: | :--- | :---: | :--- |
+| **1** |  |  |  |
+| **2** |  |  |  |
+| **3** |  |  |  |
+| **4** |  |  |  |
+
+---
+
+#### DESCRIPCIÓN DE PROBLEMAS: 
+
+**PROBLEMA #1: **
+* **Severidad:** 
+* **Heurística violada:** 
+* **Problema:** 
+![Problema1](../imagenes/problema1.png)
+* **Recomendación:** 
+
+**PROBLEMA #2: **
+* **Severidad:** 
+* **Heurística violada:** 
+* **Problema:** 
+![Problema2](../imagenes/problema2.png)
+* **Recomendación:**   
+
+**PROBLEMA #3: **
+* **Severidad:**
+* **Heurística violada:** 
+* **Problema:** 
+![Problema3](../imagenes/problema3.png)
+* **Recomendación:** 
+
+**PROBLEMA #4: **
+* **Severidad:** 
+* **Heurística violada:** 
+* **Problema:** 
+![Problema4](../imagenes/problema4.png)
+* **Recomendación:** 
+
+---
+### 5.4. Video About-the-Product.
+
+
+---
