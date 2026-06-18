@@ -1035,10 +1035,10 @@ Los errores serán puntuados tomando en cuenta la siguiente escala de severidad:
 | # | Problema | Escala de severidad | Heurística/Principio violada(o) |
 | :--- | :--- | :---: | :--- |
 | **1** | Inconsistencia visual en los botones de acción principal (Primary Buttons) | 3 | Usability: Consistencia y estándares |
-| **2** | Falta de control para descartar cambios en el "Perfil de negocio" | 2 | Usability: Libertad y control del usuario |
+| **2** | Mezcla inconsistente de idiomas en la interfaz de notificaciones | 2 | Usability: Consistencia y estándares / Relación entre el sistema y el mundo real |
 | **3** | Indicadores de campos obligatorios confusos en el formulario de "Nueva Cita" | 1 | Usability: Prevención de errores / Consistencia |
 | **4** | Bajo contraste de color en las etiquetas de estado "Pendiente" | 2 | Inclusive Design: Accesibilidad visual |
-| **5** | El módulo "Registro por foto" domina la jerarquía visual de la Agenda sin ser la tarea principal | 2 | Information Architecture: Is it usable? / Estética y diseño minimalista |
+| **5** | Falta de validación en los campos de entrada al registrar clientes | 3 | Usability: Prevención de errores |
 
 ---
 
@@ -1053,18 +1053,21 @@ Los errores serán puntuados tomando en cuenta la siguiente escala de severidad:
 ![Problema1](../assets/imagenes/problema1.png)
 
 **Recomendación:** Definir un color único y consistente (por ejemplo, el azul principal de la marca o el naranja si se desea destacar) para todos los botones de acción primaria en todo el sistema.
-
+---
 ### PROBLEMA #2: Falta de control para descartar cambios en el "Perfil de negocio"
 **Severidad:** 2
 
-**Heurística violada:** Usabilidad - Libertad y control del usuario
+**Heurística violada:** Usabilidad - Consistencia y estándares / Relación entre el sistema y el mundo real
 
 **Problema:**  
-En la pantalla de "Perfil de negocio", el usuario puede editar campos como nombre, categoría, teléfono y descripción. Sin embargo, en la parte inferior solo existen los botones "Previsualizar" y "Guardar cambios". Si el usuario modifica los datos por error y desea revertirlos, no existe un botón "Cancelar" que le permita salir de la edición sin guardar o recargar la página.
+En la vista de "Notificaciones", a pesar de que el selector de idioma superior indica que el sistema está configurado en español ("ES"), gran parte de la interfaz se muestra en inglés. El menú lateral muestra opciones como "Overview" y "Planner", y el panel derecho indica "Daily summary" y "Configure alerts". Sin embargo, el contenido dinámico de las notificaciones sí aparece en español ("Cita en 25 minutos"). Esta mezcla rompe la consistencia y puede desorientar al usuario.
 
 ![Problema2](../assets/imagenes/problema2.png)
 
-**Recomendación:** Añadir un botón secundario de "Cancelar" o "Descartar cambios" junto al botón de "Guardar cambios" para otorgar al usuario una salida de emergencia clara.  
+**Recomendación:**  
+Revisar el sistema de internacionalización (i18n) de la aplicación para asegurar que las variables de texto estático del layout y componentes laterales se traduzcan correctamente al idioma activo del usuario.
+
+--- 
 
 ### PROBLEMA #3: Indicadores de campos obligatorios confusos en el formulario de "Nueva Cita"
 **Severidad:** 1
@@ -1091,18 +1094,18 @@ En las tablas de "Clientes" y en el "Panel general", los estados de las citas ut
 **Recomendación:**  
 Aumentar el contraste oscureciendo el color del texto naranja de la etiqueta "Pendiente" o cambiando el color de fondo para cumplir con los estándares de accesibilidad WCAG.
 
-### PROBLEMA #5: El módulo "Registro por foto" domina la jerarquía visual de la Agenda sin ser la tarea principal
-**Severidad:** 2
+### PROBLEMA #5: Falta de validación en los campos de entrada al registrar clientes
+**Severidad:** 3
 
-**Heurística violada:** Information Architecture: Is it usable? / Usabilidad: Estética y diseño minimalista
+**Heurística violada:** Usabilidad - Prevención de errores
 
 **Problema:**  
-En la vista principal de la "Agenda", la barra lateral derecha asigna un bloque de tamaño considerable (y en primera posición) a un panel que dice "Registro por foto - Esperando foto del cliente". Este componente en blanco empuja hacia abajo información crucial para un calendario, como los "Detalles del día" y "Próximas citas".
+En la lista del módulo "Clientes", se observa un registro guardado con el nombre "aaa aaa" y el teléfono "123455". Esto evidencia que el formulario de creación de "Nuevo cliente" no posee validaciones adecuadas en el frontend para restringir el ingreso de caracteres inválidos, longitudes mínimas lógicas o formatos específicos (como un número de celular real). Permitir el ingreso de datos sin validación ensucia la base de datos y afecta la integridad de la información del negocio.
 
 ![Problema5](../assets/imagenes/problema5.png)
 
 **Recomendación:**  
-Reestructurar la arquitectura de la información de esa barra lateral. Las "Próximas citas" o "Detalles del día" deberían tener prioridad visual en la parte superior. El "Registro por foto" podría ser colapsable, invocado mediante un botón o trasladado estrictamente al flujo de "Nuevo Cliente" / "Llegada del cliente".
+Implementar validaciones de formato y longitud (ej. expresiones regulares) en los inputs del formulario antes de permitir el envío de datos, mostrando mensajes de error claros al usuario si el formato ingresado (como el número de teléfono) no es válido.
 
 ---
 ### 5.4. Video About-the-Product.
