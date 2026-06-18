@@ -628,7 +628,7 @@ A continuación, se detalla el registro de las sesiones de validación realizada
 | **Distrito** | San Borja |
 | **URL del Video** | [Ver Video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202312510_upc_edu_pe/IQAfmzF0Tr-7RpE8f5dZ17XbAV0qf6q7U8TEQK1BMfn72uo?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=Tf6rrr) |
 | **Timing y Duración** | Inicio: 00:00 / Duración: 7:19 |
-| **Screenshot** | ![Entrevista 1](../imagenes/entrevista_validacion_manuel.png) |
+| **Screenshot** | ![Entrevista 1](../imagenes/validation/entrevista_validacion_manuel.png) |
 | **Resumen de Apreciaciones** | Manuel Mera resalta la eficiencia de la plataforma al valorar su diseño directo, el cual evita distracciones innecesarias y permite una navegación sumamente rápida entre el panel y el calendario. Destaca que los recordatorios automáticos y la interfaz intuitiva de la vista semanal —similar a su agenda física— son elementos clave para optimizar su tiempo y reducir el ausentismo de pacientes. Finalmente, sugiere incrementar el contraste visual entre las etiquetas de citas "Pendientes" y "Confirmadas" para facilitar una lectura más ágil, concluyendo que la herramienta es altamente práctica para su gestión diaria. |
 
 **Entrevista 2**
