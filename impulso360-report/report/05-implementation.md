@@ -1458,22 +1458,70 @@ En esta sección se documentan las actividades de validación ejecutadas con usu
 * **Escenarios de Demostración (User Flows):**
   * Exploración: Ingresar a la Landing Page, identificar la propuesta de valor y seleccionar el botón de "Empezar Ahora".
   * Organización Diaria: Iniciar sesión e interpretar las métricas del "Panel General" (citas de hoy, pendientes, confirmadas).
-  * Gestión de Citas: Navegar a la "Agenda", registrar una nueva cita seleccionando cliente, servicio, fecha y hora, y verificar su aparición en la vista semanal.  
+  * Gestión de Citas: Navegar a la "Agenda", registrar una nueva cita seleccionando cliente, servicio, fecha y hora, y verificar su aparición en la vista semanal.
 
-#### Segmento 2: Empresas de Gestión de Edificios (Administradores)
+#### Segmento 2:  Emprendedores en progreso de digitalización
 * **Objetivo de Validación:** Landing Page, módulo de Perfil del Negocio, módulo de Clientes y módulo de Servicios.  
 * **Escenarios de Demostración (User Flows):**
   * Configuración Inicial: Navegar al "Perfil del Negocio" y actualizar el horario de atención y los datos de contacto.
   * Gestión de Catálogo: Ingresar a "Servicios", registrar un nuevo servicio (nombre, categoría, precio, duración).
   * Registro de Clientes: Ir al módulo "Clientes" y agregar un nuevo registro validando que la información sea correcta
 
+
+* **Preguntas de Validación del Producto:**
+
+  **Landing Page**
+  1. Después de ver la Landing Page, ¿te queda claro qué problema busca resolver Impulso360?
+  2. ¿La sección de beneficios te ayuda a entender cómo la plataforma puede mejorar la organización de tu negocio?
+  3. ¿Qué información adicional necesitarías ver en la Landing Page antes de decidir registrarte?
+
+  **Panel General**
+  1. Al ver el Panel General, ¿entiendes rápidamente el estado del día de tu negocio?
+  2. ¿Las métricas de citas de hoy, pendientes y confirmadas te parecen útiles para organizar tu jornada?
+  3. ¿Consideras que el Dashboard te ayudaría a tomar decisiones más rápido durante el día?
+  4. ¿Qué otra información te gustaría ver en el Panel General?
+
+  **Agenda y creación de citas**
+  1. Al registrar una nueva cita, ¿el flujo te parece fácil de seguir?
+  2. ¿Los campos solicitados para crear una cita son suficientes para tu tipo de negocio?
+  3. ¿Usarías esta agenda como reemplazo de tu método actual de organización?
+  4. ¿Qué parte del flujo cambiarías o simplificarías?
+
+  **Perfil del Negocio**
+  1. ¿Qué información adicional debería incluir el perfil para una empresa de gestión de edificios?
+  2. ¿Consideras que este módulo ayudaría a mantener información actualizada para clientes o residentes?
+
+  **Servicios**
+  1. Al registrar un nuevo servicio, ¿los campos son suficientes?
+  2. ¿La creación de servicios te parece útil para organizar el catálogo de atenciones o solicitudes?
+  3. ¿Consideras que este módulo facilitaría la gestión de servicios recurrentes o solicitudes frecuentes?
+
+  **Clientes**
+  1. Al agregar un nuevo cliente, ¿el formulario te parece claro y fácil de completar?
+  2. ¿Los datos solicitados son suficientes para registrar correctamente a un cliente ?
+  3. ¿Te parece útil tener una base de clientes centralizada?
+  4.  ¿Consideras que el módulo de clientes se adapta a la forma en que una empresa administradora organiza su información?
+
+---
+
+#### Preguntas Finales para Ambos Segmentos
+
+1. Después de probar los flujos mostrados, ¿cuál funcionalidad te pareció más útil?
+2. ¿Qué funcionalidad consideras menos necesaria o menos clara?
+3. ¿La plataforma te parece fácil de usar sin explicación adicional?
+4. ¿En qué parte del producto tuviste dudas o necesitaste ayuda?
+5. ¿Consideras que Impulso360 resuelve un problema real de organización para tu negocio?
+6. ¿Qué cambiarías antes de usar esta plataforma en tu operación diaria?
+8. ¿Usarías esta plataforma en tu negocio si estuviera disponible?
+9. ¿Recomendarías esta solución a otro negocio similar?
+10. ¿Qué tendría que pasar para que decidas usar Impulso360 de forma constante?
 ---
 
 ### 5.3.2. Registro de Entrevistas
 
 A continuación, se detalla el registro de las sesiones de validación realizadas con los usuarios seleccionados, grabando la pantalla y la interacción directa con el sistema. 
 
-#### Segmento 1: Junta de Directiva y Residentes
+#### Segmento 1: Microempresas de servicios por citas
 
 **Entrevista 1**
 
