@@ -1499,8 +1499,8 @@ En esta sección se documentan las actividades de validación ejecutadas con usu
   **Clientes**
   1. Al agregar un nuevo cliente, ¿el formulario te parece claro y fácil de completar?
   2. ¿Los datos solicitados son suficientes para registrar correctamente a un cliente ?
-  3. ¿Te parece útil tener una base de clientes centralizada?
-  4.  ¿Consideras que el módulo de clientes se adapta a la forma en que una empresa administradora organiza su información?
+  3. ¿Te parece útil tener una base de clientes centralizada? 
+  4. ¿Consideras que el módulo de clientes se adapta a la forma en que una empresa administradora organiza su información?
 
 ---
 
@@ -1509,12 +1509,8 @@ En esta sección se documentan las actividades de validación ejecutadas con usu
 1. Después de probar los flujos mostrados, ¿cuál funcionalidad te pareció más útil?
 2. ¿Qué funcionalidad consideras menos necesaria o menos clara?
 3. ¿La plataforma te parece fácil de usar sin explicación adicional?
-4. ¿En qué parte del producto tuviste dudas o necesitaste ayuda?
-5. ¿Consideras que Impulso360 resuelve un problema real de organización para tu negocio?
-6. ¿Qué cambiarías antes de usar esta plataforma en tu operación diaria?
-8. ¿Usarías esta plataforma en tu negocio si estuviera disponible?
-9. ¿Recomendarías esta solución a otro negocio similar?
-10. ¿Qué tendría que pasar para que decidas usar Impulso360 de forma constante?
+4. ¿Usarías esta plataforma en tu negocio si estuviera disponible?
+5. ¿Recomendarías esta solución a otro negocio similar?
 ---
 
 ### 5.3.2. Registro de Entrevistas
@@ -1537,6 +1533,19 @@ A continuación, se detalla el registro de las sesiones de validación realizada
 | **Resumen de Apreciaciones** | Manuel Mera resalta la eficiencia de la plataforma al valorar su diseño directo, el cual evita distracciones innecesarias y permite una navegación sumamente rápida entre el panel y el calendario. Destaca que los recordatorios automáticos y la interfaz intuitiva de la vista semanal —similar a su agenda física— son elementos clave para optimizar su tiempo y reducir el ausentismo de pacientes. Finalmente, sugiere incrementar el contraste visual entre las etiquetas de citas "Pendientes" y "Confirmadas" para facilitar una lectura más ágil, concluyendo que la herramienta es altamente práctica para su gestión diaria. |
 
 **Entrevista 2**
+
+| Campo | Detalle                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| :--- |:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Segmento**   | Microempresas de servicios por citas                                                                                                                                                                                                                                                                                                                                                                                                                 |  
+| **Nombres y Apellidos** | Camila Diaz                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| **Edad** | 23                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| **Distrito** | San Borja                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| **URL del Video** | [Ver Video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202419592_upc_edu_pe/IQB3-ocT_HPWQYiRyIyVINsfAYw9M0APps-K_RfNXU-DHCA?e=IwMgP0&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)                                                                                                                 |
+| **Timing y Duración** | Inicio: 00:00 / Duración: 12:52                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| **Screenshot** | ![Entrevista 1](../assets/imagenes/validation/entrevista_validacion_camila.png)                                                                                                                                                                                                                                                                                                                                                                      |
+| **Resumen de Apreciaciones** | Camila resalta la utilidad de las funcionalidades expuestas en la aplciación mencionando como serían útiles en su contexto. Además también menciona puntos de mejora en el perfil del usuario como agregar redes sociales, correo y horarios que puedan ser útiles para quienes agenden su cita. También resalta lo fácil que sería utilzar la aplicación con una explicación breve (a través del módulo de ayuda) o incluso simplemente explorando. |
+
+
 
 **Entrevista 3**
 
