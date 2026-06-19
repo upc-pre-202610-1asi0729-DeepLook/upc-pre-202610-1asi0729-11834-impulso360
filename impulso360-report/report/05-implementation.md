@@ -927,6 +927,526 @@ Durante este sprint, el equipo se centró en la documentación e implementación
 ![frontend-commit](../assets/imagenes/frontend-commits/frontend-commit5.png)
 ![frontend-commit](../assets/imagenes/frontend-commits/frontend-commit6.png)
 
+### 5.2.3. Sprint 3
+
+#### 5.2.3.1. Sprint Planning 3.
+
+
+| Sprint \#                      | Sprint 3                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+|:-------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Sprint Planning Background** |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| Date                           | 06 \- 06 \- 2026                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| Location                       | Reunión virtual via google meets                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| Prepared By                    | Grupo DeepLook                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| Attendees                      | Merino Ordinola, Winnie Lisbeth  Sandoval Cueto, Fabian Jesus  Jave Chang, Alejandro Manuel  Ramos Cerdan, Elias Daniel  Tirado Carrera, Gabriela Luciana                                                                                                                                                                                                                                                                                                                                                                                                  |
+| **Sprint Goal & User Stories** |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| Sprint 3 Goal                  | Nuestro enfoque es desarrollar el backend de Impulso360 mediante una API RESTful organizada por bounded contexts. Creemos que esta implementación permitirá que la plataforma deje de depender únicamente de datos simulados y pueda avanzar hacia una arquitectura conectada entre frontend, backend y base de datos. Esto se confirmará cuando los bounded contexts de Ayuda, Clients, Notificaciones + Dashboard, Agenda y Perfil + Servicios cuenten con endpoints funcionales, estructura de dominio, servicios de aplicación y persistencia inicial. |
+| Sprint 3 Velocity              | 44 Story Points                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| Sum of Story Points            | 44 Story Points                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |                                                                                                                                                                                                                                                                                                                        |
+
+#### 5.2.3.2. Aspect Leaders and Collaborators.
+
+| Team Member | GitHub Username | Ayuda | Clients | Notificaciones + Dashboard | Agenda + Autenticación | Perfil + Servicios |
+| :---- | :---- |:------| :---- |:---------------------------|:-----------------------|:-------------------|
+| Merino Ordinola, Winnie Lisbeth | winniemerino | C     | C | C                          | C                      | L                  |
+| Sandoval Cueto, Fabian Jesus | JFabianSandoval | C     | C | L                          | C                      | C                  |
+| Jave Chang, Alejandro Manuel | alejandro202312510 | C     | C | C                          | L                      | C                  |
+| Ramos Cerdan, Elias Daniel | eliocerdan | L     | C | C                          | C                      | C                  |
+| Tirado Carrera, Gabriela Luciana | Gaby0443 | C     | L | C                          | C                      | C                  |
+
+
+#### 5.2.3.3. Sprint Backlog 3.
+<table>
+  <thead>
+    <tr>
+      <th>Sprint #</th>
+      <th colspan="8">Sprint 3</th>
+    </tr>
+    <tr>
+      <th colspan="3">User Story</th>
+      <th colspan="6">Work-Item / Task</th>
+    </tr>
+    <tr>
+      <th>id</th>
+      <th>Title</th>
+      <th>Story Points</th>
+      <th>id</th>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Estimation<br>(Hours)</th>
+      <th>Assigned To</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="3">TS01</td>
+      <td rowspan="3">Autenticación</td>
+      <td rowspan="3">5</td>
+      <td>T01</td>
+      <td>Implementar estructura de autenticación</td>
+      <td>Crear la estructura backend necesaria para gestionar autenticación de usuarios dentro de la API RESTful.</td>
+      <td>3</td>
+      <td>Jave Chang, Alejandro Manuel</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T02</td>
+      <td>Implementar endpoint de login</td>
+      <td>Crear el endpoint de inicio de sesión para validar credenciales y retornar la respuesta correspondiente.</td>
+      <td>4</td>
+      <td>Jave Chang, Alejandro Manuel</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T03</td>
+      <td>Validar respuestas de autenticación</td>
+      <td>Probar escenarios de autenticación exitosa y credenciales inválidas para asegurar respuestas correctas del backend.</td>
+      <td>2</td>
+      <td>Jave Chang, Alejandro Manuel</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td rowspan="4">TS02</td>
+      <td rowspan="4">Gestión de citas</td>
+      <td rowspan="4">8</td>
+      <td>T04</td>
+      <td>Implementar bounded context Agenda</td>
+      <td>Crear la estructura del contexto de agenda separando domain, application, infrastructure e interfaces.</td>
+      <td>4</td>
+      <td>Jave Chang, Alejandro Manuel</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T05</td>
+      <td>Implementar modelo de cita</td>
+      <td>Definir el modelo principal para representar citas con cliente, servicio, fecha, hora y estado.</td>
+      <td>4</td>
+      <td>Jave Chang, Alejandro Manuel</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T06</td>
+      <td>Implementar servicios de aplicación de agenda</td>
+      <td>Crear servicios para registrar, consultar, actualizar, cancelar y gestionar citas desde la capa de aplicación.</td>
+      <td>5</td>
+      <td>Jave Chang, Alejandro Manuel</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T07</td>
+      <td>Exponer endpoints REST de agenda</td>
+      <td>Crear endpoints para permitir la comunicación entre frontend y backend en las operaciones principales de agenda.</td>
+      <td>4</td>
+      <td>Jave Chang, Alejandro Manuel</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td rowspan="3">US05</td>
+      <td rowspan="3">Reprogramación sencilla de citas</td>
+      <td rowspan="3">5</td>
+      <td>T08</td>
+      <td>Implementar lógica de reprogramación</td>
+      <td>Permitir la actualización de fecha y hora de una cita existente desde el backend.</td>
+      <td>3</td>
+      <td>Jave Chang, Alejandro Manuel</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T09</td>
+      <td>Validar disponibilidad de horario</td>
+      <td>Agregar validación para evitar que una cita sea reprogramada en un horario ocupado.</td>
+      <td>3</td>
+      <td>Jave Chang, Alejandro Manuel</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T10</td>
+      <td>Probar endpoint de reprogramación</td>
+      <td>Validar mediante Swagger o cliente HTTP que la cita se actualice correctamente.</td>
+      <td>2</td>
+      <td>Jave Chang, Alejandro Manuel</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td rowspan="2">US06</td>
+      <td rowspan="2">Cancelación de reservas</td>
+      <td rowspan="2">3</td>
+      <td>T11</td>
+      <td>Implementar cancelación de cita</td>
+      <td>Crear la lógica backend para marcar una cita como cancelada y liberar su horario asociado.</td>
+      <td>3</td>
+      <td>Jave Chang, Alejandro Manuel</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T12</td>
+      <td>Validar endpoint de cancelación</td>
+      <td>Comprobar que el endpoint actualice correctamente el estado de la cita cancelada.</td>
+      <td>2</td>
+      <td>Jave Chang, Alejandro Manuel</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td rowspan="2">US27</td>
+      <td rowspan="2">Planificación anticipada</td>
+      <td rowspan="2">3</td>
+      <td>T13</td>
+      <td>Consultar citas futuras</td>
+      <td>Implementar consultas backend para obtener citas futuras y permitir su posterior visualización desde la agenda.</td>
+      <td>3</td>
+      <td>Jave Chang, Alejandro Manuel</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T14</td>
+      <td>Ordenar citas por fecha</td>
+      <td>Preparar la respuesta de citas futuras ordenadas cronológicamente.</td>
+      <td>2</td>
+      <td>Jave Chang, Alejandro Manuel</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td rowspan="4">TS03</td>
+      <td rowspan="4">Gestión de clientes</td>
+      <td rowspan="4">5</td>
+      <td>T15</td>
+      <td>Implementar bounded context Clients</td>
+      <td>Crear la estructura del contexto de clientes siguiendo principios de Domain-Driven Design.</td>
+      <td>4</td>
+      <td>Tirado Carrera, Gabriela Luciana</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T16</td>
+      <td>Implementar modelo y persistencia de clientes</td>
+      <td>Crear el agregado Client, entidad JPA, repositorio y adaptación de persistencia para almacenar clientes.</td>
+      <td>4</td>
+      <td>Tirado Carrera, Gabriela Luciana</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T17</td>
+      <td>Implementar servicios de aplicación de clientes</td>
+      <td>Crear command services y query services para registrar, consultar, buscar y eliminar clientes.</td>
+      <td>4</td>
+      <td>Tirado Carrera, Gabriela Luciana</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T18</td>
+      <td>Exponer endpoints REST de clientes</td>
+      <td>Crear endpoints para registrar clientes, listar clientes, obtener cliente por id, buscar clientes y eliminar clientes.</td>
+      <td>3</td>
+      <td>Tirado Carrera, Gabriela Luciana</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td rowspan="2">US08</td>
+      <td rowspan="2">Historial por cliente</td>
+      <td rowspan="2">3</td>
+      <td>T19</td>
+      <td>Preparar consulta de historial de cliente</td>
+      <td>Implementar la base backend para consultar información histórica asociada a un cliente.</td>
+      <td>3</td>
+      <td>Tirado Carrera, Gabriela Luciana</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T20</td>
+      <td>Retornar historial estructurado</td>
+      <td>Preparar una respuesta organizada con citas, servicios, estados y notas vinculadas al cliente.</td>
+      <td>2</td>
+      <td>Tirado Carrera, Gabriela Luciana</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td rowspan="2">US29</td>
+      <td rowspan="2">Visualización ordenada</td>
+      <td rowspan="2">2</td>
+      <td>T21</td>
+      <td>Ordenar registros desde backend</td>
+      <td>Preparar respuestas ordenadas para mejorar la consulta de registros en los módulos principales.</td>
+      <td>2</td>
+      <td>Tirado Carrera, Gabriela Luciana</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T22</td>
+      <td>Validar formato de respuestas</td>
+      <td>Comprobar que los recursos retornados por el backend mantengan una estructura consistente.</td>
+      <td>2</td>
+      <td>Tirado Carrera, Gabriela Luciana</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td rowspan="3">TS04</td>
+      <td rowspan="3">Servicios del negocio</td>
+      <td rowspan="3">5</td>
+      <td>T23</td>
+      <td>Implementar bounded context Services</td>
+      <td>Crear la estructura backend para gestionar los servicios ofrecidos por cada negocio.</td>
+      <td>4</td>
+      <td>Merino Ordinola, Winnie Lisbeth</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T24</td>
+      <td>Implementar modelo de servicio</td>
+      <td>Definir la estructura de los servicios con nombre, descripción, duración, disponibilidad y datos principales.</td>
+      <td>3</td>
+      <td>Merino Ordinola, Winnie Lisbeth</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T25</td>
+      <td>Exponer endpoints REST de servicios</td>
+      <td>Crear endpoints para registrar, consultar, actualizar y eliminar servicios del negocio.</td>
+      <td>3</td>
+      <td>Merino Ordinola, Winnie Lisbeth</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td rowspan="3">TS05</td>
+      <td rowspan="3">Perfil digital</td>
+      <td rowspan="3">5</td>
+      <td>T26</td>
+      <td>Implementar bounded context Profile</td>
+      <td>Crear la estructura backend para gestionar la información del perfil digital del negocio.</td>
+      <td>4</td>
+      <td>Merino Ordinola, Winnie Lisbeth</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T27</td>
+      <td>Implementar modelo de perfil del negocio</td>
+      <td>Definir los datos principales del perfil, como nombre del negocio, descripción, contacto, horario y estado.</td>
+      <td>3</td>
+      <td>Merino Ordinola, Winnie Lisbeth</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T28</td>
+      <td>Exponer endpoints REST de perfil</td>
+      <td>Crear endpoints para consultar y actualizar la información pública del perfil del negocio.</td>
+      <td>3</td>
+      <td>Merino Ordinola, Winnie Lisbeth</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td rowspan="2">US12</td>
+      <td rowspan="2">Promoción de servicios destacados</td>
+      <td rowspan="2">3</td>
+      <td>T29</td>
+      <td>Preparar marcado de servicios destacados</td>
+      <td>Agregar soporte backend para identificar servicios destacados dentro del perfil digital.</td>
+      <td>3</td>
+      <td>Merino Ordinola, Winnie Lisbeth</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T30</td>
+      <td>Validar límite de servicios destacados</td>
+      <td>Preparar validación para evitar que se destaquen más servicios de los permitidos.</td>
+      <td>2</td>
+      <td>Merino Ordinola, Winnie Lisbeth</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td rowspan="2">US20</td>
+      <td rowspan="2">Perfil independiente</td>
+      <td rowspan="2">2</td>
+      <td>T31</td>
+      <td>Preparar consulta de perfil público</td>
+      <td>Implementar la base para consultar el perfil digital publicado desde un endpoint público.</td>
+      <td>2</td>
+      <td>Merino Ordinola, Winnie Lisbeth</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T32</td>
+      <td>Validar estado de publicación</td>
+      <td>Agregar validación para diferenciar perfiles publicados y no publicados.</td>
+      <td>2</td>
+      <td>Merino Ordinola, Winnie Lisbeth</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td rowspan="3">TS06</td>
+      <td rowspan="3">Recordatorios</td>
+      <td rowspan="3">8</td>
+      <td>T33</td>
+      <td>Implementar bounded context Notifications</td>
+      <td>Crear la estructura backend para gestionar recordatorios y alertas internas relacionadas con citas próximas.</td>
+      <td>4</td>
+      <td>Sandoval Cueto, Fabian Jesus</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T34</td>
+      <td>Implementar modelo de notificación</td>
+      <td>Definir los datos principales de una notificación, como tipo, mensaje, fecha, estado y relación con una cita.</td>
+      <td>3</td>
+      <td>Sandoval Cueto, Fabian Jesus</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T35</td>
+      <td>Exponer endpoints REST de recordatorios</td>
+      <td>Crear endpoints para consultar recordatorios pendientes y alertas próximas.</td>
+      <td>3</td>
+      <td>Sandoval Cueto, Fabian Jesus</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td rowspan="2">US25</td>
+      <td rowspan="2">Confirmación ordenada de reservas</td>
+      <td rowspan="2">2</td>
+      <td>T36</td>
+      <td>Preparar confirmación desde backend</td>
+      <td>Crear lógica para actualizar el estado de una reserva pendiente a confirmada.</td>
+      <td>2</td>
+      <td>Sandoval Cueto, Fabian Jesus</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T37</td>
+      <td>Validar estado de reservas confirmadas</td>
+      <td>Comprobar que las reservas confirmadas puedan ser consultadas correctamente desde el API.</td>
+      <td>2</td>
+      <td>Sandoval Cueto, Fabian Jesus</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td rowspan="2">US14</td>
+      <td rowspan="2">Citas perdidas</td>
+      <td rowspan="2">2</td>
+      <td>T38</td>
+      <td>Preparar identificación de citas perdidas</td>
+      <td>Crear lógica backend para identificar citas que pasaron su horario sin ser atendidas o confirmadas.</td>
+      <td>2</td>
+      <td>Sandoval Cueto, Fabian Jesus</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T39</td>
+      <td>Consultar citas perdidas</td>
+      <td>Preparar endpoint o consulta para obtener citas marcadas como perdidas.</td>
+      <td>2</td>
+      <td>Sandoval Cueto, Fabian Jesus</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td rowspan="2">US10</td>
+      <td rowspan="2">Notas por cita</td>
+      <td rowspan="2">2</td>
+      <td>T40</td>
+      <td>Implementar notas internas en citas</td>
+      <td>Agregar soporte backend para registrar y actualizar notas internas asociadas a una cita.</td>
+      <td>2</td>
+      <td>Jave Chang, Alejandro Manuel</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T41</td>
+      <td>Validar persistencia de notas</td>
+      <td>Comprobar que las notas internas se mantengan asociadas correctamente a la cita correspondiente.</td>
+      <td>2</td>
+      <td>Jave Chang, Alejandro Manuel</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td rowspan="6">EP07</td>
+      <td rowspan="6">RESTful API</td>
+      <td rowspan="6">-</td>
+      <td>T42</td>
+      <td>Documentar endpoints de autenticación</td>
+      <td>Registrar evidencia de los endpoints de autenticación, incluyendo método, ruta, request, response y estado esperado.</td>
+      <td>2</td>
+      <td>Jave Chang, Alejandro Manuel</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T43</td>
+      <td>Documentar endpoints de agenda</td>
+      <td>Registrar evidencia de los endpoints relacionados con citas, reprogramación, cancelación, notas y citas futuras.</td>
+      <td>2</td>
+      <td>Jave Chang, Alejandro Manuel</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T44</td>
+      <td>Documentar endpoints de clientes</td>
+      <td>Registrar evidencia de los endpoints de registro, consulta, búsqueda, historial y eliminación de clientes.</td>
+      <td>2</td>
+      <td>Tirado Carrera, Gabriela Luciana</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T45</td>
+      <td>Documentar endpoints de servicios y perfil</td>
+      <td>Registrar evidencia de los endpoints relacionados con servicios del negocio, perfil digital y perfil público.</td>
+      <td>2</td>
+      <td>Merino Ordinola, Winnie Lisbeth</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T46</td>
+      <td>Documentar endpoints de recordatorios y dashboard</td>
+      <td>Registrar evidencia de los endpoints relacionados con recordatorios, alertas, confirmaciones y métricas del dashboard.</td>
+      <td>2</td>
+      <td>Sandoval Cueto, Fabian Jesus</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T47</td>
+      <td>Documentar endpoints de ayuda</td>
+      <td>Registrar evidencia de los endpoints relacionados con preguntas frecuentes y contenido de soporte.</td>
+      <td>2</td>
+      <td>Ramos Cerdan, Elias Daniel</td>
+      <td>Done</td>
+    </tr>
+  </tbody>
+</table>
+
+#### 5.2.3.4. Development Evidence for Sprint Review.
+
+Durante el Sprint 3, el equipo desarrolló el backend de Impulso360 mediante una API RESTful organizada por bounded contexts. El trabajo se enfocó en construir la base técnica de la plataforma para permitir la comunicación futura entre frontend, backend y base de datos, dejando atrás el uso exclusivo de datos simulados.
+
+| Repository | Branch | Commit Id | Commit Message  | Commited on (Date) |
+|---|---|---|---|---|
+|  |  |  |  |  |  
+|  |  |  |  |  |  
+|  |  |  |  |  |  
+|  |  |  |  |  |  
+|  |  |  |  |  |  
+
+
+#### 5.2.3.5. Execution Evidence for Sprint Review.
+
+Durante el Sprint 3, el equipo validó la ejecución del backend de Impulso360 mediante pruebas locales de la API RESTful. Esta evidencia permitirá demostrar que los bounded contexts implementados pueden ejecutarse correctamente y responder a solicitudes desde herramientas como Postman o el navegador.
+
+
+#### 5.2.3.6. Services Documentation Evidence for Sprint Review.
+
+Durante el Sprint 3 se incluye endpoints RESTful, debido a que el alcance principal estuvo orientado al desarrollo del backend de la plataforma.
+
+La documentación de servicios se organiza según los bounded contexts trabajados
+
+##### Clients Endpoints
+
+| Method | Endpoint | Description | Expected Result |
+| :---- | :---- | :---- | :---- |
+| POST | `/api/v1/clients` | Registra un nuevo cliente en la plataforma. | Retorna el cliente creado o una respuesta de creación correcta. | 
+| GET | `/api/v1/clients` | Obtiene el listado de clientes registrados. | Retorna una colección de clientes. | 
+| GET | `/api/v1/clients/{id}` | Obtiene la información de un cliente por su identificador. | Retorna la información del cliente encontrado. | 
+| GET | `/api/v1/clients/search` | Busca clientes por nombre, apellido, teléfono o correo. | Retorna las coincidencias relacionadas con el criterio de búsqueda. | 
+| DELETE | `/api/v1/clients/{id}` | Elimina un cliente registrado mediante su identificador. | Retorna una respuesta de eliminación correcta. |
+
+#### 5.2.3.7. Software Deployment Evidence for Sprint Review.
+
+#### 5.2.3.8. Team Collaboration Insights during Sprint
+
 ## 5.3. Validation Interviews
 
 En esta sección se documentan las actividades de validación ejecutadas con usuarios reales pertenecientes a nuestros dos segmentos objetivo. El propósito es evaluar la usabilidad, claridad y propuesta de valor tanto de la Landing Page como de los prototipos navegables de la aplicación web de Impulso360, garantizando que el sistema provea estrictamente el servicio sin flujos de asistencia innecesarios que desvíen la atención del usuario.
