@@ -1413,25 +1413,44 @@ Durante este sprint, el equipo se centró en la documentación e implementación
 
 Durante el Sprint 3, el equipo desarrolló el backend de Impulso360 mediante una API RESTful organizada por bounded contexts. El trabajo se enfocó en construir la base técnica de la plataforma para permitir la comunicación futura entre frontend, backend y base de datos, dejando atrás el uso exclusivo de datos simulados.
 
-| Repository | Branch | Commit Id | Commit Message  | Commited on (Date) |
-|---|---|---|---|---|
-|  |  |  |  |  |  
-|  |  |  |  |  |  
-|  |  |  |  |  |  
-|  |  |  |  |  |  
-|  |  |  |  |  |  
+| Repository          | Branch                                    | Commit Id | Commit Message                                                             | Commited on (Date) |
+|---------------------|-------------------------------------------|-----------|----------------------------------------------------------------------------|--------------------|
+| impulso360-Backend  | feature/create-client                     | ce9db5d   | feat(clients): implement create client endpoint                            | 2026-06-14         |  
+| impulso360-Backend  | feature/query-clients                     | f0004bf   | feat(clients): implement query clients endpoints                           | 2026-06-14         |  
+| impulso360-Backend  | feature/update-client                     | 9158a7c   | feat(clients): implement update client endpoint                            | 2026-06-14         |  
+| impulso360-Backend  | feature/delete-client                     | 2527057   | feat(clients): implement delete client endpoint                            | 2026-06-14         |  
+| impulso360-Backend  | feature/get-agenda                        | 87b2a59   | feat: add appointments, users, and clients bounded contexts with full CRUD | 2026-06-16         |  
+| impulso360-Backend  | feature/deployment-github-actions-release | e1be00d   | feat(deployment): configure production profile and release workflow        | 2026-06-19         |
+| impulso360-Backend  | feature/get-general-dashboard-summary     | 86066e0   | feat: get general dashboard summary                                        | 2026-06-20         |
+| impulso360-Backend  | feature/get-general-dashboard-clints      | 5037764   | feat: get general dashboard clients                                        | 2026-06-20         |
+| impulso360-Backend  | feature/get-general-dashboard-alerts      | 79b7f7a   | feat: get general dashboard alerts                                         | 2026-06-20         |
+
 
 
 #### 5.2.3.5. Execution Evidence for Sprint Review.
 
-Durante el Sprint 3, el equipo validó la ejecución del backend de Impulso360 mediante pruebas locales de la API RESTful. Esta evidencia permitirá demostrar que los bounded contexts implementados pueden ejecutarse correctamente y responder a solicitudes desde herramientas como Postman o el navegador.
+En el Sprint 3 se verificó la ejecución del backend de Impulso360. Se realizaron pruebas exitosas en los endpoints integrados en Swagger UI y Postman, demostrando que los bounded contexts responden correctamente a las solicitude.
+
+##### Users:
+![Swagger User Endpoints Evidence](../assets/imagenes/execution-evidence-sprint-3/)
+#### Clients:
+![Swagger Clients Endpoints Evidence](../assets/imagenes/execution-evidence-sprint-3/)
 
 
 #### 5.2.3.6. Services Documentation Evidence for Sprint Review.
 
-Durante el Sprint 3 se incluye endpoints RESTful, debido a que el alcance principal estuvo orientado al desarrollo del backend de la plataforma.
+Durante el Sprint 3 se incluye endpoints RESTful, debido a que el alcance principal estuvo orientado al desarrollo del backend de la plataforma. 
 
-La documentación de servicios se organiza según los bounded contexts trabajados
+La documentación de servicios se organiza según los bounded contexts trabajados:
+
+##### Users Endpoints
+
+| Method | Endpoint | Description | Expected Result |
+| :---- | :---- | :---- | :---- |
+| POST | `/api/v1/users` | Registra un nuevo usuario en la plataforma. | Retorna el usuario creado o una respuesta de creación correcta. |
+| GET | `/api/v1/users` | Obtiene el listado de usuarios registrados. También permite filtrar mediante parámetros como `email` o `search`. | Retorna una colección de usuarios o las coincidencias encontradas según el filtro aplicado. |
+| GET | `/api/v1/users/{userId}` | Obtiene la información de un usuario mediante su identificador. | Retorna la información del usuario encontrado. |
+| PATCH | `/api/v1/users/{userId}` | Actualiza parcialmente la información de un usuario registrado. | Retorna el usuario actualizado o una respuesta de actualización correcta. |
 
 ##### Clients Endpoints
 
@@ -1443,9 +1462,42 @@ La documentación de servicios se organiza según los bounded contexts trabajado
 | GET | `/api/v1/clients/search` | Busca clientes por nombre, apellido, teléfono o correo. | Retorna las coincidencias relacionadas con el criterio de búsqueda. | 
 | DELETE | `/api/v1/clients/{id}` | Elimina un cliente registrado mediante su identificador. | Retorna una respuesta de eliminación correcta. |
 
+##### Appointments Endpoints
+
+| Method | Endpoint | Description | Expected Result |
+| :---- | :---- | :---- | :---- |
+| POST | `/api/v1/appointments` | Registra una nueva cita en la plataforma. | Retorna la cita creada o una respuesta de creación correcta. |
+| GET | `/api/v1/appointments` | Obtiene el listado de citas registradas. También permite filtrar por `businessId` o buscar por `clientName`. | Retorna una colección de citas o las coincidencias según el filtro aplicado. |
+| GET | `/api/v1/appointments/{appointmentId}` | Obtiene la información de una cita mediante su identificador. | Retorna la información de la cita encontrada. |
+| PATCH | `/api/v1/appointments/{appointmentId}` | Actualiza parcialmente la información de una cita registrada. | Retorna la cita actualizada o una respuesta de actualización correcta. |
+| DELETE | `/api/v1/appointments/{appointmentId}` | Elimina una cita registrada mediante su identificador. | Retorna una respuesta de eliminación correcta. |
+
 #### 5.2.3.7. Software Deployment Evidence for Sprint Review.
 
+Durante el Sprint, se realizaron actividades relacionadas con el despliegue del backend y la configuración de su base de datos MySQL. El proceso de deployment se llevó a cabo utilizando máquinas virtuales en Google Cloud Platform y GitHub Releases para la generación y publicación del artefacto ejecutable del backend.
+
+Se configuraron dos máquinas virtuales en Google Cloud Platform. La primera fue destinada a la capa de datos, donde se alojó la base de datos MySQL. La segunda fue creada para la capa de aplicación, encargada de ejecutar el archivo .jar del backend desarrollado con Spring Boot. Esta separación permitió organizar la arquitectura de despliegue en dos componentes principales: servidor de aplicación y servidor de base de datos.
+
+Asimismo, la aplicación backend fue configurada para utilizar un perfil de producción conectado a la base de datos MySQL mediante variables de entorno. Esta configuración permite ejecutar el servicio sin almacenar credenciales sensibles directamente en el código fuente, facilitando un despliegue más seguro y ordenado. Finalmente, se habilitó la documentación OpenAPI mediante Swagger UI, lo que proporciona una evidencia visual de los endpoints disponibles y permite validar el funcionamiento del servicio desplegado directamente desde el navegador.
+Se puede acceder al despliegue mediante los siguientes links:
+
+![Github Releases](../assets/imagenes/deployment-evidence-sprint-3/)
+![Virtual Machine](../assets/imagenes/deployment-evidence-sprint-3/evidence-vm-deployment.png)
+
+- **URL BASE:** http://34.176.216.15:3000
+- **Documentación de Swagger/OpenAPI:** http://34.176.216.15:3000/swagger-ui/index.html
+- **Ejemplo de Endpoint:** http://34.176.216.15:3000/api/v1/clients
+
+
 #### 5.2.3.8. Team Collaboration Insights during Sprint
+Durante este sprint, el equipo se centró en la implementación y despliegue del backend de la aplicación. El trabajo se organizó mediante GitHub como herramienta principal para la colaboración, control de versiones, generación de releases y documentación del servicio mediante OpenAPI/Swagger. A continuación, se presentan las colaboraciones y commits realizados tanto para el backend como para el reporte.
+
+**Report:**
+
+
+**Backend de la aplicación**
+
+
 
 ## 5.3. Validation Interviews
 
