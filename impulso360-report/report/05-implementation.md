@@ -1685,7 +1685,7 @@ Los errores serán puntuados tomando en cuenta la siguiente escala de severidad:
 
 ---
 
-### PROBLEMA #2: Falta de control para descartar cambios en el "Perfil de negocio"
+### PROBLEMA #2: Mezcla inconsistente de idiomas en la interfaz de notificaciones
 **Severidad:** 2
 
 **Heurística violada:** Usabilidad - Consistencia y estándares / Relación entre el sistema y el mundo real
