@@ -1605,6 +1605,17 @@ A continuación, se detalla el registro de las sesiones de validación realizada
 
 **Entrevista 4**
 
+| Campo | Detalle |
+| :--- | :--- |
+| **Segmento**   | Emprendedores en proceso de digitalización |  
+| **Nombres y Apellidos** | Jesus Hidalgo |
+| **Edad** | 22 |
+| **Distrito** | San Miguel |
+| **URL del Video** | [Ver Video](https://upcedupe-my.sharepoint.com/personal/u20231e504_upc_edu_pe/_layouts/15/stream.aspx?id=%2Fpersonal%2Fu20231e504%5Fupc%5Fedu%5Fpe%2FDocuments%2FOpenSource%5FDeepLook%2Fentrevista%5Fvalidation%5F4%2Emp4&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2E44bf8432%2D5f26%2D42c0%2Da4f4%2D6e04a8bf37d1) |
+| **Timing y Duración** | Inicio: 00:00 / Duración: 11:20 |
+| **Screenshot** | ![Entrevista 4](impulso360-report/assets/imagenes/validation/entrevista_validation_jesus.png) |
+| **Resumen de Apreciaciones** | Jesus tiene un empredimiento de ventas de libros que maneja a través de redes sociales, instagram, WhatsApp y Facebook. Resalta la importancia de contar con un asesor de ayuda o servicio al cliente durante el uso de estas herramientas, además, considera que las funciones de perfil y servicios son propicias para fortalecer la su imagen de negocio ante los clientes. Lo que más atractivo encontro fue el Panel principal en donde se muestra el resumen del día, los clientes agendados. Lo que sugirió fue más personalización, ya que le gustaría ver la lista de libros vendidos, los que aún quedan disponibles y el estado de la venta. También afirmó que seriamente consideraría utilizar esta herramienta para gestionar su emprendimiento en el día a día.|
+
 **Entrevista 5**
 
 **Entrevista 6**
@@ -1685,7 +1696,7 @@ Los errores serán puntuados tomando en cuenta la siguiente escala de severidad:
 
 ---
 
-### PROBLEMA #2: Mezcla inconsistente de idiomas en la interfaz de notificaciones
+### PROBLEMA #2: Falta de control para descartar cambios en el "Perfil de negocio"
 **Severidad:** 2
 
 **Heurística violada:** Usabilidad - Consistencia y estándares / Relación entre el sistema y el mundo real
@@ -1740,6 +1751,5 @@ Implementar validaciones de formato y longitud (ej. expresiones regulares) en lo
 
 ---
 ### 5.4. Video About-the-Product.
-
 
 ---
