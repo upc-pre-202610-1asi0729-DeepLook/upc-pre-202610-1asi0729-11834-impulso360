@@ -1467,8 +1467,6 @@ La documentación de servicios se organiza según los bounded contexts trabajado
 | PUT | `/api/v1/clients/{clientId}` | Actualiza completamente la información de un cliente registrado. | Retorna el cliente actualizado o una respuesta de actualización correcta. |
 | DELETE | `/api/v1/clients/{id}` | Elimina un cliente registrado mediante su identificador. | Retorna una respuesta de eliminación correcta. |
 
-> **Nota:** en la especificación de Swagger no se encontró un endpoint dedicado `GET /api/v1/clients/search`. Es posible que la búsqueda se resuelva mediante parámetros de consulta sobre `GET /api/v1/clients` (similar al patrón usado en Users). Se recomienda validar directamente en el Swagger.
-
 ##### Appointments Endpoints
 
 | Method | Endpoint | Description | Expected Result |
