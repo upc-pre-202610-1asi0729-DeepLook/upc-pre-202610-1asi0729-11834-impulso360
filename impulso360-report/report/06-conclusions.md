@@ -2,11 +2,20 @@
 
 ## Conclusiones
 
-Primero, durante el desarrollo del proyecto pudimos ordenar y profundizar en la problemática, ya que no solo recopilamos información mediante entrevistas, sino que también la convertimos en artefactos útiles como User Personas, User Stories, Needfinding e Impact Mapping. Esto nos ayudó a comprender con mayor claridad las necesidades de los usuarios y qué aspectos del producto priorizar, basando nuestras decisiones en información real y no en suposiciones.
+Durante este Sprint, la adopción de GitFlow junto con Conventional Commits permitió al equipo DeepLook mantener una organización clara del código fuente a lo largo del sprints, facilitando la trazabilidad de cambios y el trabajo paralelo entre los cinco integrantes.
 
-En el aspecto técnico, el uso de **Standalone Components en Angular** fue clave, ya que eliminó código redundante y logró una aplicación inicial mucho más ligera y rápida. Asimismo, el diseño del módulo analítico ha sentado las bases para que los emprendedores puedan gestionar sus negocios con datos reales, transformando la propuesta en una solución digital clara, organizada y coherente con las necesidades detectadas.
+El desarrollo incremental por sprints (Landing Page → Frontend → Backend) resultó efectivo para construir Impulso360 progresivamente, permitiendo validar cada capa antes de avanzar a la siguiente y evitando dependencias prematuras entre frontend y backend.
 
-Finalmente, logramos fortalecer el trabajo colaborativo gracias al uso de herramientas como **GitHub**, el control de versiones, el Product Backlog y la planificación por sprint. Estas herramientas no solo permitieron evidenciar los aportes individuales y distribuir responsabilidades, sino que también aseguraron una base sólida y transparente para continuar con el desarrollo del producto, manteniendo un seguimiento preciso de los objetivos alineados con el trabajo final.
+El despliegue evolucionó de forma coherente con la madurez del producto: GitHub Pages para la Landing Page estática, Firebase para el frontend Angular, y finalmente máquinas virtuales en Google Cloud Platform con separación de capas (aplicación y base de datos) para el backend en producción.
+
+La aplicación de Domain-Driven Design y arquitectura hexagonal en el backend (bounded contexts de Agenda, Clients, Services, Profile, Notifications, Users) permitió organizar la lógica de negocio de manera modular, facilitando la documentación posterior mediante OpenAPI/Swagger.
+
+Las entrevistas de validación con usuarios reales de ambos segmentos (microempresas de citas y emprendedores en digitalización) confirmaron que la propuesta de valor central — organización simple sin flujos de asistencia innecesarios es percibida positivamente y considerada útil para la gestión diaria del negocio.
+
+La evaluación heurística reveló que, si bien la funcionalidad del sistema es sólida, existen brechas relevantes en consistencia visual y prevención de errores que no fueron detectadas durante el desarrollo, sino hasta la fase de auditoría UX.
+
+Finalmente , los hallazgos de la evaluación heurística y de las entrevistas de validación constituyen un insumo clave para la siguiente entrega del proyecto, en la cual se espera subsanar las inconsistencias visuales, fortalecer las validaciones de los formularios y completar la internacionalización pendiente, consolidando así una versión de Impulso360 más robusta, accesible y alineada con los estándares de usabilidad esperados por ambos segmentos de usuarios.
+
 
 ## Recomendaciones
 
@@ -14,4 +23,8 @@ Con respecto a la gestión del equipo, es fundamental mejorar la organización i
 
 Asimismo, se recomienda medir la efectividad de los recordatorios (WhatsApp, SMS, Email) para optimizar los horarios y canales de envío según el comportamiento del usuario. Además de esta optimización técnica, es vital revisar la coherencia general del informe, asegurando que los diagramas, mockups y términos utilizados sigan una misma línea narrativa. Una revisión final colectiva de títulos, enlaces y redacción garantizará un producto más profesional y fácil de entender.
 
-Finalmente, recomendamos fortalecer la trazabilidad entre las entrevistas y el producto final. Es decir, explicar mejor cómo cada necesidad encontrada se traduce directamente en una funcionalidad dentro del Product Backlog y los flujos de la aplicación. Al vincular estrechamente las historias de usuario con los problemas reales detectados, demostraremos con mayor rigor que nuestra solución responde de manera efectiva a los segmentos objetivo definidos.
+Definir como equipo un "Definition of Done" más estricto que incluya validaciones de UX/UI y de datos, no solo la entrega funcional del endpoint o vista. Esto evitaría que problemas de severidad alta (como la falta de validación en Clientes) lleguen hasta la fase de auditoría externa.
+
+Realizar retrospectivas más profundas al cierre de cada sprint, donde el equipo discuta explícitamente hallazgos de consistencia y calidad (no solo velocity y story points completados), de modo que los aprendizajes de un sprint (ej. falta de i18n completa) se corrijan antes de replicarse en el siguiente.
+
+Reforzar la revisión cruzada (code review) antes de marcar tareas como "Done". Varios problemas detectados en la evaluación heurística (botones inconsistentes, falta de validaciones, mezcla de idiomas) no fueron capturados durante el desarrollo, lo que sugiere que las Pull Requests se aprobaron sin una revisión visual/funcional rigurosa entre compañeros, más allá de la revisión técnica del código.
