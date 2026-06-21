@@ -1535,11 +1535,11 @@ Durante el Sprint, se realizaron actividades relacionadas con el despliegue del 
 Se configuraron dos máquinas virtuales en Google Cloud Platform. La primera fue destinada a la capa de datos, donde se alojó la base de datos MySQL. La segunda fue creada para la capa de aplicación, encargada de ejecutar el archivo .jar del backend desarrollado con Spring Boot. Esta separación permitió organizar la arquitectura de despliegue en dos componentes principales: servidor de aplicación y servidor de base de datos.
 
 Asimismo, la aplicación backend fue configurada para utilizar un perfil de producción conectado a la base de datos MySQL mediante variables de entorno. Esta configuración permite ejecutar el servicio sin almacenar credenciales sensibles directamente en el código fuente, facilitando un despliegue más seguro y ordenado. Finalmente, se habilitó la documentación OpenAPI mediante Swagger UI, lo que proporciona una evidencia visual de los endpoints disponibles y permite validar el funcionamiento del servicio desplegado directamente desde el navegador.
-Se puede acceder al despliegue mediante los siguientes links:
 
 ![Github Releases](../assets/imagenes/deployment-evidence-sprint-3/deployment-evidence-sprint-3-git-releases.png)
 ![Virtual Machine](../assets/imagenes/deployment-evidence-sprint-3/evidence-vm-deployment.png)
 
+Se puede acceder al despliegue mediante los siguientes links:
 - **URL BASE:** http://34.176.216.15:3000
 - **Documentación de Swagger/OpenAPI:** http://34.176.216.15:3000/swagger-ui/index.html
 - **Ejemplo de Endpoint:** http://34.176.216.15:3000/api/v1/clients
