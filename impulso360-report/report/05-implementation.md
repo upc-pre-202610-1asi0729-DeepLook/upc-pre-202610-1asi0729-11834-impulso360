@@ -1615,10 +1615,20 @@ A continuación, se detalla el registro de las sesiones de validación realizada
 | **Distrito** | San Miguel |
 | **URL del Video** | [Ver Video](https://upcedupe-my.sharepoint.com/personal/u20231e504_upc_edu_pe/_layouts/15/stream.aspx?id=%2Fpersonal%2Fu20231e504%5Fupc%5Fedu%5Fpe%2FDocuments%2FOpenSource%5FDeepLook%2Fentrevista%5Fvalidation%5F4%2Emp4&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2E44bf8432%2D5f26%2D42c0%2Da4f4%2D6e04a8bf37d1) |
 | **Timing y Duración** | Inicio: 00:00 / Duración: 11:20 |
-| **Screenshot** | ![Entrevista 4](impulso360-report/assets/imagenes/validation/entrevista_validation_jesus.png) |
+| **Screenshot** | ![Entrevista 4](../assets/imagenes/validation/entrevista_validation_jesus.png) |
 | **Resumen de Apreciaciones** | Jesus tiene un empredimiento de ventas de libros que maneja a través de redes sociales, instagram, WhatsApp y Facebook. Resalta la importancia de contar con un asesor de ayuda o servicio al cliente durante el uso de estas herramientas, además, considera que las funciones de perfil y servicios son propicias para fortalecer la su imagen de negocio ante los clientes. Lo que más atractivo encontro fue el Panel principal en donde se muestra el resumen del día, los clientes agendados. Lo que sugirió fue más personalización, ya que le gustaría ver la lista de libros vendidos, los que aún quedan disponibles y el estado de la venta. También afirmó que seriamente consideraría utilizar esta herramienta para gestionar su emprendimiento en el día a día.|
 
 **Entrevista 5**
+| Campo | Detalle |
+| :--- | :--- |
+| **Segmento**   | Emprendedores en proceso de digitalización |  
+| **Nombres y Apellidos** | Jose Santana |
+| **Edad** | 20 |
+| **Distrito** | Pachacamac |
+| **URL del Video** | [Ver Video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20221a132_upc_edu_pe/IQDyGj4ZLRJNRYRTirx_WwtqAeOdaApXXlgyDcfKI8ysGfU?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=IQywS5) |
+| **Timing y Duración** | Inicio: 00:00 / Duración: 19:13 |
+| **Screenshot** | ![Entrevista 4](../assets/imagenes/validation/entrevista_validation_jose_santana.png) |
+| **Resumen de Apreciaciones** | José Santana destaca que la herramienta es muy concreta, elegante y libre de saturación visual, logrando que sus contextos delimitados se complementen de forma fluida sin abrumar al usuario. Lo que más atractivo encontró fue el panel principal con las citas del día, la claridad de los planes en la landing page y el diseño compacto de los formularios. Como sugerencias, recomendó quitar el estado 'cancelada' al crear una nueva cita y dar más reactividad al rango del calendario; además, propuso adaptar el módulo de servicios para que incluya productos, permitiendo gestionar stock limitado y fechas de vigencia para promociones temporales. Concluye que la aplicación funciona a la perfección gracias a su enfoque básico y profesional..|
 
 **Entrevista 6**
 
