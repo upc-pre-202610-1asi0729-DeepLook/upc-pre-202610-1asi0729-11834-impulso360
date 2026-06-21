@@ -1435,8 +1435,10 @@ Durante el Sprint 3, el equipo desarrolló el backend de Impulso360 mediante una
 En el Sprint 3 se verificó la ejecución del backend de Impulso360. Se realizaron pruebas exitosas en los endpoints integrados en Swagger UI y Postman, demostrando que los bounded contexts responden correctamente a las solicitude.
 
 ##### Swagger/OpenAPI :
-![Swagger  Endpoints Evidence](../assets/imagenes/execution-evidence-sprint-3/)
-
+![Swagger  Endpoints Evidence](../assets/imagenes/execution-evidence-sprint-3/execution-evidence-1.png)
+![Swagger  Endpoints Evidence](../assets/imagenes/execution-evidence-sprint-3/execution-evidence-2.png)
+![Swagger  Endpoints Evidence](../assets/imagenes/execution-evidence-sprint-3/execution-evidence-3.png)
+![Swagger  Endpoints Evidence](../assets/imagenes/execution-evidence-sprint-3/execution-evidence-4.png)
 
 
 #### 5.2.3.6. Services Documentation Evidence for Sprint Review.
@@ -1458,11 +1460,14 @@ La documentación de servicios se organiza según los bounded contexts trabajado
 
 | Method | Endpoint | Description | Expected Result |
 | :---- | :---- | :---- | :---- |
-| POST | `/api/v1/clients` | Registra un nuevo cliente en la plataforma. | Retorna el cliente creado o una respuesta de creación correcta. | 
-| GET | `/api/v1/clients` | Obtiene el listado de clientes registrados. | Retorna una colección de clientes. | 
-| GET | `/api/v1/clients/{id}` | Obtiene la información de un cliente por su identificador. | Retorna la información del cliente encontrado. | 
-| GET | `/api/v1/clients/search` | Busca clientes por nombre, apellido, teléfono o correo. | Retorna las coincidencias relacionadas con el criterio de búsqueda. | 
+| POST | `/api/v1/clients` | Registra un nuevo cliente en la plataforma. | Retorna el cliente creado o una respuesta de creación correcta. |
+| GET | `/api/v1/clients` | Obtiene el listado de clientes registrados. | Retorna una colección de clientes. |
+| GET | `/api/v1/clients/{id}` | Obtiene la información de un cliente por su identificador. | Retorna la información del cliente encontrado. |
+| GET | `/api/v1/clients/search` | Busca clientes por nombre, apellido, teléfono o correo. | Retorna las coincidencias relacionadas con el criterio de búsqueda. |
+| PUT | `/api/v1/clients/{clientId}` | Actualiza completamente la información de un cliente registrado. | Retorna el cliente actualizado o una respuesta de actualización correcta. |
 | DELETE | `/api/v1/clients/{id}` | Elimina un cliente registrado mediante su identificador. | Retorna una respuesta de eliminación correcta. |
+
+> **Nota:** en la especificación de Swagger no se encontró un endpoint dedicado `GET /api/v1/clients/search`. Es posible que la búsqueda se resuelva mediante parámetros de consulta sobre `GET /api/v1/clients` (similar al patrón usado en Users). Se recomienda validar directamente en el Swagger.
 
 ##### Appointments Endpoints
 
@@ -1471,9 +1476,60 @@ La documentación de servicios se organiza según los bounded contexts trabajado
 | POST | `/api/v1/appointments` | Registra una nueva cita en la plataforma. | Retorna la cita creada o una respuesta de creación correcta. |
 | GET | `/api/v1/appointments` | Obtiene el listado de citas registradas. También permite filtrar por `businessId` o buscar por `clientName`. | Retorna una colección de citas o las coincidencias según el filtro aplicado. |
 | GET | `/api/v1/appointments/{appointmentId}` | Obtiene la información de una cita mediante su identificador. | Retorna la información de la cita encontrada. |
+| GET | `/api/v1/appointments/missed` | Obtiene el listado de citas marcadas como no asistidas (missed). | Retorna una colección de citas con estado "missed". |
 | PATCH | `/api/v1/appointments/{appointmentId}` | Actualiza parcialmente la información de una cita registrada. | Retorna la cita actualizada o una respuesta de actualización correcta. |
+| PATCH | `/api/v1/appointments/{appointmentId}/reschedule` | Reprograma una cita registrada, actualizando su fecha y/u hora. | Retorna la cita reprogramada o una respuesta de actualización correcta. |
+| PATCH | `/api/v1/appointments/{appointmentId}/confirm` | Confirma la asistencia o realización de una cita registrada. | Retorna la cita confirmada o una respuesta de actualización correcta. |
+| PATCH | `/api/v1/appointments/{appointmentId}/cancel` | Cancela una cita registrada. | Retorna la cita cancelada o una respuesta de actualización correcta. |
+| PATCH | `/api/v1/appointments/{appointmentId}/mark-missed` | Marca una cita registrada como no asistida (missed). | Retorna la cita actualizada o una respuesta de actualización correcta. |
 | DELETE | `/api/v1/appointments/{appointmentId}` | Elimina una cita registrada mediante su identificador. | Retorna una respuesta de eliminación correcta. |
 
+##### Services Endpoints
+
+| Method | Endpoint | Description | Expected Result |
+| :---- | :---- | :---- | :---- |
+| POST | `/api/v1/services` | Registra un nuevo servicio ofrecido por un negocio. | Retorna el servicio creado o una respuesta de creación correcta. |
+| GET | `/api/v1/services` | Obtiene el listado de servicios registrados. | Retorna una colección de servicios. |
+| GET | `/api/v1/services/{serviceId}` | Obtiene la información de un servicio mediante su identificador. | Retorna la información del servicio encontrado. |
+| PATCH | `/api/v1/services/{serviceId}` | Actualiza parcialmente la información de un servicio registrado. | Retorna el servicio actualizado o una respuesta de actualización correcta. |
+| PATCH | `/api/v1/services/{serviceId}/toggle-feature` | Activa o desactiva una característica/estado destacado del servicio. | Retorna el servicio actualizado o una respuesta de actualización correcta. |
+| DELETE | `/api/v1/services/{serviceId}` | Elimina un servicio registrado mediante su identificador. | Retorna una respuesta de eliminación correcta. |
+
+##### Businesses Endpoints
+
+| Method | Endpoint | Description | Expected Result |
+| :---- | :---- | :---- | :---- |
+| POST | `/api/v1/businesses` | Registra un nuevo negocio en la plataforma. | Retorna el negocio creado o una respuesta de creación correcta. |
+| GET | `/api/v1/businesses` | Obtiene el listado de negocios registrados. | Retorna una colección de negocios. |
+| GET | `/api/v1/businesses/{businessId}` | Obtiene la información de un negocio mediante su identificador. | Retorna la información del negocio encontrado. |
+| PATCH | `/api/v1/businesses/{businessId}` | Actualiza parcialmente la información de un negocio registrado. | Retorna el negocio actualizado o una respuesta de actualización correcta. |
+| DELETE | `/api/v1/businesses/{businessId}` | Elimina un negocio registrado mediante su identificador. | Retorna una respuesta de eliminación correcta. |
+
+##### Business Profiles Endpoints
+
+| Method | Endpoint | Description | Expected Result |
+| :---- | :---- | :---- | :---- |
+| POST | `/api/v1/business-profiles` | Registra el perfil de un negocio en la plataforma. | Retorna el perfil de negocio creado o una respuesta de creación correcta. |
+| GET | `/api/v1/business-profiles/{businessProfileId}` | Obtiene la información de un perfil de negocio mediante su identificador. | Retorna la información del perfil de negocio encontrado. |
+
+##### Notifications Endpoints
+
+Endpoints internos para el recordatorio de citas.
+
+| Method | Endpoint | Description | Expected Result |
+| :---- | :---- | :---- | :---- |
+| GET | `/api/v1/notifications/upcoming-reminder` | Obtiene el recordatorio de las próximas citas a realizarse. | Retorna la información del recordatorio de la cita próxima. |
+
+##### Reporting Endpoints
+
+Endpoints para el reporte operativo del dashboard.
+
+| Method | Endpoint | Description | Expected Result |
+| :---- | :---- | :---- | :---- |
+| GET | `/api/v1/reporting/general-dashboard/upcoming-alert` | Obtiene las alertas de próximas citas para el dashboard general. | Retorna la información de alertas próximas. |
+| GET | `/api/v1/reporting/general-dashboard/recent-clients` | Obtiene el listado de clientes recientes para el dashboard general. | Retorna una colección de clientes recientes. |
+| GET | `/api/v1/reporting/general-dashboard/appointments` | Obtiene el listado de citas para el dashboard general. | Retorna una colección de citas. |
+| GET | `/api/v1/reporting/general-dashboard-summary` | Obtiene el resumen general de métricas del dashboard. | Retorna un resumen con las métricas generales del negocio. |
 #### 5.2.3.7. Software Deployment Evidence for Sprint Review.
 
 Durante el Sprint, se realizaron actividades relacionadas con el despliegue del backend y la configuración de su base de datos MySQL. El proceso de deployment se llevó a cabo utilizando máquinas virtuales en Google Cloud Platform y GitHub Releases para la generación y publicación del artefacto ejecutable del backend.
@@ -1483,7 +1539,7 @@ Se configuraron dos máquinas virtuales en Google Cloud Platform. La primera fue
 Asimismo, la aplicación backend fue configurada para utilizar un perfil de producción conectado a la base de datos MySQL mediante variables de entorno. Esta configuración permite ejecutar el servicio sin almacenar credenciales sensibles directamente en el código fuente, facilitando un despliegue más seguro y ordenado. Finalmente, se habilitó la documentación OpenAPI mediante Swagger UI, lo que proporciona una evidencia visual de los endpoints disponibles y permite validar el funcionamiento del servicio desplegado directamente desde el navegador.
 Se puede acceder al despliegue mediante los siguientes links:
 
-![Github Releases](../assets/imagenes/deployment-evidence-sprint-3/)
+![Github Releases](../assets/imagenes/deployment-evidence-sprint-3/deployment-evidence-sprint-3-git-releases.png)
 ![Virtual Machine](../assets/imagenes/deployment-evidence-sprint-3/evidence-vm-deployment.png)
 
 - **URL BASE:** http://34.176.216.15:3000
@@ -1495,10 +1551,22 @@ Se puede acceder al despliegue mediante los siguientes links:
 Durante este sprint, el equipo se centró en la implementación y despliegue del backend de la aplicación. El trabajo se organizó mediante GitHub como herramienta principal para la colaboración, control de versiones, generación de releases y documentación del servicio mediante OpenAPI/Swagger. A continuación, se presentan las colaboraciones y commits realizados tanto para el backend como para el reporte.
 
 **Report:**
+![Report commits 1](../assets/imagenes/team-collaboration-insight-sprint-3/report-commits-1.png)
+![Report commits 2](../assets/imagenes/team-collaboration-insight-sprint-3/report-commits-2.png)
+![Report commits 3](../assets/imagenes/team-collaboration-insight-sprint-3/report-commits-3.png)
+![Report commits 4](../assets/imagenes/team-collaboration-insight-sprint-3/report-commits-4.png)
+![Report commits 5](../assets/imagenes/team-collaboration-insight-sprint-3/report-commits-5.png)
+![Report commits 6](../assets/imagenes/team-collaboration-insight-sprint-3/report-commits-6.png)
 
 
 **Backend de la aplicación**
-
+![Backend commits 1](../assets/imagenes/team-collaboration-insight-sprint-3/backend-commit-1.png)
+![Backend commits 2](../assets/imagenes/team-collaboration-insight-sprint-3/backend-commit-2.png)
+![Backend commits 3](../assets/imagenes/team-collaboration-insight-sprint-3/backend-commit-3.png)
+![Backend commits 4](../assets/imagenes/team-collaboration-insight-sprint-3/backend-commit-4.png)
+![Backend commits 5](../assets/imagenes/team-collaboration-insight-sprint-3/backend-commit-5.png)
+![Backend commits 6](../assets/imagenes/team-collaboration-insight-sprint-3/backend-commit-6.png)
+![Backend commits 7](../assets/imagenes/team-collaboration-insight-sprint-3/backend-commit-7.png)
 
 
 ## 5.3. Validation Interviews
