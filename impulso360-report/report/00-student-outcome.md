@@ -116,6 +116,12 @@
 | TB1 | 12/05/2026 | Jave Chang Alejandro Manuel | Corrección de diagrama de clases<br>Corrección de diccionario de clases<br>Frontend |
 | TB1 | 11/05/2026 | Tirado Carrera Gabriela Luciana | Corrección diagramas C4<br>Sprint planning<br>Sprint backlog<br>Frontend |
 | TB1 | 13/05/2026 | Merino Ordinola, Winnie Lisbeth | Corrección de event storming<br>Business profile & Services bounded context frontend |
+| AV2 | 18/06/2026 | Ramos Cerdan Elias Daniel | Implementación del backend del bounded context Reporting<br>Desarrollo de endpoints para el panel general<br>Pruebas de funcionalidades en Swagger<br>Uso de GitFlow, Conventional Commits y releases<br>Participación en entrevista de validación<br>Actualización del reporte<br>Desarrollo del curso de Java |
+| AV2 | 19/06/2026 | Sandoval Cueto Fabian Jesus | Implementación del backend del bounded context Reminder / Notification<br>Desarrollo de funcionalidades relacionadas con recordatorios y notificaciones<br>Pruebas de endpoints en Swagger<br>Uso de GitFlow, Conventional Commits y releases<br>Participación en entrevista de validación<br>Actualización del reporte<br>Desarrollo del curso de Java |
+| AV2 | 08/06/2026 | Jave Chang Alejandro Manuel | Implementación del backend del bounded context Appointment Management<br>Desarrollo de funcionalidades relacionadas con la gestión de citas<br>Pruebas de endpoints en Swagger<br>Uso de GitFlow, Conventional Commits y releases<br>Participación en entrevista de validación<br>Actualización del reporte<br>Desarrollo del curso de Java |
+| AV2 | 09/06/2026 | Tirado Carrera Gabriela Luciana | Implementación del backend del bounded context Customer Management<br>Desarrollo de funcionalidades relacionadas con la gestión de clientes<br>Pruebas de endpoints en Swagger<br>Uso de GitFlow, Conventional Commits y releases<br>Participación en entrevista de validación<br>Actualización del reporte<br>Desarrollo del curso de Java |
+| AV2 | 19/06/2026 | Merino Ordinola, Winnie Lisbeth | Implementación del backend del bounded context Business Profile<br>Desarrollo de funcionalidades relacionadas con el perfil del negocio<br>Pruebas de endpoints en Swagger<br>Uso de GitFlow, Conventional Commits y releases<br>Participación en entrevista de validación<br>Actualización del reporte<br>Desarrollo del curso de Java |
+
 
 # Project Report Collaboration Insights
 
@@ -129,7 +135,7 @@ URL del repositorio para el proyecto: [Link](https://github.com/upc-pre-202610-1
 
 # Student Outcome
 
-<table style="width: 100%; table-layout: fixed;">
+<table>
   <thead>
     <tr>
       <th>Criterio Específico</th>
