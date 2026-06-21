@@ -1669,6 +1669,17 @@ A continuación, se detalla el registro de las sesiones de validación realizada
 
 **Entrevista 3**
 
+| Campo | Detalle |
+| :--- | :--- |
+| **Segmento**   | Microempresas de property management |  
+| **Nombres y Apellidos** | Angel Barrera |
+| **Edad** | 28 |
+| **Distrito** | Surquillo |
+| **URL del Video** | [Ver Video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20201a277_upc_edu_pe/IQDPzGlb2mV6TJXhsdFLsGGhAa4DIOimeKMnhZxcnWjYODk?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=GtZb1Y) |
+| **Timing y Duración** | Inicio: 00:00 / Duración: 21:44 |
+| **Screenshot** | ![Entrevista 3](..\assets\imagenes\validation\entrevista_validation_angelbarrera.png) |
+| **Resumen de Apreciaciones** | Angel Barrera resalta la utilidad de Impulso360 al valorar que la plataforma permite organizar citas, clientes, servicios y horarios desde un mismo entorno digital, dijo que para la organización de sus clientes que recibe al mes le vendría muy bien. Destaca que el panel general, el calendario y la gestión de servicios facilitan el control diario del negocio, evitando procesos manuales o desordenados. También considera importante que la aplicación tenga una navegación clara entre secciones como agenda, clientes, perfil del negocio y ayuda, ya que esto permite usarla con mayor facilidad. Finalmente, la validación muestra que la plataforma responde a una necesidad real de pequeños negocios que buscan mejorar la administración de sus reservas y la atención a sus clientes. |
+
 #### Segmento 2: Emprendedores en progreso de digitalización
 
 **Entrevista 4**
@@ -1681,12 +1692,33 @@ A continuación, se detalla el registro de las sesiones de validación realizada
 | **Distrito** | San Miguel |
 | **URL del Video** | [Ver Video](https://upcedupe-my.sharepoint.com/personal/u20231e504_upc_edu_pe/_layouts/15/stream.aspx?id=%2Fpersonal%2Fu20231e504%5Fupc%5Fedu%5Fpe%2FDocuments%2FOpenSource%5FDeepLook%2Fentrevista%5Fvalidation%5F4%2Emp4&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2E44bf8432%2D5f26%2D42c0%2Da4f4%2D6e04a8bf37d1) |
 | **Timing y Duración** | Inicio: 00:00 / Duración: 11:20 |
-| **Screenshot** | ![Entrevista 4](impulso360-report/assets/imagenes/validation/entrevista_validation_jesus.png) |
+| **Screenshot** | ![Entrevista 4](../assets/imagenes/validation/entrevista_validation_jesus.png) |
 | **Resumen de Apreciaciones** | Jesus tiene un empredimiento de ventas de libros que maneja a través de redes sociales, instagram, WhatsApp y Facebook. Resalta la importancia de contar con un asesor de ayuda o servicio al cliente durante el uso de estas herramientas, además, considera que las funciones de perfil y servicios son propicias para fortalecer la su imagen de negocio ante los clientes. Lo que más atractivo encontro fue el Panel principal en donde se muestra el resumen del día, los clientes agendados. Lo que sugirió fue más personalización, ya que le gustaría ver la lista de libros vendidos, los que aún quedan disponibles y el estado de la venta. También afirmó que seriamente consideraría utilizar esta herramienta para gestionar su emprendimiento en el día a día.|
 
 **Entrevista 5**
+| Campo | Detalle |
+| :--- | :--- |
+| **Segmento**   | Emprendedores en proceso de digitalización |  
+| **Nombres y Apellidos** | Jose Santana |
+| **Edad** | 20 |
+| **Distrito** | Pachacamac |
+| **URL del Video** | [Ver Video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20221a132_upc_edu_pe/IQDyGj4ZLRJNRYRTirx_WwtqAeOdaApXXlgyDcfKI8ysGfU?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=IQywS5) |
+| **Timing y Duración** | Inicio: 00:00 / Duración: 19:13 |
+| **Screenshot** | ![Entrevista 4](../assets/imagenes/validation/entrevista_validation_jose_santana.png) |
+| **Resumen de Apreciaciones** | José Santana destaca que la herramienta es muy concreta, elegante y libre de saturación visual, logrando que sus contextos delimitados se complementen de forma fluida sin abrumar al usuario. Lo que más atractivo encontró fue el panel principal con las citas del día, la claridad de los planes en la landing page y el diseño compacto de los formularios. Como sugerencias, recomendó quitar el estado 'cancelada' al crear una nueva cita y dar más reactividad al rango del calendario; además, propuso adaptar el módulo de servicios para que incluya productos, permitiendo gestionar stock limitado y fechas de vigencia para promociones temporales. Concluye que la aplicación funciona a la perfección gracias a su enfoque básico y profesional..|
 
 **Entrevista 6**
+
+| Campo | Detalle |
+| :--- | :--- |
+| **Segmento**   | Emprendimiento de maquillaje |  
+| **Nombres y Apellidos** | Rut Camacho |
+| **Edad** | 24 |
+| **Distrito** | San Miguel |
+| **URL del Video** | [Ver Video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20201a277_upc_edu_pe/IQAqbCQ3Z3H1Tq5NUSIOcnNgAZysTPw0hJGR-L4ILeHHS-E?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=aghFLT) |
+| **Timing y Duración** | Inicio: 00:00 / Duración: 24:08 |
+| **Screenshot** | ![Entrevista 3](..\assets\imagenes\validation\entrevista_validation_rutcamacho.png) |
+| **Resumen de Apreciaciones** | Rut Camacho destaca la utilidad de Impulso360 para su emprendimiento de maquillaje, ya que considera que la plataforma le ayudaría a organizar mejor las citas y la atención de las clientas que recibe durante el mes. Valora que pueda gestionar clientes, servicios, horarios y reservas desde un solo espacio digital, evitando depender de apuntes manuales o mensajes dispersos. También resalta que el panel general, el calendario y la sección de servicios le permitirían tener un mayor control de su agenda diaria y visualizar con más claridad sus próximas atenciones. Finalmente, considera que la navegación entre agenda, clientes, perfil del negocio y ayuda es clara, por lo que la plataforma resulta práctica para emprendimientos de belleza que buscan ordenar sus reservas y mejorar la atención al cliennte. |
 
 ---
 
