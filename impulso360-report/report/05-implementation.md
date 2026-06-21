@@ -1413,28 +1413,30 @@ Durante este sprint, el equipo se centró en la documentación e implementación
 
 Durante el Sprint 3, el equipo desarrolló el backend de Impulso360 mediante una API RESTful organizada por bounded contexts. El trabajo se enfocó en construir la base técnica de la plataforma para permitir la comunicación futura entre frontend, backend y base de datos, dejando atrás el uso exclusivo de datos simulados.
 
-| Repository          | Branch                                    | Commit Id | Commit Message                                                             | Commited on (Date) |
-|---------------------|-------------------------------------------|-----------|----------------------------------------------------------------------------|--------------------|
-| impulso360-Backend  | feature/create-client                     | ce9db5d   | feat(clients): implement create client endpoint                            | 2026-06-14         |  
-| impulso360-Backend  | feature/query-clients                     | f0004bf   | feat(clients): implement query clients endpoints                           | 2026-06-14         |  
-| impulso360-Backend  | feature/update-client                     | 9158a7c   | feat(clients): implement update client endpoint                            | 2026-06-14         |  
-| impulso360-Backend  | feature/delete-client                     | 2527057   | feat(clients): implement delete client endpoint                            | 2026-06-14         |  
-| impulso360-Backend  | feature/get-agenda                        | 87b2a59   | feat: add appointments, users, and clients bounded contexts with full CRUD | 2026-06-16         |  
-| impulso360-Backend  | feature/deployment-github-actions-release | e1be00d   | feat(deployment): configure production profile and release workflow        | 2026-06-19         |
-| impulso360-Backend  | feature/get-general-dashboard-summary     | 86066e0   | feat: get general dashboard summary                                        | 2026-06-20         |
-| impulso360-Backend  | feature/get-general-dashboard-clints      | 5037764   | feat: get general dashboard clients                                        | 2026-06-20         |
-| impulso360-Backend  | feature/get-general-dashboard-alerts      | 79b7f7a   | feat: get general dashboard alerts                                         | 2026-06-20         |
-
+| Repository          | Branch                                    | Commit Id | Commit Message                                                                                        | Commited on (Date)     |
+|---------------------|-------------------------------------------|-----------|-------------------------------------------------------------------------------------------------------|------------------------|
+| impulso360-Backend  | feature/create-client                     | ce9db5d   | feat(clients): implement create client endpoint                                                       | 2026-06-14             |  
+| impulso360-Backend  | feature/query-clients                     | f0004bf   | feat(clients): implement query clients endpoints                                                      | 2026-06-14             |  
+| impulso360-Backend  | feature/update-client                     | 9158a7c   | feat(clients): implement update client endpoint                                                       | 2026-06-14             |  
+| impulso360-Backend  | feature/delete-client                     | 2527057   | feat(clients): implement delete client endpoint                                                       | 2026-06-14             |  
+| impulso360-Backend  | feature/get-agenda                        | 87b2a59   | feat: add appointments, users, and clients bounded contexts with full CRUD                            | 2026-06-16             |  
+| impulso360-Backend  | feature/deployment-github-actions-release | e1be00d   | feat(deployment): configure production profile and release workflow                                   | 2026-06-19             |
+| impulso360-Backend  | feature/get-general-dashboard-summary     | 86066e0   | feat: get general dashboard summary                                                                   | 2026-06-20             |
+| impulso360-Backend  | feature/get-general-dashboard-clints      | 5037764   | feat: get general dashboard clients                                                                   | 2026-06-20             |
+| impulso360-Backend  | feature/get-general-dashboard-alerts      | 79b7f7a   | feat: get general dashboard alerts                                                                    | 2026-06-20             |
+| impulso360-Backend  | feature/notifications                     | 6145a6b   | feat(notifications): implement upcoming appointment reminder endpoint and multi-profile configuration | 2026-05-20             |
+| impulso360-Backend  | feature/update-appointments               | 2c69131   | feat(appointments): add confirm, cancel, reschedule and mark-missed actions                           | 2026-05-20             |
+| impulso360-Backend  | feature/create-businnes-profile           | c65c0a5   | Endpoints de BusinessProfile funcionando: POST y GET                                                  | 2026-05-20             |
+| impulso360-Backend  | feature/get-agenda                        | 994834e   | feat: add business/client/service CRUD, cover image support                                           | 2026-05-20             |
 
 
 #### 5.2.3.5. Execution Evidence for Sprint Review.
 
 En el Sprint 3 se verificó la ejecución del backend de Impulso360. Se realizaron pruebas exitosas en los endpoints integrados en Swagger UI y Postman, demostrando que los bounded contexts responden correctamente a las solicitude.
 
-##### Users:
-![Swagger User Endpoints Evidence](../assets/imagenes/execution-evidence-sprint-3/)
-#### Clients:
-![Swagger Clients Endpoints Evidence](../assets/imagenes/execution-evidence-sprint-3/)
+##### Swagger/OpenAPI :
+![Swagger  Endpoints Evidence](../assets/imagenes/execution-evidence-sprint-3/)
+
 
 
 #### 5.2.3.6. Services Documentation Evidence for Sprint Review.
@@ -1751,5 +1753,14 @@ Implementar validaciones de formato y longitud (ej. expresiones regulares) en lo
 
 ---
 ### 5.4. Video About-the-Product.
+
+El video About-the-Product presenta la solución Impulso360, explicando su problemática, propuesta de valor, principales funcionalidades, productos desplegados y evidencia de validación con usuarios. En el video se muestra cómo la plataforma ayuda a microempresas y emprendimientos de servicios a organizar citas, clientes, recordatorios y servicios desde una solución web simple y accesible. Además, se incluye una referencia a un testimonio positivo obtenido durante las entrevistas de validación.
+
+- **Duración**: 2:34 mn
+- **URL Microsoft Stream**: [Ver Video en Microsoft Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202419592_upc_edu_pe/IQAkl66iXvBhQ5JaMWPbQu98AQTUamkeW6IbvAS3H369l9A?e=xzcLNc&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
+- **URL Youtube**: [Ver video en Youtube](https://youtu.be/VxOny58n3Q8)
+
+![About the product evidence](../assets/imagenes/about-the-product/about-the-product-frame.png)
+
 
 ---
